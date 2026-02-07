@@ -152,10 +152,10 @@ def select_epsilon(R0_range, sigma_range, Dimmunity_range, s_obs, scale, n_pilot
 R0_range= [1.0, 12.0]
 sigma_range = [0.1, 1.0]
 Dimmunity_range = [0.05, 0.5]
-eps, pilots = select_epsilon(R0_range, sigma_range, Dimmunity_range, s_obs_v5_numba, scale, n_pilot=500, quantile=0.2, seed=123)
-# eps =0.3252211564759101
+# eps, pilots = select_epsilon(R0_range, sigma_range, Dimmunity_range, s_obs_v5_numba, scale, n_pilot=500, quantile=0.2, seed=123)
+eps =0.9714213500285555
 print("eps: ", eps)
-print("dists: ", len(pilots))
+# print("dists: ", len(pilots))
 # plt.hist(pilots, bins=30, density=True)
 # plt.title("ABC posterior of pilots")
 # plt.xlabel("dists")
@@ -198,7 +198,7 @@ def abc_reject(R0_range, sigma_range, Dimmunity_range, s_obs, scale, eps, n_acce
     return acc, dists_acc, trials, ss
 
 
-post, dists_acc, trials, ss = abc_reject(R0_range, sigma_range, Dimmunity_range, s_obs_v5_numba, scale, eps, n_accept=400, max_trials=2_000_000, seed=123)
+post, dists_acc, trials, ss = abc_reject(R0_range, sigma_range, Dimmunity_range, s_obs_v5_numba, scale, eps, n_accept=40, max_trials=2_000_000, seed=123)
 print("Accepted: ", len(post), "Trials: ", trials, "Acceptance rate: ", len(post)/trials)
 
 R0_samps, sigma_samps, Dimmunity_samps = post[:, 0], post[:, 1], post[:, 2]
