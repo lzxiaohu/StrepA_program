@@ -70,10 +70,10 @@ def simulate_prevalence_v5_numba(theta, fixed_params, seed):
     return SSPrev_selected.astype(float)
 
 # synthetic data
-_Tdry = simulate_prevalence_v5_numba(np.array([2.0, 0.8, 0.4*52.14], float), fixed_params, seed=int(123))
+_Tdry = simulate_prevalence_v5_numba(np.array([5.0, 0.5, 0.25*52.14], float), fixed_params, seed=int(123))
 T = _Tdry.size
 print("T's size", T)
-_Tdry1 = simulate_prevalence_v5_numba(np.array([2.0, 0.8, 0.4*52.14], float), fixed_params, seed=int(123))
+_Tdry1 = simulate_prevalence_v5_numba(np.array([5.0, 0.5, 0.25*52.14], float), fixed_params, seed=int(123))
 print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
 # print(_Tdry)
 
@@ -104,7 +104,7 @@ y_obs_array = _Tdry
 print("s_obs", s_obs_v5_numba)
 
 # scale = abs(s_obs_v5_numba)
-scale = np.array([21.0, 19.0, 250.0, 17, 0.6, 17], dtype=float)
+scale = np.array([22.0, 20.0, 220.0, 18, 0.8, 20], dtype=float)
 print("scale", scale)
 
 # function: discrepancy
@@ -152,7 +152,7 @@ def select_epsilon(R0_range, sigma_range, Dimmunity_range, s_obs, scale, n_pilot
 R0_range= [1.0, 12.0]
 sigma_range = [0.1, 1.0]
 Dimmunity_range = [0.05, 0.5]
-eps, pilots = select_epsilon(R0_range, sigma_range, Dimmunity_range, s_obs_v5_numba, scale, n_pilot=500, quantile=0.2, seed=123)
+eps, pilots = select_epsilon(R0_range, sigma_range, Dimmunity_range, s_obs_v5_numba, scale, n_pilot=1000, quantile=0.2, seed=123)
 # eps =0.9714213500285555
 print("eps: ", eps)
 print("dists: ", len(pilots))
@@ -198,7 +198,7 @@ def abc_reject(R0_range, sigma_range, Dimmunity_range, s_obs, scale, eps, n_acce
     return acc, dists_acc, trials, ss
 
 
-post, dists_acc, trials, ss = abc_reject(R0_range, sigma_range, Dimmunity_range, s_obs_v5_numba, scale, eps, n_accept=400, max_trials=2_000_000, seed=123)
+post, dists_acc, trials, ss = abc_reject(R0_range, sigma_range, Dimmunity_range, s_obs_v5_numba, scale, eps, n_accept=1200, max_trials=2_000_000, seed=123)
 print("Accepted: ", len(post), "Trials: ", trials, "Acceptance rate: ", len(post)/trials)
 
 R0_samps, sigma_samps, Dimmunity_samps = post[:, 0], post[:, 1], post[:, 2]
