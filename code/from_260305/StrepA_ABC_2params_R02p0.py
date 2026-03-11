@@ -1,4 +1,4 @@
-# file name: StrepA_ABC_2params.py
+# file name: StrepA_ABC_2params_R02p0.py
 
 
 # Packages:
@@ -116,16 +116,16 @@ def summary_stats(series_2d):
 
 # synthetic data
 if core_params_num == 2:
-    _Tdry = simulate_prevalence_v5_numba(np.array([2.0, 0.5], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry = simulate_prevalence_v5_numba(np.array([2.0, 0.6], float), fixed_params, core_params_num, seed=int(123))
     T = _Tdry.size
     print("T's size", T)
-    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.0, 0.5], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.0, 0.6], float), fixed_params, core_params_num, seed=int(123))
     print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
 elif core_params_num == 3:
-    _Tdry = simulate_prevalence_v5_numba(np.array([2.0, 0.5, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry = simulate_prevalence_v5_numba(np.array([2.0, 0.6, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
     T = _Tdry.size
     print("T's size", T)
-    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.0, 0.5, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.0, 0.6, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
     print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
 
 else:
@@ -308,10 +308,10 @@ if core_params_num == 2:
     print("Posterior mean R0: ", R0_samps.mean())
     print("Posterior mean sigma: ", sigma_samps.mean())
 
-    np.savetxt("../../experimental_data/from_260305/R0_samps_2params_v6_ud1.csv", R0_samps, delimiter=",")
-    np.savetxt("../../experimental_data/from_260305/sigma_samps_2params_v6_ud1.csv", sigma_samps, delimiter=",")
-    np.savetxt("../../experimental_data/from_260305/dists_acc_2params_v6_ud1.csv", dists_acc, delimiter=",")
-    np.savetxt("../../experimental_data/from_260305/ss_2params_v6_ud1.csv", ss, delimiter=",")
+    np.savetxt("../../experimental_data/from_260305/R0_samps_2params_R02p0.csv", R0_samps, delimiter=",")
+    np.savetxt("../../experimental_data/from_260305/sigma_samps_2params_R02p0.csv", sigma_samps, delimiter=",")
+    np.savetxt("../../experimental_data/from_260305/dists_acc_2params_R02p0.csv", dists_acc, delimiter=",")
+    np.savetxt("../../experimental_data/from_260305/ss_2params_R02p0.csv", ss, delimiter=",")
 
 elif core_params_num == 3:
     #
@@ -330,11 +330,11 @@ elif core_params_num == 3:
     print("Posterior mean sigma: ", sigma_samps.mean())
     print("Posterior mean Dimmunity: ", Dimmunity_samps.mean())
 
-    np.savetxt("../../experimental_data/from_260305/R0_samps_3params_v6_ud1.csv", R0_samps, delimiter=",")
-    np.savetxt("../../experimental_data/from_260305/sigma_samps_3params_v6_ud1.csv", sigma_samps, delimiter=",")
-    np.savetxt("../../experimental_data/from_260305/Dimmunity_samps_3params_v6_ud1.csv", Dimmunity_samps, delimiter=",")
-    np.savetxt("../../experimental_data/from_260305/dists_acc_3params_v6_ud1.csv", dists_acc, delimiter=",")
-    np.savetxt("../../experimental_data/from_260305/ss_3params_v6_ud1.csv", ss, delimiter=",")
+    np.savetxt("../../experimental_data/from_260305/R0_samps_3params_R02p0.csv", R0_samps, delimiter=",")
+    np.savetxt("../../experimental_data/from_260305/sigma_samps_3params_R02p0.csv", sigma_samps, delimiter=",")
+    np.savetxt("../../experimental_data/from_260305/Dimmunity_samps_3params_R02p0.csv", Dimmunity_samps, delimiter=",")
+    np.savetxt("../../experimental_data/from_260305/dists_acc_3params_R02p0.csv", dists_acc, delimiter=",")
+    np.savetxt("../../experimental_data/from_260305/ss_3params_R02p0.csv", ss, delimiter=",")
 else:
     raise ValueError('Invalid core params num')
 
