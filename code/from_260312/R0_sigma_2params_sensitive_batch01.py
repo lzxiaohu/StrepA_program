@@ -50,7 +50,7 @@ N_REPS = 100
 #               946438445, 1095601156, 791870896, 1432871125, 755510091,
 #               1493800520, 3487919346, 1938714511, 3965736568, 1930440936,
 #               1187877992, 3387705611, 3520819031, 3701866991, 3822060012]
-MASTER_SEED = 2930678936  # controls reproducibility of the entire experiment
+MASTER_SEED = 3487919346  # controls reproducibility of the entire experiment
 
 
 # function: build parameters
