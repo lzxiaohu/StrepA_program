@@ -1,0 +1,58 @@
+nohup: ignoring input
+T's size 920
+True True
+s_obs [ 0.  0.  0.  0.  0. nan  0. nan nan nan  0.]
+scale [2.80e+01 5.20e+02 5.67e+04 2.75e+01 9.72e+01 4.48e-01 2.64e+01 2.30e+01
+ 1.12e+00 1.74e-01 1.81e+00]
+dist nan number:  0
+dist nan number:  50
+dist nan number:  100
+dist nan number:  150
+dist nan number:  200
+dist nan number:  250
+dist nan number:  300
+dist nan number:  350
+dist nan number:  400
+dist nan number:  450
+dist nan number:  500
+dist nan number:  550
+dist nan number:  600
+dist nan number:  650
+dist nan number:  700
+dist nan number:  750
+dist nan number:  800
+dist nan number:  850
+dist nan number:  900
+dist nan number:  950
+dist nan number:  1000
+dist nan number:  1050
+dist nan number:  1100
+dist nan number:  1150
+dist nan number:  1200
+dist nan number:  1250
+dist nan number:  1300
+dist nan number:  1350
+dist nan number:  1400
+dist nan number:  1450
+Traceback (most recent call last):
+  File "StrepA_ABC_2params_R02p0.py", line 299, in <module>
+    eps, pilots = select_epsilon_2params(R0_range, sigma_range, s_obs_v5_numba, scale,
+  File "StrepA_ABC_2params_R02p0.py", line 220, in select_epsilon_2params
+    eps = np.quantile(dists, quantile)
+  File "<__array_function__ internals>", line 200, in quantile
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/numpy/lib/function_base.py", line 4461, in quantile
+    return _quantile_unchecked(
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/numpy/lib/function_base.py", line 4473, in _quantile_unchecked
+    return _ureduce(a,
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/numpy/lib/function_base.py", line 3752, in _ureduce
+    r = func(a, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/numpy/lib/function_base.py", line 4639, in _quantile_ureduce_func
+    result = _quantile(arr,
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/numpy/lib/function_base.py", line 4745, in _quantile
+    take(arr, indices=-1, axis=DATA_AXIS)
+  File "<__array_function__ internals>", line 200, in take
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/numpy/core/fromnumeric.py", line 190, in take
+    return _wrapfunc(a, 'take', indices, axis=axis, out=out, mode=mode)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/numpy/core/fromnumeric.py", line 57, in _wrapfunc
+    return bound(*args, **kwds)
+IndexError: cannot do a non-empty take from an empty axes.

@@ -95,15 +95,15 @@ def simulate_prevalence_v5_numba(theta, fixed_params, core_params_num, seed):
 # function: summary_stats()
 def summary_stats(series_2d):
     y = np.asarray(series_2d, float).ravel()
-    # avg_time_obs = ss.avg_time_obs_str(series_2d)
+    avg_time_obs = ss.avg_time_obs_str(series_2d)
     # max_time_obs = ss.max_time_obs_str(series_2d)
     num_strains_obs = ss.num_strains_obs_str(series_2d)
-    # avg_time_repeat_obs = ss.avg_time_repeat_inf_numpy(series_2d)
-    # var_time_repeat_obs = ss.var_time_repeat_inf_numpy(series_2d)
+    avg_time_repeat_obs = ss.avg_time_repeat_inf_numpy(series_2d)
+    var_time_repeat_obs = ss.var_time_repeat_inf_numpy(series_2d)
     avg_prev_obs = ss.avg_prev_numpy(series_2d)
     var_prev_obs = np.sqrt(ss.var_prev_numpy(series_2d))
     avg_div_obs = ss.avg_div_numpy(series_2d)
-    # var_div_obs = ss.var_div_numpy(series_2d)
+    var_div_obs = ss.var_div_numpy(series_2d)
     max_abundance_obs = ss.max_abundance_numpy(series_2d)
     avg_npmi_obs = ss.avg_npmi_numpy(series_2d)
     div_all_isolates_obs = ss.div_all_isolates_numpy(series_2d)
@@ -111,7 +111,9 @@ def summary_stats(series_2d):
 
     return np.array(
         [num_strains_obs, avg_prev_obs, var_prev_obs, avg_div_obs,
-         max_abundance_obs, avg_npmi_obs, div_all_isolates_obs], float)
+         max_abundance_obs, avg_npmi_obs, div_all_isolates_obs, 
+         avg_time_obs, avg_time_repeat_obs, var_time_repeat_obs, var_div_obs], float)
+
 
 
 # synthetic data
@@ -137,7 +139,8 @@ y_obs_array = _Tdry
 print("s_obs", s_obs_v5_numba)
 
 # scale = abs(s_obs_v5_numba)
-scale = np.array([28.0, 520.0, 56700.0, 27.5, 97.2, 0.448, 26.4], dtype=float)
+scale = np.array([28.0, 520.0, 56700.0, 27.5, 97.2, 0.448, 26.4, 
+23.0, 1.12, 0.174, 1.81], dtype=float)
 print("scale", scale)
 
 # function: discrepancy
