@@ -1,0 +1,64 @@
+nohup: ignoring input
+T's size 920
+True True
+s_obs [ 0.  0. nan  0.]
+scale [5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+dist nan number:  0
+dist nan number:  50
+dist nan number:  100
+dist nan number:  150
+dist nan number:  200
+dist nan number:  250
+dist nan number:  300
+dist nan number:  350
+dist nan number:  400
+dist nan number:  450
+dist nan number:  500
+dist nan number:  550
+dist nan number:  600
+dist nan number:  650
+dist nan number:  700
+dist nan number:  750
+dist nan number:  800
+dist nan number:  850
+dist nan number:  900
+dist nan number:  950
+dist nan number:  1000
+dist nan number:  1050
+dist nan number:  1100
+dist nan number:  1150
+dist nan number:  1200
+dist nan number:  1250
+dist nan number:  1300
+dist nan number:  1350
+dist nan number:  1400
+dist nan number:  1450
+Traceback (most recent call last):
+  File "/home/ubuntu/strepa/StrepA_program/code/from_260312/StrepA_ABC_2params_R02p5.py", line 296, in <module>
+    eps, pilots = select_epsilon_2params(R0_range, sigma_range, s_obs_v5_numba, scale,
+                  ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                         n_pilot=1500, quantile=0.2, seed=123)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/strepa/StrepA_program/code/from_260312/StrepA_ABC_2params_R02p5.py", line 217, in select_epsilon_2params
+    eps = np.quantile(dists, quantile)
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/numpy/lib/_function_base_impl.py", line 4556, in quantile
+    return _quantile_unchecked(
+        a, q, axis, out, overwrite_input, method, keepdims, weights)
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/numpy/lib/_function_base_impl.py", line 4569, in _quantile_unchecked
+    return _ureduce(a,
+                    func=_quantile_ureduce_func,
+    ...<5 lines>...
+                    overwrite_input=overwrite_input,
+                    method=method)
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/numpy/lib/_function_base_impl.py", line 3914, in _ureduce
+    r = func(a, **kwargs)
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/numpy/lib/_function_base_impl.py", line 4744, in _quantile_ureduce_func
+    result = _quantile(arr,
+                       quantiles=q,
+    ...<2 lines>...
+                       out=out,
+                       weights=wgt)
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/numpy/lib/_function_base_impl.py", line 4866, in _quantile
+    slices_having_nans = np.isnan(arr[-1, ...])
+                                  ~~~^^^^^^^^^
+IndexError: index -1 is out of bounds for axis 0 with size 0

@@ -1,4 +1,4 @@
-# file name: StrepA_ABC_2params_R02p0.py
+# file name: StrepA_ABC_2params_R01p5.py
 
 
 # Packages:
@@ -307,10 +307,10 @@ if core_params_num == 2:
     print("Posterior mean R0: ", R0_samps.mean())
     print("Posterior mean sigma: ", sigma_samps.mean())
 
-    np.savetxt("../../experimental_data/from_260312/R0_samps_2params_R02p0.csv", R0_samps, delimiter=",")
-    np.savetxt("../../experimental_data/from_260312/sigma_samps_2params_R02p0.csv", sigma_samps, delimiter=",")
-    np.savetxt("../../experimental_data/from_260312/dists_acc_2params_R02p0.csv", dists_acc, delimiter=",")
-    np.savetxt("../../experimental_data/from_260312/ss_2params_R02p0.csv", ss, delimiter=",")
+    np.savetxt("../../experimental_data/from_260312/R0_samps_2params_R01p5.csv", R0_samps, delimiter=",")
+    np.savetxt("../../experimental_data/from_260312/sigma_samps_2params_R01p5.csv", sigma_samps, delimiter=",")
+    np.savetxt("../../experimental_data/from_260312/dists_acc_2params_R01p5.csv", dists_acc, delimiter=",")
+    np.savetxt("../../experimental_data/from_260312/ss_2params_R01p5.csv", ss, delimiter=",")
 
 elif core_params_num == 3:
     #
@@ -329,11 +329,11 @@ elif core_params_num == 3:
     print("Posterior mean sigma: ", sigma_samps.mean())
     print("Posterior mean Dimmunity: ", Dimmunity_samps.mean())
 
-    np.savetxt("../../experimental_data/from_260312/R0_samps_3params_R02p0.csv", R0_samps, delimiter=",")
-    np.savetxt("../../experimental_data/from_260312/sigma_samps_3params_R02p0.csv", sigma_samps, delimiter=",")
-    np.savetxt("../../experimental_data/from_260312/Dimmunity_samps_3params_R02p0.csv", Dimmunity_samps, delimiter=",")
-    np.savetxt("../../experimental_data/from_260312/dists_acc_3params_R02p0.csv", dists_acc, delimiter=",")
-    np.savetxt("../../experimental_data/from_260312/ss_3params_R02p0.csv", ss, delimiter=",")
+    np.savetxt("../../experimental_data/from_260312/R0_samps_3params_R01p5.csv", R0_samps, delimiter=",")
+    np.savetxt("../../experimental_data/from_260312/sigma_samps_3params_R01p5.csv", sigma_samps, delimiter=",")
+    np.savetxt("../../experimental_data/from_260312/Dimmunity_samps_3params_R01p5.csv", Dimmunity_samps, delimiter=",")
+    np.savetxt("../../experimental_data/from_260312/dists_acc_3params_R01p5.csv", dists_acc, delimiter=",")
+    np.savetxt("../../experimental_data/from_260312/ss_3params_R01p5.csv", ss, delimiter=",")
 else:
     raise ValueError('Invalid core params num')
 
