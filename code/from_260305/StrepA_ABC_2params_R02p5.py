@@ -116,16 +116,16 @@ def summary_stats(series_2d):
 
 # synthetic data
 if core_params_num == 2:
-    _Tdry = simulate_prevalence_v5_numba(np.array([2.5, 0.6], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry = simulate_prevalence_v5_numba(np.array([2.5, 0.8], float), fixed_params, core_params_num, seed=int(123))
     T = _Tdry.size
     print("T's size", T)
-    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.5, 0.6], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.5, 0.8], float), fixed_params, core_params_num, seed=int(123))
     print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
 elif core_params_num == 3:
-    _Tdry = simulate_prevalence_v5_numba(np.array([2.5, 0.6, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry = simulate_prevalence_v5_numba(np.array([2.5, 0.8, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
     T = _Tdry.size
     print("T's size", T)
-    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.5, 0.6, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.5, 0.8, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
     print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
 
 else:
@@ -287,7 +287,7 @@ def abc_reject_2params(R0_range, sigma_range, core_params_num, s_obs, scale, eps
     return acc, dists_acc, trials, ss
 
 
-R0_range= [0.1, 5.0]
+R0_range= [1.0, 5.0]
 sigma_range = [0.1, 1.0]
 # Dimmunity_range = [0.05, 0.5]
 # eps = 0.17756345360659403
