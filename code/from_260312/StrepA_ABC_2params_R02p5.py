@@ -116,16 +116,16 @@ def summary_stats(series_2d):
 
 # synthetic data
 if core_params_num == 2:
-    _Tdry = simulate_prevalence_v5_numba(np.array([2.5, 0.8], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry = simulate_prevalence_v5_numba(np.array([2.5,0.4], float), fixed_params, core_params_num, seed=int(123))
     T = _Tdry.size
     print("T's size", T)
-    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.5, 0.8], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.5, 0.4], float), fixed_params, core_params_num, seed=int(123))
     print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
 elif core_params_num == 3:
-    _Tdry = simulate_prevalence_v5_numba(np.array([2.5, 0.8, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry = simulate_prevalence_v5_numba(np.array([2.5, 0.4, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
     T = _Tdry.size
     print("T's size", T)
-    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.5, 0.8, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.5, 0.4, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
     print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
 
 else:
