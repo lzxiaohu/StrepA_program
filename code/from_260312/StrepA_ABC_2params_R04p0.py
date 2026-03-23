@@ -288,7 +288,7 @@ def abc_reject_2params(R0_range, sigma_range, core_params_num, s_obs, scale, eps
 
 
 R0_range= [1.0, 8.0]
-sigma_range = [0.2, 1.0]
+sigma_range = [0.2, 0.8]
 # Dimmunity_range = [0.05, 0.5]
 # eps = 0.17756345360659403
 
