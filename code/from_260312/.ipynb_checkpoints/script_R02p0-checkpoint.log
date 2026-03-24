@@ -1,0 +1,209 @@
+nohup: ignoring input
+T's size 920
+True True
+s_obs [61.39130435 31.09624229 -0.18144325  2.69040636]
+scale [5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+dist 0.4989306642082675 number:  0
+dist 0.1377739269798682 number:  50
+dist 0.4392305363348254 number:  100
+dist nan number:  150
+dist 0.12708122179783618 number:  200
+dist 0.6210839124166683 number:  250
+dist nan number:  300
+dist 0.22200967342203687 number:  350
+dist nan number:  400
+dist nan number:  450
+dist 0.21495538990820715 number:  500
+dist nan number:  550
+dist 0.07460518479371914 number:  600
+dist 0.10538973281281593 number:  650
+dist 0.4884507771033954 number:  700
+dist 0.09288161875529354 number:  750
+dist 0.09594837351680173 number:  800
+dist 0.09145071281283636 number:  850
+dist nan number:  900
+dist nan number:  950
+dist nan number:  1000
+dist nan number:  1050
+dist 0.3485498310644348 number:  1100
+dist nan number:  1150
+dist 0.45143588024472986 number:  1200
+dist 0.32292203909295136 number:  1250
+dist 0.041479223045286416 number:  1300
+dist 0.1074268574878357 number:  1350
+dist 0.10528854553140217 number:  1400
+dist 0.11968727789331164 number:  1450
+eps:  0.10967822814400117
+dists:  1011
+dist 0.10915114235714277 accepted:  30 trials:  168
+dist 0.092651557696056 accepted:  60 trials:  395
+dist 0.0987515035565319 accepted:  90 trials:  602
+dist 0.09145071281283636 accepted:  120 trials:  851
+dist 0.022171665104035412 accepted:  150 trials:  1085
+dist 0.09483905616365923 accepted:  180 trials:  1329
+dist 0.02391694290443125 accepted:  210 trials:  1558
+dist 0.012271316012790225 accepted:  240 trials:  1790
+dist 0.09417642286164186 accepted:  270 trials:  2017
+dist 0.07493985375390684 accepted:  300 trials:  2249
+dist 0.09708674949585677 accepted:  330 trials:  2469
+dist 0.09842695937742361 accepted:  360 trials:  2663
+dist 0.05850280255709777 accepted:  390 trials:  2856
+dist 0.04684246052386965 accepted:  420 trials:  3155
+dist 0.026173190578579305 accepted:  450 trials:  3350
+dist 0.10571378840876655 accepted:  480 trials:  3526
+dist 0.0948713046993646 accepted:  510 trials:  3732
+dist 0.021029594785548122 accepted:  540 trials:  3973
+dist 0.10531099211706045 accepted:  570 trials:  4179
+dist 0.10284090685369295 accepted:  600 trials:  4385
+dist 0.0657648658482134 accepted:  630 trials:  4707
+dist 0.0548654709133957 accepted:  660 trials:  4946
+dist 0.09317338713017738 accepted:  690 trials:  5152
+dist 0.10812111188580865 accepted:  720 trials:  5372
+dist 0.10370287455952272 accepted:  750 trials:  5607
+dist 0.1095377987035102 accepted:  780 trials:  5824
+dist 0.09408863022916815 accepted:  810 trials:  6030
+dist 0.09834514673599265 accepted:  840 trials:  6202
+dist 0.044556330903942655 accepted:  870 trials:  6380
+dist 0.09343532989831571 accepted:  900 trials:  6543
+dist 0.10125197319402358 accepted:  930 trials:  6756
+dist 0.045364056585775435 accepted:  960 trials:  7045
+dist 0.09814053396668271 accepted:  990 trials:  7227
+dist 0.04569247112011637 accepted:  1020 trials:  7475
+dist 0.1044110696793404 accepted:  1050 trials:  7671
+dist 0.04356386694497618 accepted:  1080 trials:  7969
+dist 0.09460391748176283 accepted:  1110 trials:  8177
+dist 0.054565057968656516 accepted:  1140 trials:  8444
+dist 0.044517946075193236 accepted:  1170 trials:  8639
+dist 0.04838860814151829 accepted:  1200 trials:  8893
+dist 0.1021383211767268 accepted:  1230 trials:  9112
+dist 0.04616061812159261 accepted:  1260 trials:  9329
+dist 0.09629165554363049 accepted:  1290 trials:  9579
+dist 0.09222285530528364 accepted:  1320 trials:  9858
+dist 0.041828006098626656 accepted:  1350 trials:  10105
+dist 0.09420728490947558 accepted:  1380 trials:  10264
+dist 0.0958348392916193 accepted:  1410 trials:  10483
+dist 0.09725389218482185 accepted:  1440 trials:  10621
+dist 0.0936954811184939 accepted:  1470 trials:  10819
+dist 0.09541739650232736 accepted:  1500 trials:  11000
+dist 0.04014735689146387 accepted:  1530 trials:  11203
+dist 0.09421705406231753 accepted:  1560 trials:  11424
+dist 0.09572396487035743 accepted:  1590 trials:  11571
+dist 0.09900374813923772 accepted:  1620 trials:  11766
+dist 0.10349223933055295 accepted:  1650 trials:  11953
+dist 0.0507245532576408 accepted:  1680 trials:  12151
+dist 0.09428047692357303 accepted:  1710 trials:  12315
+dist 0.10165284635956691 accepted:  1740 trials:  12556
+dist 0.03121678479964735 accepted:  1770 trials:  12777
+dist 0.0919291735579272 accepted:  1800 trials:  12995
+dist 0.09841169150511933 accepted:  1830 trials:  13235
+dist 0.04852002983517274 accepted:  1860 trials:  13420
+dist 0.08339287709671661 accepted:  1890 trials:  13586
+dist 0.09196086127935549 accepted:  1920 trials:  13754
+dist 0.09453823220272908 accepted:  1950 trials:  13952
+dist 0.07413332395285555 accepted:  1980 trials:  14157
+Accepted:  2000 Trials:  14291 Acceptance rate:  0.1399482191589112
+Posterior mean R0:  2.99187012215942
+Posterior mean sigma:  0.4997585477780783
+Elapsed: 61206.6410 s
+nohup: ignoring input
+T's size 920
+True True
+R0 (2000,) [4.27901825 1.9262225  2.99115587 1.73735195 4.66849029 2.98680737
+ 2.87740315 2.94256561 3.44057931 4.24844844]
+sigma (2000,) [0.73393562 0.2995424  0.54963478 0.20893695 0.71881415 0.48098752
+ 0.57413504 0.51146909 0.64632746 0.67930616]
+theta (2000, 2) [[4.27901825 0.73393562]
+ [1.9262225  0.2995424 ]
+ [2.99115587 0.54963478]
+ [1.73735195 0.20893695]
+ [4.66849029 0.71881415]
+ [2.98680737 0.48098752]
+ [2.87740315 0.57413504]
+ [2.94256561 0.51146909]
+ [3.44057931 0.64632746]
+ [4.24844844 0.67930616]]
+rmse: 6.605792136245479
+mae: 2.8087010869565217
+coverage: 0.9489130434782609
+Elapsed: 8257.9441 s
+Traceback (most recent call last):
+  File "/home/ubuntu/strepa/StrepA_program/code/from_260312/pcc_sigma0p3_R02p0.py", line 216, in <module>
+    heatmap(y_obs_array, "Observed", save_path="../../figures/from_260312/ppc/sigma0p3/R02p0/")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/strepa/StrepA_program/code/from_260312/pcc_sigma0p3_R02p0.py", line 210, in heatmap
+    plt.savefig(f"{save_path}{title}.png", dpi=300, bbox_inches="tight")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/pyplot.py", line 1251, in savefig
+    res = fig.savefig(*args, **kwargs)  # type: ignore[func-returns-value]
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/figure.py", line 3490, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2186, in print_figure
+    result = print_method(
+        filename,
+    ...<3 lines>...
+        bbox_inches_restore=_bbox_inches_restore,
+        **kwargs)
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2042, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+                                                                 ~~~~^
+        *args, **{k: v for k, v in kwargs.items() if k not in skip}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 481, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 430, in _print_pil
+    mpl.image.imsave(
+    ~~~~~~~~~~~~~~~~^
+        filename_or_obj, self.buffer_rgba(), format=fmt, origin="upper",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dpi=self.figure.dpi, metadata=metadata, pil_kwargs=pil_kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/image.py", line 1657, in imsave
+    image.save(fname, **pil_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/PIL/Image.py", line 2566, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '../../figures/from_260312/ppc/sigma0p3/R02p0/Observed.png'
+nohup: ignoring input
+T's size 920
+True True
+R0 (2000,) [4.27901825 1.9262225  2.99115587 1.73735195 4.66849029 2.98680737
+ 2.87740315 2.94256561 3.44057931 4.24844844]
+sigma (2000,) [0.73393562 0.2995424  0.54963478 0.20893695 0.71881415 0.48098752
+ 0.57413504 0.51146909 0.64632746 0.67930616]
+theta (2000, 2) [[4.27901825 0.73393562]
+ [1.9262225  0.2995424 ]
+ [2.99115587 0.54963478]
+ [1.73735195 0.20893695]
+ [4.66849029 0.71881415]
+ [2.98680737 0.48098752]
+ [2.87740315 0.57413504]
+ [2.94256561 0.51146909]
+ [3.44057931 0.64632746]
+ [4.24844844 0.67930616]]
+rmse: 6.605792136245479
+mae: 2.8087010869565217
+coverage: 0.9489130434782609
+Elapsed: 8326.1927 s
+Worst strain coverage: 0.0
+Best strain coverage: 1.0
+Worst strain MAE: 29.450478260869566
+Worst time coverage: 0.925
+Best time coverage: 0.975
+Worst time MAE: 4.5784625
+============================================================
+POSTERIOR PREDICTIVE CHECK RESULTS
+============================================================
+Ground truth:      R0 = 2.0, sigma = 0.3
+Posterior samples: 2000
+R0 posterior:      2.992 ± 0.854
+sigma posterior:   0.500 ± 0.157
+------------------------------------------------------------
+RMSE:              6.605792
+MAE:               2.808701
+90% CI Coverage:   94.89%
+Expected Coverage: 90.00%
+------------------------------------------------------------
+Status: ⚠ Over-coverage (model underconfident)
+============================================================
