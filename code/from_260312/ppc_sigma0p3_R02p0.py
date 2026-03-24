@@ -99,16 +99,16 @@ def summary_stats(series_2d):
 # GENERATE SYNTHETIC DATA
 # ============================================================================
 if core_params_num == 2:
-    _Tdry = simulate_prevalence_v5_numba(np.array([3.0, 0.3], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry = simulate_prevalence_v5_numba(np.array([2.0, 0.3], float), fixed_params, core_params_num, seed=int(123))
     T = _Tdry.size
     print("T's size", T)
-    _Tdry1 = simulate_prevalence_v5_numba(np.array([3.0, 0.3], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.0, 0.3], float), fixed_params, core_params_num, seed=int(123))
     print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
 elif core_params_num == 3:
-    _Tdry = simulate_prevalence_v5_numba(np.array([3.0, 0.3, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry = simulate_prevalence_v5_numba(np.array([2.0, 0.3, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
     T = _Tdry.size
     print("T's size", T)
-    _Tdry1 = simulate_prevalence_v5_numba(np.array([3.0, 0.3, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.0, 0.3, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
     print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
 else:
     raise ValueError('Invalid core params num')
@@ -118,8 +118,8 @@ y_obs_array = _Tdry
 # ============================================================================
 # LOAD POSTERIOR SAMPLES
 # ============================================================================
-csv_path_R0 = "../../experimental_data/from_260312/R0_samps_2params_R03p0.csv"
-csv_path_sigma = "../../experimental_data/from_260312/sigma_samps_2params_R03p0.csv"
+csv_path_R0 = "../../experimental_data/from_260312/R0_samps_2params_R02p0.csv"
+csv_path_sigma = "../../experimental_data/from_260312/sigma_samps_2params_R02p0.csv"
 total_length = 2000
 R0_samps = np.loadtxt(csv_path_R0, delimiter=",")
 sigma_samps = np.loadtxt(csv_path_sigma, delimiter=",")
@@ -213,18 +213,18 @@ def heatmap(M, title, save_path=None):
 # ============================================================================
 # VISUALIZE RESULTS
 # ============================================================================
-heatmap(y_obs_array, "Observed", save_path="../../figures/from_260312/ppc/sigma0p3/R03p0/")
-heatmap(pred_mean, "PPC mean", save_path="../../figures/from_260312/ppc/sigma0p3/R03p0/")
-heatmap(pred_mean - y_obs_array, "Error (mean - obs)", save_path="../../figures/from_260312/ppc/sigma0p3/R03p0/")
+heatmap(y_obs_array, "Observed", save_path="../../figures/from_260312/ppc/sigma0p3/R02p0/")
+heatmap(pred_mean, "PPC mean", save_path="../../figures/from_260312/ppc/sigma0p3/R02p0/")
+heatmap(pred_mean - y_obs_array, "Error (mean - obs)", save_path="../../figures/from_260312/ppc/sigma0p3/R02p0/")
 
 # ============================================================================
 # ADDITIONAL DIAGNOSTICS (OPTIONAL)
 # ============================================================================
 # Uncertainty heatmap
-heatmap(pred_hi - pred_lo, "90% CI Width (Uncertainty)", save_path="../../figures/from_260312/ppc/sigma0p3/R03p0/")
+heatmap(pred_hi - pred_lo, "90% CI Width (Uncertainty)", save_path="../../figures/from_260312/ppc/sigma0p3/R02p0/")
 
 # Coverage map
-heatmap(inside.astype(float), "Coverage Map (1=inside, 0=outside)", save_path="../../figures/from_260312/ppc/sigma0p3/R03p0/")
+heatmap(inside.astype(float), "Coverage Map (1=inside, 0=outside)", save_path="../../figures/from_260312/ppc/sigma0p3/R02p0/")
 
 # Strain-specific metrics
 strain_coverage = inside.mean(axis=1)
@@ -246,7 +246,7 @@ print("Worst time MAE:", time_mae.max())
 print("=" * 60)
 print("POSTERIOR PREDICTIVE CHECK RESULTS")
 print("=" * 60)
-print(f"Ground truth:      R0 = 2.5, sigma = 0.4")
+print(f"Ground truth:      R0 = 2.0, sigma = 0.3")
 print(f"Posterior samples: {len(theta_samps)}")
 print(f"R0 posterior:      {R0_samps.mean():.3f} ± {R0_samps.std():.3f}")
 print(f"sigma posterior:   {sigma_samps.mean():.3f} ± {sigma_samps.std():.3f}")

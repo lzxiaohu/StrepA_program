@@ -105,3 +105,147 @@ Accepted:  2000 Trials:  27623 Acceptance rate:  0.07240343192267314
 Posterior mean R0:  2.023922257868533
 Posterior mean sigma:  0.45498953525925584
 Elapsed: 86496.9104 s
+nohup: ignoring input
+T's size 920
+True True
+R0 (2000,) [2.4829341  1.36867597 1.99340368 1.35825351 1.74130233 1.54408951
+ 1.58429833 1.61937198 1.54841962 2.7578508 ]
+sigma (2000,) [0.57796412 0.20893695 0.48098752 0.2181768  0.39713305 0.30807257
+ 0.27690527 0.30620654 0.27723429 0.60397568]
+theta (2000, 2) [[2.4829341  0.57796412]
+ [1.36867597 0.20893695]
+ [1.99340368 0.48098752]
+ [1.35825351 0.2181768 ]
+ [1.74130233 0.39713305]
+ [1.54408951 0.30807257]
+ [1.58429833 0.27690527]
+ [1.61937198 0.30620654]
+ [1.54841962 0.27723429]
+ [2.7578508  0.60397568]]
+rmse: 2.523860487223371
+mae: 0.6811331521739131
+coverage: 0.9771739130434782
+Elapsed: 6304.0667 s
+Traceback (most recent call last):
+  File "/home/ubuntu/strepa/StrepA_program/code/from_260312/pcc_sigma0p3_R01p5.py", line 216, in <module>
+    heatmap(y_obs_array, "Observed", save_path="../../figures/from_260312/ppc/sigma0p3/R01p5/")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/strepa/StrepA_program/code/from_260312/pcc_sigma0p3_R01p5.py", line 210, in heatmap
+    plt.savefig(f"{save_path}{title}.png", dpi=300, bbox_inches="tight")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/pyplot.py", line 1251, in savefig
+    res = fig.savefig(*args, **kwargs)  # type: ignore[func-returns-value]
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/figure.py", line 3490, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2186, in print_figure
+    result = print_method(
+        filename,
+    ...<3 lines>...
+        bbox_inches_restore=_bbox_inches_restore,
+        **kwargs)
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2042, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+                                                                 ~~~~^
+        *args, **{k: v for k, v in kwargs.items() if k not in skip}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 481, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 430, in _print_pil
+    mpl.image.imsave(
+    ~~~~~~~~~~~~~~~~^
+        filename_or_obj, self.buffer_rgba(), format=fmt, origin="upper",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dpi=self.figure.dpi, metadata=metadata, pil_kwargs=pil_kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/matplotlib/image.py", line 1657, in imsave
+    image.save(fname, **pil_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.13/site-packages/PIL/Image.py", line 2566, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '../../figures/from_260312/ppc/sigma0p3/R01p5/Observed.png'
+nohup: ignoring input
+T's size 920
+True True
+R0 (100,) [2.4829341  1.36867597 1.99340368 1.35825351 1.74130233 1.54408951
+ 1.58429833 1.61937198 1.54841962 2.7578508 ]
+sigma (100,) [0.57796412 0.20893695 0.48098752 0.2181768  0.39713305 0.30807257
+ 0.27690527 0.30620654 0.27723429 0.60397568]
+theta (100, 2) [[2.4829341  0.57796412]
+ [1.36867597 0.20893695]
+ [1.99340368 0.48098752]
+ [1.35825351 0.2181768 ]
+ [1.74130233 0.39713305]
+ [1.54408951 0.30807257]
+ [1.58429833 0.27690527]
+ [1.61937198 0.30620654]
+ [1.54841962 0.27723429]
+ [2.7578508  0.60397568]]
+rmse: 2.590811900611047
+mae: 0.7029347826086957
+coverage: 0.9771739130434782
+Elapsed: 330.8458 s
+Worst strain coverage: 0.08695652173913043
+Best strain coverage: 1.0
+Worst strain MAE: 13.826086956521738
+Worst time coverage: 0.975
+Best time coverage: 1.0
+Worst time MAE: 1.1790000000000003
+============================================================
+POSTERIOR PREDICTIVE CHECK RESULTS
+============================================================
+Ground truth:      R0 = 2.5, sigma = 0.4
+Posterior samples: 100
+R0 posterior:      2.023 ± 0.447
+sigma posterior:   0.457 ± 0.142
+------------------------------------------------------------
+RMSE:              2.590812
+MAE:               0.702935
+90% CI Coverage:   97.72%
+Expected Coverage: 90.00%
+------------------------------------------------------------
+Status: ⚠ Over-coverage (model underconfident)
+============================================================
+nohup: ignoring input
+T's size 920
+True True
+R0 (2000,) [2.4829341  1.36867597 1.99340368 1.35825351 1.74130233 1.54408951
+ 1.58429833 1.61937198 1.54841962 2.7578508 ]
+sigma (2000,) [0.57796412 0.20893695 0.48098752 0.2181768  0.39713305 0.30807257
+ 0.27690527 0.30620654 0.27723429 0.60397568]
+theta (2000, 2) [[2.4829341  0.57796412]
+ [1.36867597 0.20893695]
+ [1.99340368 0.48098752]
+ [1.35825351 0.2181768 ]
+ [1.74130233 0.39713305]
+ [1.54408951 0.30807257]
+ [1.58429833 0.27690527]
+ [1.61937198 0.30620654]
+ [1.54841962 0.27723429]
+ [2.7578508  0.60397568]]
+rmse: 2.523860487223371
+mae: 0.6811331521739131
+coverage: 0.9771739130434782
+Elapsed: 6289.7252 s
+Worst strain coverage: 0.08695652173913043
+Best strain coverage: 1.0
+Worst strain MAE: 13.574282608695652
+Worst time coverage: 0.975
+Best time coverage: 1.0
+Worst time MAE: 1.1638124999999997
+============================================================
+POSTERIOR PREDICTIVE CHECK RESULTS
+============================================================
+Ground truth:      R0 = 1.5, sigma = 0.3
+Posterior samples: 2000
+R0 posterior:      2.024 ± 0.461
+sigma posterior:   0.455 ± 0.140
+------------------------------------------------------------
+RMSE:              2.523860
+MAE:               0.681133
+90% CI Coverage:   97.72%
+Expected Coverage: 90.00%
+------------------------------------------------------------
+Status: ⚠ Over-coverage (model underconfident)
+============================================================
