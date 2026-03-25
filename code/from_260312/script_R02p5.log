@@ -105,3 +105,93 @@ Accepted:  2000 Trials:  19694 Acceptance rate:  0.10155377272265664
 Posterior mean R0:  2.702985747900577
 Posterior mean sigma:  0.5043290349230165
 Elapsed: 73611.2974 s
+nohup: ignoring input
+python: can't open file '/home/ubuntu/strepa/StrepA_program/code/from_260312/pcc_sigma0p3_R02p5.py': [Errno 2] No such file or directory
+nohup: ignoring input
+python: can't open file '/home/ubuntu/strepa/StrepA_program/code/from_260312/pcc_sigma0p5_R02p5.py': [Errno 2] No such file or directory
+nohup: ignoring input
+T's size 920
+True True
+y_obs_array.mean() 1.0260869565217392
+R0 (100,) [1.88143949 1.9262225  1.73735195 2.98680737 2.94256561 1.71650703
+ 1.97498042 2.48260466 1.60919117 2.84817529]
+sigma (100,) [0.34749745 0.33272319 0.21191593 0.57465003 0.61529212 0.22423573
+ 0.38385715 0.46284407 0.31601956 0.61754683]
+theta (100, 2) [[1.88143949 0.34749745]
+ [1.9262225  0.33272319]
+ [1.73735195 0.21191593]
+ [2.98680737 0.57465003]
+ [2.94256561 0.61529212]
+ [1.71650703 0.22423573]
+ [1.97498042 0.38385715]
+ [2.48260466 0.46284407]
+ [1.60919117 0.31601956]
+ [2.84817529 0.61754683]]
+rmse: 5.448896268371995
+mae: 1.9208369565217391
+coverage: 0.9510869565217391
+Elapsed: 406.8797 s
+Worst strain coverage: 0.0
+Best strain coverage: 1.0
+Worst strain MAE: 22.753913043478267
+Worst time coverage: 0.95
+Best time coverage: 0.975
+Worst time MAE: 3.0574999999999988
+============================================================
+POSTERIOR PREDICTIVE CHECK RESULTS
+============================================================
+Ground truth:      R0 = 2.5, sigma = 0.3
+Posterior samples: 100
+R0 posterior:      2.580 ± 0.802
+sigma posterior:   0.484 ± 0.158
+------------------------------------------------------------
+RMSE:              5.448896
+MAE:               1.920837
+90% CI Coverage:   95.11%
+Expected Coverage: 90.00%
+------------------------------------------------------------
+Status: ⚠ Over-coverage (model underconfident)
+============================================================
+nohup: ignoring input
+T's size 920
+True True
+y_obs_array.mean() 1.0260869565217392
+R0 (2000,) [1.88143949 1.9262225  1.73735195 2.98680737 2.94256561 1.71650703
+ 1.97498042 2.48260466 1.60919117 2.84817529]
+sigma (2000,) [0.34749745 0.33272319 0.21191593 0.57465003 0.61529212 0.22423573
+ 0.38385715 0.46284407 0.31601956 0.61754683]
+theta (2000, 2) [[1.88143949 0.34749745]
+ [1.9262225  0.33272319]
+ [1.73735195 0.21191593]
+ [2.98680737 0.57465003]
+ [2.94256561 0.61529212]
+ [1.71650703 0.22423573]
+ [1.97498042 0.38385715]
+ [2.48260466 0.46284407]
+ [1.60919117 0.31601956]
+ [2.84817529 0.61754683]]
+rmse: 5.354125098905354
+mae: 1.8436244565217392
+coverage: 0.9510869565217391
+Elapsed: 7713.4187 s
+Worst strain coverage: 0.0
+Best strain coverage: 1.0
+Worst strain MAE: 22.837043478260867
+Worst time coverage: 0.95
+Best time coverage: 0.975
+Worst time MAE: 2.94475
+============================================================
+POSTERIOR PREDICTIVE CHECK RESULTS
+============================================================
+Ground truth:      R0 = 2.5, sigma = 0.3
+Posterior samples: 2000
+R0 posterior:      2.703 ± 0.901
+sigma posterior:   0.504 ± 0.166
+------------------------------------------------------------
+RMSE:              5.354125
+MAE:               1.843624
+90% CI Coverage:   95.11%
+Expected Coverage: 90.00%
+------------------------------------------------------------
+Status: ⚠ Over-coverage (model underconfident)
+============================================================
