@@ -41,3 +41,10 @@ Expected Coverage: 90.00%
 ------------------------------------------------------------
 Status: ⚠ Over-coverage (model underconfident)
 ============================================================
+nohup: ignoring input
+T's size 920
+True True
+scale [5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+weights:  [1. 1. 3. 1.]
+s_obs [32.17391304 18.55863478 -0.09689335  1.98871199]
+dist 1.683773065190031 number:  0
