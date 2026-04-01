@@ -95,6 +95,34 @@ def summary_stats(series_2d):
     return np.array(
         [avg_prev_obs, var_prev_obs, avg_npmi_obs, div_all_isolates_obs], float)
 
+
+def plot_dots(x, y, title="Scatter Plot", save_path=None):
+    """
+    Plot x and y with dots.
+
+    Parameters:
+    -----------
+    x : array-like
+        X coordinates
+    y : array-like
+        Y coordinates
+    title : str
+        Plot title
+    xlabel : str
+        X-axis label
+    ylabel : str
+        Y-axis label
+    """
+    plt.figure(figsize=(8, 6))
+    plt.scatter(x, y)
+    plt.xlabel("R0 samples")
+    plt.ylabel("sigma samples")
+    plt.title(title)
+    plt.grid(True, alpha=0.3)
+    plt.tight_layout()
+    plt.savefig(f"{save_path}{title}.png", dpi=300, bbox_inches="tight")
+    # plt.show()
+
 # ============================================================================
 # GENERATE SYNTHETIC DATA
 # ============================================================================
@@ -120,7 +148,7 @@ print("y_obs_array.mean", y_obs_array.mean())
 # ============================================================================
 csv_path_R0 = "../../experimental_data/from_260312/R0_samps_2params_R05p0.csv"
 csv_path_sigma = "../../experimental_data/from_260312/sigma_samps_2params_R05p0.csv"
-total_length = 2000
+total_length = 1000
 R0_samps = np.loadtxt(csv_path_R0, delimiter=",")
 sigma_samps = np.loadtxt(csv_path_sigma, delimiter=",")
 R0_samps = np.asarray(R0_samps, dtype=float).ravel()
@@ -130,9 +158,10 @@ theta_samps = theta_samps[np.isfinite(theta_samps).all(axis=1)]
 theta_samps = theta_samps[:total_length]
 R0_samps = theta_samps[:, 0]
 sigma_samps = theta_samps[:, 1]
-print("R0", R0_samps.shape, R0_samps[:10])
-print("sigma", sigma_samps.shape, sigma_samps[:10])
-print("theta", theta_samps.shape, theta_samps[:10, :])
+# print("R0", R0_samps.shape, R0_samps[:10])
+# print("sigma", sigma_samps.shape, sigma_samps[:10])
+# print("theta", theta_samps.shape, theta_samps[:10, :])
+plot_dots(R0_samps, sigma_samps, title="R0 vs sigma", save_path="../../figures/from_260312/ppc/sigma0p7/R05p0/")
 
 # ============================================================================
 # FUNCTION: simulate_at_obs
@@ -145,6 +174,8 @@ def simulate_at_obs(theta, seed):
 # ============================================================================
 # GENERATE POSTERIOR PREDICTIVE CHECKS
 # ============================================================================
+print("start to simulate:")
+R0_samps = theta_samps[:, 0]
 ppc = []
 for m, th in enumerate(theta_samps):
     Y_m = simulate_at_obs(th, seed=123)
@@ -208,7 +239,7 @@ def heatmap(M, title, save_path=None):
     plt.ylabel("strain")
     plt.tight_layout()
     plt.savefig(f"{save_path}{title}.png", dpi=300, bbox_inches="tight")
-    plt.show()
+    # plt.show()
 
 # ============================================================================
 # VISUALIZE RESULTS

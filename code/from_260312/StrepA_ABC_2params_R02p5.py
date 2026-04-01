@@ -14,7 +14,9 @@ from numpy.random import Generator as _NpGen, RandomState as _RS
 import functions_list_260305 as functions_list
 import summary_stats_elms_260305 as ss
 import hashlib
-import time
+import time, datetime
+import logging
+import sys
 
 start = time.perf_counter()
 
@@ -22,29 +24,37 @@ core_params_num = 2  # core params: R0 and sigma
 # core_params_num = 3  # core params: R0, sigma, and Dimmunity
 
 # fixed parameters
-DurationSimulation = 20.0     # years: 20.0
-Nstrains = 40       # number of strains: 42
-omega = 0.2     # immunity cross strains: 0.1
-x = 10.0        #
-Cperweek = 34.53    #
-Nagents = 1000      # number of agents
-alpha = 0.007        # migration rate: 3.0
-AgeDeath = 71.0     # life expectancy
+DurationSimulation = 20.0  # years: 20.0
+Nstrains = 40  # number of strains: 42
+omega = 0.2  # immunity cross strains: 0.1
+x = 10.0  #
+Cperweek = 34.53  #
+Nagents = 1000  # number of agents
+alpha = 0.007  # migration rate: 3.0
+AgeDeath = 71.0  # life expectancy
 # R0: updated parameter (Basic reproductive number)
 # Sigma: updated parameter ()
 
 if core_params_num == 2:
     Dimmunity = 10.0 * 52.14  # weeks: 0.5 * 52.14
     fixed_params = np.array([DurationSimulation, Nstrains, Dimmunity, omega,
-                         x, Cperweek, Nagents, alpha,
-                         AgeDeath], dtype=float)
+                             x, Cperweek, Nagents, alpha,
+                             AgeDeath], dtype=float)
 elif core_params_num == 3:
-    fixed_params = np.array([DurationSimulation, Nstrains, omega,x,
+    fixed_params = np.array([DurationSimulation, Nstrains, omega, x,
                              Cperweek, Nagents, alpha, AgeDeath], dtype=float)
 else:
     raise ValueError('Invalid core params num')
 
 rng = np.random.default_rng(123)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+    stream=sys.stdout  # Important for nohup
+)
+
 
 # function: build parameters
 def build_params(theta, fixed_params, core_params_num):
@@ -70,7 +80,7 @@ def build_params(theta, fixed_params, core_params_num):
 # function: seed_from_theta
 def seed_from_theta(theta, master_seed: int = 123):
     th = np.asarray(theta, np.float64).ravel()
-    b  = th.tobytes() + np.uint64(master_seed).tobytes()
+    b = th.tobytes() + np.uint64(master_seed).tobytes()
     return int.from_bytes(hashlib.sha1(b).digest()[:8], 'little')
 
 
@@ -93,8 +103,25 @@ def simulate_prevalence_v5_numba(theta, fixed_params, core_params_num, seed):
 
 
 # function: summary_stats()
-def summary_stats(series_2d):
-    y = np.asarray(series_2d, float).ravel()
+def summary_stats(series_2d, scale=None):
+    """
+    Compute summary statistics, replacing NaN with scale values if provided.
+
+    Parameters:
+    -----------
+    series_2d : array-like
+        Input data (strains × timepoints)
+    scale : array-like, optional
+        Scale values to use for NaN replacement [avg_prev, var_prev, avg_npmi, div]
+        Default: [520.0, 56700.0, 0.448, 26.4]
+
+    Returns:
+    --------
+    stats : array, shape (4,)
+        [avg_prev, var_prev, avg_npmi, diversity]
+    """
+
+    # y = np.asarray(series_2d, float).ravel()
     # avg_time_obs = ss.avg_time_obs_str(series_2d)
     # max_time_obs = ss.max_time_obs_str(series_2d)
     # num_strains_obs = ss.num_strains_obs_str(series_2d)
@@ -109,41 +136,75 @@ def summary_stats(series_2d):
     div_all_isolates_obs = ss.div_all_isolates_numpy(series_2d)
     # print("s_obs: ", avg_time_obs, avg_prev_obs, var_prev_obs, avg_div_obs, avg_npmi_obs)
 
-    return np.array(
-        [avg_prev_obs, var_prev_obs, avg_npmi_obs, div_all_isolates_obs], float)
+    # Combine into array
+    stats = np.array(
+        [avg_prev_obs, var_prev_obs, avg_npmi_obs, div_all_isolates_obs],
+        dtype=float
+    )
+
+    # Replace NaN with scale values if provided
+    if scale is not None:
+        scale = np.asarray(scale, dtype=float)
+        nan_mask = np.isnan(stats)
+        stats[nan_mask] = scale[nan_mask]
+
+    return stats
 
 
 # synthetic data
 if core_params_num == 2:
     _Tdry = simulate_prevalence_v5_numba(np.array([2.5, 0.7], float), fixed_params, core_params_num, seed=int(123))
     T = _Tdry.size
-    print("T's size", T)
+    logging.info(f"T's size: {T}")
+    # print("T's size", T)
     _Tdry1 = simulate_prevalence_v5_numba(np.array([2.5, 0.7], float), fixed_params, core_params_num, seed=int(123))
-    print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
+    logging.info(f"allclose={np.allclose(_Tdry, _Tdry1)}, same_shape={_Tdry.shape == _Tdry1.shape}")
+    # print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
 elif core_params_num == 3:
-    _Tdry = simulate_prevalence_v5_numba(np.array([2.5, 0.7, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
+    _Tdry = simulate_prevalence_v5_numba(np.array([2.5, 0.7, 0.25 * 52.14], float), fixed_params, core_params_num,
+                                         seed=int(123))
     T = _Tdry.size
-    print("T's size", T)
-    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.5, 0.7, 0.25 * 52.14], float), fixed_params, core_params_num, seed=int(123))
-    print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
+    logging.info(f"T's size: {T}")
+    # print("T's size", T)
+    _Tdry1 = simulate_prevalence_v5_numba(np.array([2.5, 0.7, 0.25 * 52.14], float), fixed_params, core_params_num,
+                                          seed=int(123))
+    logging.info(f"allclose={np.allclose(_Tdry, _Tdry1)}, same_shape={_Tdry.shape == _Tdry1.shape}")
+    # print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
 
 else:
     raise ValueError('Invalid core params num')
 
-# print(_Tdry)
-s_obs_v5_numba = summary_stats(_Tdry)
-y_obs_array = _Tdry
-print("s_obs", s_obs_v5_numba)
-
 # scale = abs(s_obs_v5_numba)
 scale = np.array([520.0, 56700.0, 0.448, 26.4], dtype=float)
-print("scale", scale)
+logging.info(f"scale:{scale}")
+# print("scale", scale)
+
+# Give npmi (index 2) more weight
+weights = np.array([1.0, 1.0, 3.0, 1.0])  # npmi has 3x weight
+logging.info(f"weights: {weights}")
+# print("weights: ", weights)
+
+# print(_Tdry)
+s_obs_v5_numba = summary_stats(_Tdry, scale=scale)
+y_obs_array = _Tdry
+logging.info(f"s_obs: {s_obs_v5_numba}")
+
+
+# print("s_obs", s_obs_v5_numba)
 
 # function: discrepancy
-def discrepancy(s_sim, s_obs, scale):
+def discrepancy(s_sim, s_obs, scale, weights=None):
     # scale the difference between simulated data and observations
+
+    if weights is None:
+        weights = np.ones_like(s_sim)
+    else:
+        weights = np.asarray(weights, float)
+
     z = (s_sim - s_obs) / scale
-    return np.sqrt(np.sum(z**2))
+    weighted_z = weights * z
+    return np.sqrt(np.sum(weighted_z ** 2))
+
 
 # function: prior_value_3params
 def prior_value_3params(R0_range, sigma_range, Dimmunity_range, rng):
@@ -157,6 +218,7 @@ def prior_value_3params(R0_range, sigma_range, Dimmunity_range, rng):
     # sigma = rng.uniform(1.0, max(5.0, y.std(ddof=1)*2))
     return R0_sel, sigma_sel, Dimmunity_sel
 
+
 # function: prior_value_2params
 def prior_value_2params(R0_range, sigma_range, rng):
     # intercept a: around distance range
@@ -165,6 +227,7 @@ def prior_value_2params(R0_range, sigma_range, rng):
     sigma_sel = rng.uniform(sigma_range[0], sigma_range[1])
 
     return R0_sel, sigma_sel
+
 
 # function: select_epsilon_3params
 def select_epsilon_3params(R0_range, sigma_range, Dimmunity_range, s_obs, scale, n_pilot=5000, quantile=0.02, seed=123):
@@ -176,9 +239,10 @@ def select_epsilon_3params(R0_range, sigma_range, Dimmunity_range, s_obs, scale,
 
     for ii in range(n_pilot):
         R0_sel, sigma_sel, Dimmunity_sel = prior_value_3params(R0_range, sigma_range, Dimmunity_range, rng)
-        y_sim = simulate_prevalence_v5_numba([R0_sel, sigma_sel, Dimmunity_sel*52.14], fixed_params, core_params_num, seed)
-        s_sim = summary_stats(y_sim)
-        tempt = discrepancy(s_sim, s_obs, scale)
+        y_sim = simulate_prevalence_v5_numba([R0_sel, sigma_sel, Dimmunity_sel * 52.14], fixed_params, core_params_num,
+                                             seed)
+        s_sim = summary_stats(y_sim, scale=scale)
+        tempt = discrepancy(s_sim, s_obs, scale, weights=weights)
         if np.isnan(tempt):
             # print("this is nan")
             pass
@@ -186,7 +250,8 @@ def select_epsilon_3params(R0_range, sigma_range, Dimmunity_range, s_obs, scale,
             dists.append(tempt)
             # print("dist", tempt)
         if ii % 50 == 0:
-            print("dist", tempt, "number: ", ii)
+            logging.info(f"dist: {tempt}; number: {ii}")
+            # print("dist", tempt, "number: ", ii)
 
     eps = np.quantile(dists, quantile)
     return eps, dists
@@ -203,8 +268,8 @@ def select_epsilon_2params(R0_range, sigma_range, s_obs, scale, n_pilot=5000, qu
     for ii in range(n_pilot):
         R0_sel, sigma_sel = prior_value_2params(R0_range, sigma_range, rng)
         y_sim = simulate_prevalence_v5_numba([R0_sel, sigma_sel], fixed_params, core_params_num, seed)
-        s_sim = summary_stats(y_sim)
-        tempt = discrepancy(s_sim, s_obs, scale)
+        s_sim = summary_stats(y_sim, scale=scale)
+        tempt = discrepancy(s_sim, s_obs, scale, weights=weights)
         if np.isnan(tempt):
             # print("this is nan")
             pass
@@ -212,14 +277,16 @@ def select_epsilon_2params(R0_range, sigma_range, s_obs, scale, n_pilot=5000, qu
             dists.append(tempt)
             # print("dist", tempt)
         if ii % 50 == 0:
-            print("dist", tempt, "number: ", ii)
+            logging.info(f"dist: {tempt}; number: {ii}")
+            # print("dist", tempt, "number: ", ii)
 
     eps = np.quantile(dists, quantile)
     return eps, dists
 
 
 # function: abc_reject_3params
-def abc_reject_3params(R0_range, sigma_range, Dimmunity_range, core_params_num, s_obs, scale, eps, n_accept=2000, max_trials=2_000_000, seed=123):
+def abc_reject_3params(R0_range, sigma_range, Dimmunity_range, core_params_num, s_obs, scale, eps, n_accept=2000,
+                       max_trials=2_000_000, seed=123):
     rng = np.random.default_rng(123)
     accepted = []
     ss = []
@@ -231,18 +298,20 @@ def abc_reject_3params(R0_range, sigma_range, Dimmunity_range, core_params_num, 
     while len(accepted) < n_accept and trials < max_trials:
         trials += 1
         R0_sel, sigma_sel, Dimmunity_sel = prior_value_3params(R0_range, sigma_range, Dimmunity_range, rng)
-        y_sim = simulate_prevalence_v5_numba([R0_sel, sigma_sel, Dimmunity_sel*52.14], fixed_params, core_params_num, seed)
-        s_sim = summary_stats(y_sim)
-        dist = discrepancy(s_sim, s_obs, scale)
+        y_sim = simulate_prevalence_v5_numba([R0_sel, sigma_sel, Dimmunity_sel * 52.14], fixed_params, core_params_num,
+                                             seed)
+        s_sim = summary_stats(y_sim, scale=scale)
+        dist = discrepancy(s_sim, s_obs, scale, weights=weights)
 
-        if dist < eps:
+        if dist <= eps + 0.000001:
             count += 1
             accepted.append((R0_sel, sigma_sel, Dimmunity_sel))
             dists_acc.append(dist)
             ss.append(s_sim)
 
             if count % 30 == 0:
-                print("dist", dist, "accepted: ", count, "trials: ", trials)
+                logging.info(f"dist: {dist}; accepted: {count}; trials: {trials}")
+                # print("dist", dist, "accepted: ", count, "trials: ", trials)
             else:
                 pass
 
@@ -253,7 +322,8 @@ def abc_reject_3params(R0_range, sigma_range, Dimmunity_range, core_params_num, 
 
 
 # function: abc_reject_2params
-def abc_reject_2params(R0_range, sigma_range, core_params_num, s_obs, scale, eps, n_accept=2000, max_trials=2_000_000, seed=123):
+def abc_reject_2params(R0_range, sigma_range, core_params_num, s_obs, scale, eps, n_accept=2000, max_trials=2_000_000,
+                       seed=123):
     rng = np.random.default_rng(123)
     accepted = []
     ss = []
@@ -266,17 +336,18 @@ def abc_reject_2params(R0_range, sigma_range, core_params_num, s_obs, scale, eps
         trials += 1
         R0_sel, sigma_sel = prior_value_2params(R0_range, sigma_range, rng)
         y_sim = simulate_prevalence_v5_numba([R0_sel, sigma_sel], fixed_params, core_params_num, seed)
-        s_sim = summary_stats(y_sim)
-        dist = discrepancy(s_sim, s_obs, scale)
+        s_sim = summary_stats(y_sim, scale=scale)
+        dist = discrepancy(s_sim, s_obs, scale, weights=weights)
 
-        if dist < eps:
+        if dist <= eps + 0.000001:
             count += 1
             accepted.append((R0_sel, sigma_sel))
             dists_acc.append(dist)
             ss.append(s_sim)
 
             if count % 30 == 0:
-                print("dist", dist, "accepted: ", count, "trials: ", trials)
+                logging.info(f"dist: {dist}; accepted: {count}; trials: {trials}")
+                # print("dist", dist, "accepted: ", count, "trials: ", trials)
             else:
                 pass
 
@@ -286,26 +357,30 @@ def abc_reject_2params(R0_range, sigma_range, core_params_num, s_obs, scale, eps
     return acc, dists_acc, trials, ss
 
 
-R0_range= [1.0, 5.0]
-sigma_range = [0.2, 1.0]
+R0_range = [1.0, 4.0]
+sigma_range = [0.2, 1.2]
 # Dimmunity_range = [0.05, 0.5]
 # eps = 0.17756345360659403
 
 if core_params_num == 2:
     #
     eps, pilots = select_epsilon_2params(R0_range, sigma_range, s_obs_v5_numba, scale,
-                                         n_pilot=1500, quantile=0.2, seed=123)
-    print("eps: ", eps)
-    print("dists: ", len(pilots))
+                                         n_pilot=1500, quantile=0.05, seed=123)
+    logging.info(f"eps: {eps}; dists: {len(pilots)}")
+    # print("eps: ", eps)
+    # print("dists: ", len(pilots))
 
     post, dists_acc, trials, ss = abc_reject_2params(R0_range, sigma_range, core_params_num, s_obs_v5_numba,
-                                                     scale, eps, n_accept=2000, max_trials=2_000_000,
+                                                     scale, eps, n_accept=1000, max_trials=2_000_000,
                                                      seed=123)
-    print("Accepted: ", len(post), "Trials: ", trials, "Acceptance rate: ", len(post) / trials)
+    logging.info(f"Accepted: {len(post)}; Trials: {trials}; Acceptance rate: {len(post) / trials}")
+    # print("Accepted: ", len(post), "Trials: ", trials, "Acceptance rate: ", len(post) / trials)
 
     R0_samps, sigma_samps = post[:, 0], post[:, 1]
-    print("Posterior mean R0: ", R0_samps.mean())
-    print("Posterior mean sigma: ", sigma_samps.mean())
+    logging.info(f"Posterior mean R0: {R0_samps.mean()}")
+    # print("Posterior mean R0: ", R0_samps.mean())
+    logging.info(f"Posterior mean sigma: {sigma_samps.mean()}")
+    # print("Posterior mean sigma: ", sigma_samps.mean())
 
     np.savetxt("../../experimental_data/from_260312/R0_samps_2params_R02p5.csv", R0_samps, delimiter=",")
     np.savetxt("../../experimental_data/from_260312/sigma_samps_2params_R02p5.csv", sigma_samps, delimiter=",")
@@ -316,18 +391,23 @@ elif core_params_num == 3:
     #
     Dimmunity_range = [0.05, 0.5]
     eps, pilots = select_epsilon_3params(R0_range, sigma_range, Dimmunity_range, s_obs_v5_numba,
-                                         scale, n_pilot=1500, quantile=0.2, seed=123)
-    print("eps: ", eps)
-    print("dists: ", len(pilots))
+                                         scale, n_pilot=1500, quantile=0.05, seed=123)
+    logging.info(f"eps: {eps}; dists: {pilots}")
+    # print("eps: ", eps)
+    # print("dists: ", len(pilots))
     post, dists_acc, trials, ss = abc_reject_3params(R0_range, sigma_range, Dimmunity_range, core_params_num,
-                                                     s_obs_v5_numba, scale, eps, n_accept=2000,
+                                                     s_obs_v5_numba, scale, eps, n_accept=4000,
                                                      max_trials=2_000_000, seed=123)
-    print("Accepted: ", len(post), "Trials: ", trials, "Acceptance rate: ", len(post) / trials)
+    logging.info(f"Accepted: {len(post)}; Trials: {trials}; Acceptance rate: {len(post) / trials}")
+    # print("Accepted: ", len(post), "Trials: ", trials, "Acceptance rate: ", len(post) / trials)
 
     R0_samps, sigma_samps, Dimmunity_samps = post[:, 0], post[:, 1], post[:, 2]
-    print("Posterior mean R0: ", R0_samps.mean())
-    print("Posterior mean sigma: ", sigma_samps.mean())
-    print("Posterior mean Dimmunity: ", Dimmunity_samps.mean())
+    logging.info(f"Posterior mean R0: {R0_samps.mean()}")
+    # print("Posterior mean R0: ", R0_samps.mean())
+    logging.info(f"Posterior mean sigma: {sigma_samps.mean()}")
+    # print("Posterior mean sigma: ", sigma_samps.mean())
+    logging.info(f"Posterior mean Dimmunity: {Dimmunity_samps.mean()}")
+    # print("Posterior mean Dimmunity: ", Dimmunity_samps.mean())
 
     np.savetxt("../../experimental_data/from_260312/R0_samps_3params_R02p5.csv", R0_samps, delimiter=",")
     np.savetxt("../../experimental_data/from_260312/sigma_samps_3params_R02p5.csv", sigma_samps, delimiter=",")
@@ -338,4 +418,5 @@ else:
     raise ValueError('Invalid core params num')
 
 end = time.perf_counter()
-print(f"Elapsed: {end - start:.4f} s")
+logging.info(f"Elapsed: {end - start:.4f} s")
+# print(f"Elapsed: {end - start:.4f} s")

@@ -62,3 +62,109 @@ Traceback (most recent call last):
     slices_having_nans = np.isnan(arr[-1, ...])
                                   ~~~^^^^^^^^^
 IndexError: index -1 is out of bounds for axis 0 with size 0
+2026-03-31 16:58:54 - INFO - T's size: 920
+2026-03-31 16:58:56 - INFO - allclose=True, same_shape=True
+2026-03-31 16:58:56 - INFO - scale:[5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+2026-03-31 16:58:56 - INFO - weights: [1. 1. 3. 1.]
+2026-03-31 16:58:56 - INFO - s_obs: [0.    0.    0.448 0.   ]
+2026-03-31 16:58:59 - INFO - dist: 4.667817071594991; number: 0
+2026-03-31 17:01:09 - INFO - dist: 3.3351418708938505; number: 50
+2026-03-31 17:03:37 - INFO - dist: 4.8553572740920465; number: 100
+2026-03-31 17:05:52 - INFO - dist: 0.0; number: 150
+2026-03-31 17:08:09 - INFO - dist: 3.650147575976153; number: 200
+2026-03-31 17:10:32 - INFO - dist: 5.336013964296365; number: 250
+2026-03-31 17:12:52 - INFO - dist: 0.0; number: 300
+2026-03-31 17:14:57 - INFO - dist: 4.469834711824337; number: 350
+2026-03-31 17:17:27 - INFO - dist: 0.0; number: 400
+2026-03-31 17:19:51 - INFO - dist: 0.0; number: 450
+2026-03-31 17:22:08 - INFO - dist: 3.9432822937159027; number: 500
+2026-03-31 17:24:34 - INFO - dist: 0.0; number: 550
+2026-03-31 17:26:57 - INFO - dist: 3.943281005969893; number: 600
+2026-03-31 17:29:42 - INFO - dist: 0.0; number: 650
+2026-03-31 17:32:11 - INFO - dist: 5.046600837840519; number: 700
+2026-03-31 17:34:48 - INFO - dist: 0.0; number: 750
+2026-03-31 17:37:20 - INFO - dist: 3.335214458167856; number: 800
+2026-03-31 17:39:43 - INFO - dist: 3.651681573170917; number: 850
+2026-03-31 17:41:59 - INFO - dist: 0.0; number: 900
+2026-03-31 17:44:01 - INFO - dist: 0.0; number: 950
+2026-03-31 17:46:18 - INFO - dist: 0.0; number: 1000
+2026-03-31 17:48:34 - INFO - dist: 0.0; number: 1050
+2026-03-31 17:50:21 - INFO - dist: 0.0; number: 1100
+2026-03-31 17:52:42 - INFO - dist: 0.0; number: 1150
+2026-03-31 17:55:20 - INFO - dist: 4.66290841545106; number: 1200
+2026-03-31 17:57:46 - INFO - dist: 4.678641945354013; number: 1250
+2026-03-31 18:00:10 - INFO - dist: 0.0; number: 1300
+2026-03-31 18:02:16 - INFO - dist: 0.0; number: 1350
+2026-03-31 18:04:28 - INFO - dist: 0.0; number: 1400
+2026-03-31 18:06:49 - INFO - dist: 3.33519029348186; number: 1450
+2026-03-31 18:09:07 - INFO - eps: 0.0; dists: 1500
+2026-03-31 18:10:59 - INFO - dist: 0.0; accepted: 30; trials: 42
+2026-03-31 18:13:30 - INFO - dist: 0.0; accepted: 60; trials: 94
+2026-03-31 18:15:45 - INFO - dist: 0.0; accepted: 90; trials: 142
+2026-03-31 18:17:41 - INFO - dist: 0.0; accepted: 120; trials: 186
+2026-03-31 18:19:17 - INFO - dist: 0.0; accepted: 150; trials: 227
+2026-03-31 18:21:30 - INFO - dist: 0.0; accepted: 180; trials: 278
+2026-03-31 18:22:57 - INFO - dist: 0.0; accepted: 210; trials: 317
+2026-03-31 18:24:35 - INFO - dist: 0.0; accepted: 240; trials: 359
+2026-03-31 18:26:31 - INFO - dist: 0.0; accepted: 270; trials: 404
+2026-03-31 18:28:21 - INFO - dist: 0.0; accepted: 300; trials: 448
+2026-03-31 18:30:05 - INFO - dist: 0.0; accepted: 330; trials: 490
+2026-03-31 18:31:55 - INFO - dist: 0.0; accepted: 360; trials: 535
+2026-03-31 18:33:49 - INFO - dist: 0.0; accepted: 390; trials: 581
+2026-03-31 18:36:14 - INFO - dist: 0.0; accepted: 420; trials: 637
+2026-03-31 18:38:33 - INFO - dist: 0.0; accepted: 450; trials: 690
+2026-03-31 18:40:52 - INFO - dist: 0.0; accepted: 480; trials: 743
+2026-03-31 18:43:05 - INFO - dist: 0.0; accepted: 510; trials: 795
+2026-03-31 18:44:30 - INFO - dist: 0.0; accepted: 540; trials: 833
+2026-03-31 18:46:31 - INFO - dist: 0.0; accepted: 570; trials: 880
+2026-03-31 18:48:04 - INFO - dist: 0.0; accepted: 600; trials: 920
+2026-03-31 18:49:58 - INFO - dist: 0.0; accepted: 630; trials: 967
+2026-03-31 18:51:58 - INFO - dist: 0.0; accepted: 660; trials: 1017
+2026-03-31 18:53:38 - INFO - dist: 0.0; accepted: 690; trials: 1064
+2026-03-31 18:54:56 - INFO - dist: 0.0; accepted: 720; trials: 1103
+2026-03-31 18:56:47 - INFO - dist: 0.0; accepted: 750; trials: 1151
+2026-03-31 18:58:59 - INFO - dist: 0.0; accepted: 780; trials: 1206
+2026-03-31 19:00:45 - INFO - dist: 0.0; accepted: 810; trials: 1254
+2026-03-31 19:02:35 - INFO - dist: 0.0; accepted: 840; trials: 1302
+2026-03-31 19:03:54 - INFO - dist: 0.0; accepted: 870; trials: 1339
+2026-03-31 19:05:30 - INFO - dist: 0.0; accepted: 900; trials: 1382
+2026-03-31 19:07:13 - INFO - dist: 0.0; accepted: 930; trials: 1427
+2026-03-31 19:09:17 - INFO - dist: 0.0; accepted: 960; trials: 1477
+2026-03-31 19:10:47 - INFO - dist: 0.0; accepted: 990; trials: 1519
+2026-03-31 19:11:21 - INFO - Accepted: 1000; Trials: 1534; Acceptance rate: 0.651890482398957
+2026-03-31 19:11:21 - INFO - Posterior mean R0: 2.2408936024898813
+2026-03-31 19:11:21 - INFO - Posterior mean sigma: 0.8335432598340574
+2026-03-31 19:11:21 - INFO - Elapsed: 7948.4138 s
+T's size 920
+True True
+y_obs_array.mean 0.0
+start to simulate:
+T's size 920
+True True
+y_obs_array.mean 0.0
+start to simulate:
+rmse: 0.0
+mae: 0.0
+coverage: 1.0
+Elapsed: 2201.9846 s
+Worst strain coverage: 1.0
+Best strain coverage: 1.0
+Worst strain MAE: 0.0
+Worst time coverage: 1.0
+Best time coverage: 1.0
+Worst time MAE: 0.0
+============================================================
+POSTERIOR PREDICTIVE CHECK RESULTS
+============================================================
+Ground truth:      R0 = 2.5, sigma = 0.7
+Posterior samples: 1000
+R0 posterior:      2.241 ± 0.847
+sigma posterior:   0.834 ± 0.238
+------------------------------------------------------------
+RMSE:              0.000000
+MAE:               0.000000
+90% CI Coverage:   100.00%
+Expected Coverage: 90.00%
+------------------------------------------------------------
+Status: ⚠ Over-coverage (model underconfident)
+============================================================
