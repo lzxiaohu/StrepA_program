@@ -277,7 +277,7 @@ def abc_reject_3params(R0_range, sigma_range, Dimmunity_range, core_params_num, 
         s_sim = summary_stats(y_sim, scale=scale)
         dist = discrepancy(s_sim, s_obs, scale, weights=weights)
 
-        if dist < eps:
+        if dist <= eps + 0.000001:
             count += 1
             accepted.append((R0_sel, sigma_sel, Dimmunity_sel))
             dists_acc.append(dist)
@@ -311,7 +311,7 @@ def abc_reject_2params(R0_range, sigma_range, core_params_num, s_obs, scale, eps
         s_sim = summary_stats(y_sim, scale=scale)
         dist = discrepancy(s_sim, s_obs, scale, weights=weights)
 
-        if dist < eps:
+        if dist <= eps + 0.000001:
             count += 1
             accepted.append((R0_sel, sigma_sel))
             dists_acc.append(dist)

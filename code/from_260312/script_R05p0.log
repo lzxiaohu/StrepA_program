@@ -48,3 +48,201 @@ scale [5.20e+02 5.67e+04 4.48e-01 2.64e+01]
 weights:  [1. 1. 3. 1.]
 s_obs [130.34782609  66.22661419  -0.32805877   7.65386168]
 dist 0.4734565122857978 number:  0
+dist 0.14535254555188776 number:  50
+dist 0.4782619773101884 number:  100
+dist 1.286910649834574 number:  150
+dist 0.3635005436459041 number:  200
+dist 0.55446000401124 number:  250
+dist 5.210935588598926 number:  300
+dist 0.26206887528988587 number:  350
+dist 5.210935588598926 number:  400
+dist 5.210935588598926 number:  450
+dist 0.3261439940281201 number:  500
+dist 5.210935588598926 number:  550
+dist 0.12150901329267777 number:  600
+dist 1.0077112199971492 number:  650
+dist 0.521854662049994 number:  700
+dist 0.34013646178129336 number:  750
+dist 1.0084672316105334 number:  800
+dist 0.16481755243544122 number:  850
+dist 5.210935588598926 number:  900
+dist 5.210935588598926 number:  950
+dist 5.210935588598926 number:  1000
+dist 5.210935588598926 number:  1050
+dist 0.3113221090343445 number:  1100
+dist 5.210935588598926 number:  1150
+dist 0.4781064645858065 number:  1200
+dist 0.43452960595182316 number:  1250
+dist 0.5480007617496346 number:  1300
+dist 0.19257175884451744 number:  1350
+dist 0.11600324852676899 number:  1400
+dist 0.07126476907856648 number:  1450
+eps:  0.12149131528403571
+dists:  1500
+dist 0.06596114029609566 accepted:  30 trials:  604
+dist 0.11247629573328441 accepted:  60 trials:  1053
+dist 0.06590790710133304 accepted:  90 trials:  1848
+dist 0.1202069194710244 accepted:  120 trials:  2430
+dist 0.09680522187940385 accepted:  150 trials:  2879
+dist 0.04902808740061828 accepted:  180 trials:  3374
+dist 0.11778274179470741 accepted:  210 trials:  4002
+dist 0.05793222294948158 accepted:  240 trials:  4485
+dist 0.026765591353404172 accepted:  270 trials:  5011
+dist 0.019223641367056912 accepted:  300 trials:  5824
+dist 0.024474152112092865 accepted:  330 trials:  6473
+dist 0.11498690849645052 accepted:  360 trials:  7074
+dist 0.016833354090616398 accepted:  390 trials:  7565
+dist 0.09127167682406107 accepted:  420 trials:  8033
+dist 0.039574860633298355 accepted:  450 trials:  8605
+dist 0.10858927185048728 accepted:  480 trials:  8998
+dist 0.11762068762181556 accepted:  510 trials:  9537
+dist 0.025547423128714747 accepted:  540 trials:  10116
+dist 0.06377687049195202 accepted:  570 trials:  10587
+dist 0.06016427737619464 accepted:  600 trials:  11154
+dist 0.08832678362878107 accepted:  630 trials:  11839
+dist 0.10827096789471947 accepted:  660 trials:  12332
+dist 0.07098893535687832 accepted:  690 trials:  13058
+dist 0.10684705381728511 accepted:  720 trials:  13563
+dist 0.09413379723402382 accepted:  750 trials:  14032
+dist 0.11520843391989095 accepted:  780 trials:  14757
+dist 0.06732540808471235 accepted:  810 trials:  15397
+dist 0.07745177908449291 accepted:  840 trials:  16070
+dist 0.12119917808028823 accepted:  870 trials:  16647
+dist 0.04592785738677755 accepted:  900 trials:  17189
+dist 0.08446565270711752 accepted:  930 trials:  17738
+dist 0.1109854122586176 accepted:  960 trials:  18344
+dist 0.07433426636910695 accepted:  990 trials:  18726
+dist 0.10812899820292345 accepted:  1020 trials:  19216
+dist 0.03444538519235577 accepted:  1050 trials:  19801
+dist 0.07723430466529244 accepted:  1080 trials:  20437
+dist 0.07631354382029532 accepted:  1110 trials:  21085
+dist 0.052724265035073645 accepted:  1140 trials:  21484
+dist 0.11569057852690239 accepted:  1170 trials:  22009
+dist 0.036031102583967384 accepted:  1200 trials:  22445
+dist 0.06032344140844546 accepted:  1230 trials:  23201
+dist 0.07289299081024322 accepted:  1260 trials:  23823
+dist 0.11472526546461306 accepted:  1290 trials:  24332
+dist 0.08840748871323821 accepted:  1320 trials:  24854
+dist 0.05347398181498053 accepted:  1350 trials:  25537
+dist 0.0729159456578286 accepted:  1380 trials:  26103
+dist 0.06611793878463097 accepted:  1410 trials:  26680
+dist 0.04164846277342779 accepted:  1440 trials:  27233
+dist 0.10846467668441288 accepted:  1470 trials:  27924
+dist 0.10587188581339298 accepted:  1500 trials:  28306
+dist 0.06740634185278588 accepted:  1530 trials:  29011
+dist 0.11587550824518252 accepted:  1560 trials:  29370
+dist 0.11978131203260167 accepted:  1590 trials:  29935
+dist 0.055941705995434896 accepted:  1620 trials:  30346
+dist 0.058257611378076044 accepted:  1650 trials:  30907
+dist 0.10084429997142828 accepted:  1680 trials:  31505
+dist 0.04653184914000334 accepted:  1710 trials:  31863
+dist 0.12036580919563812 accepted:  1740 trials:  32403
+dist 0.08241115450940924 accepted:  1770 trials:  33068
+dist 0.11416411511127046 accepted:  1800 trials:  33550
+dist 0.09364460206676879 accepted:  1830 trials:  34119
+dist 0.05574698569902613 accepted:  1860 trials:  34723
+dist 0.11742703535640887 accepted:  1890 trials:  35333
+dist 0.11702186672298773 accepted:  1920 trials:  35718
+dist 0.10748905095530621 accepted:  1950 trials:  36188
+dist 0.07958029656689412 accepted:  1980 trials:  36814
+dist 0.1035732682448449 accepted:  2010 trials:  37375
+dist 0.11090778369897134 accepted:  2040 trials:  37789
+dist 0.08140556898832854 accepted:  2070 trials:  38278
+dist 0.09620464119360335 accepted:  2100 trials:  38919
+dist 0.11468852017068353 accepted:  2130 trials:  39630
+dist 0.06983691425143294 accepted:  2160 trials:  40308
+dist 0.10464159346094161 accepted:  2190 trials:  40814
+dist 0.07128334369268441 accepted:  2220 trials:  41269
+dist 0.11086233335894412 accepted:  2250 trials:  41880
+dist 0.05750824828210976 accepted:  2280 trials:  42456
+dist 0.0683889822291841 accepted:  2310 trials:  43000
+dist 0.04419284727052631 accepted:  2340 trials:  43497
+dist 0.018945416462559823 accepted:  2370 trials:  44252
+dist 0.056961589761568676 accepted:  2400 trials:  44758
+dist 0.04093112958124872 accepted:  2430 trials:  45443
+dist 0.12094927661714983 accepted:  2460 trials:  45931
+dist 0.05699142534605136 accepted:  2490 trials:  46542
+dist 0.026124633462692892 accepted:  2520 trials:  47230
+dist 0.0498313792297614 accepted:  2550 trials:  47773
+dist 0.11533754758268168 accepted:  2580 trials:  48306
+dist 0.03374358542920348 accepted:  2610 trials:  48868
+dist 0.10877942920226956 accepted:  2640 trials:  49504
+dist 0.11572432174643686 accepted:  2670 trials:  50106
+dist 0.10791391546935421 accepted:  2700 trials:  50720
+dist 0.06879492301485428 accepted:  2730 trials:  51130
+dist 0.05824678934639372 accepted:  2760 trials:  51657
+dist 0.04949434827248697 accepted:  2790 trials:  52149
+dist 0.06059286752124486 accepted:  2820 trials:  52990
+dist 0.040254035310479136 accepted:  2850 trials:  53541
+dist 0.1116393607406895 accepted:  2880 trials:  54018
+dist 0.05156981570813569 accepted:  2910 trials:  54621
+dist 0.10691156659719268 accepted:  2940 trials:  55089
+dist 0.08415027266577138 accepted:  2970 trials:  55598
+dist 0.11554781304106562 accepted:  3000 trials:  56081
+dist 0.10788787408311629 accepted:  3030 trials:  56640
+dist 0.03652339859987406 accepted:  3060 trials:  57189
+dist 0.04055968316655432 accepted:  3090 trials:  57715
+dist 0.12148623872763764 accepted:  3120 trials:  58274
+dist 0.1157624034585488 accepted:  3150 trials:  58992
+dist 0.036986032272284156 accepted:  3180 trials:  59579
+dist 0.07327013100342905 accepted:  3210 trials:  60456
+dist 0.06853720621273256 accepted:  3240 trials:  61021
+dist 0.025927090784207518 accepted:  3270 trials:  61659
+dist 0.10953221054052581 accepted:  3300 trials:  62128
+dist 0.01341531423989277 accepted:  3330 trials:  62721
+dist 0.11642268346526886 accepted:  3360 trials:  63198
+dist 0.0774434633718571 accepted:  3390 trials:  63840
+dist 0.038681475806801945 accepted:  3420 trials:  64303
+dist 0.11356140031368392 accepted:  3450 trials:  64862
+dist 0.07703690421296065 accepted:  3480 trials:  65403
+dist 0.06152743112058037 accepted:  3510 trials:  66171
+dist 0.03897363000009851 accepted:  3540 trials:  66728
+dist 0.12107077212072122 accepted:  3570 trials:  67297
+dist 0.06814592170693022 accepted:  3600 trials:  67786
+dist 0.02682656597136788 accepted:  3630 trials:  68420
+dist 0.07730995060367635 accepted:  3660 trials:  68931
+dist 0.05874884561655084 accepted:  3690 trials:  69547
+dist 0.052173829540248164 accepted:  3720 trials:  69931
+dist 0.04129119492274356 accepted:  3750 trials:  70541
+dist 0.11340497206810593 accepted:  3780 trials:  71156
+dist 0.11287587053858295 accepted:  3810 trials:  71701
+dist 0.11327981142138864 accepted:  3840 trials:  72140
+dist 0.02162321830305065 accepted:  3870 trials:  72957
+dist 0.10454437842307569 accepted:  3900 trials:  73562
+dist 0.05264399849300018 accepted:  3930 trials:  74110
+dist 0.12093336652853487 accepted:  3960 trials:  74543
+dist 0.11902602478742795 accepted:  3990 trials:  75146
+Accepted:  4000 Trials:  75394 Acceptance rate:  0.05305461973101308
+Posterior mean R0:  5.6501393599579215
+Posterior mean sigma:  0.5809593379831629
+Elapsed: 340199.8564 s
+nohup: ignoring input
+T's size 920
+True True
+y_obs_array.mean 3.258695652173913
+start to simulate:
+rmse: 8.031483605454692
+mae: 5.400236141304347
+coverage: 0.9554347826086956
+Elapsed: 22540.9068 s
+Worst strain coverage: 0.4782608695652174
+Best strain coverage: 1.0
+Worst strain MAE: 17.407869565217396
+Worst time coverage: 0.925
+Best time coverage: 1.0
+Worst time MAE: 9.00216875
+============================================================
+POSTERIOR PREDICTIVE CHECK RESULTS
+============================================================
+Ground truth:      R0 = 5.0, sigma = 0.6
+Posterior samples: 4000
+R0 posterior:      5.650 ± 1.577
+sigma posterior:   0.581 ± 0.160
+------------------------------------------------------------
+RMSE:              8.031484
+MAE:               5.400236
+90% CI Coverage:   95.54%
+Expected Coverage: 90.00%
+------------------------------------------------------------
+Status: ⚠ Over-coverage (model underconfident)
+============================================================
