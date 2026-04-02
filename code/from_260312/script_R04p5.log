@@ -106,6 +106,7 @@ Posterior mean R0:  4.442028189867422
 Posterior mean sigma:  0.5871608203353076
 Elapsed: 72637.8688 s
 <<<<<<< HEAD
+<<<<<<< HEAD
 T's size 920
 True True
 y_obs_array.mean 1.5456521739130435
@@ -250,5 +251,7 @@ Expected Coverage: 90.00%
 ------------------------------------------------------------
 Status: ⚠ Over-coverage (model underconfident)
 ============================================================
+=======
+>>>>>>> parent of 424eb99 (update posterior analysis table of sigma=0.7)
 =======
 >>>>>>> parent of 424eb99 (update posterior analysis table of sigma=0.7)
