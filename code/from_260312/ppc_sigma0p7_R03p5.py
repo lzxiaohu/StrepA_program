@@ -148,7 +148,11 @@ print("y_obs_array.mean", y_obs_array.mean())
 # ============================================================================
 csv_path_R0 = "../../experimental_data/from_260312/R0_samps_2params_R03p5.csv"
 csv_path_sigma = "../../experimental_data/from_260312/sigma_samps_2params_R03p5.csv"
+<<<<<<< HEAD
 total_length = 1000
+=======
+total_length = 100
+>>>>>>> parent of 424eb99 (update posterior analysis table of sigma=0.7)
 R0_samps = np.loadtxt(csv_path_R0, delimiter=",")
 sigma_samps = np.loadtxt(csv_path_sigma, delimiter=",")
 R0_samps = np.asarray(R0_samps, dtype=float).ravel()

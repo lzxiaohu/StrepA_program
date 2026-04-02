@@ -105,6 +105,7 @@ Accepted:  2000 Trials:  16610 Acceptance rate:  0.12040939193257075
 Posterior mean R0:  3.363023748963227
 Posterior mean sigma:  0.5914662167220603
 Elapsed: 70786.9697 s
+<<<<<<< HEAD
 T's size 920
 True True
 y_obs_array.mean 0.4
@@ -249,3 +250,5 @@ Expected Coverage: 90.00%
 ------------------------------------------------------------
 Status: ⚠ Over-coverage (model underconfident)
 ============================================================
+=======
+>>>>>>> parent of 424eb99 (update posterior analysis table of sigma=0.7)
