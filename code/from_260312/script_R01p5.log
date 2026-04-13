@@ -100,3 +100,332 @@ nohup: ignoring input
 2026-04-02 06:58:47 - INFO - s_obs: [0.    0.    0.448 0.   ]
 2026-04-02 06:58:50 - INFO - dist: 3.949019595196082; number: 0
 2026-04-02 07:00:36 - INFO - dist: 0.0; number: 50
+2026-04-02 07:02:28 - INFO - dist: 3.335563383087808; number: 100
+2026-04-02 07:04:15 - INFO - dist: 0.0; number: 150
+2026-04-02 07:05:58 - INFO - dist: 0.0; number: 200
+2026-04-02 07:07:37 - INFO - dist: 3.94076008090447; number: 250
+2026-04-02 07:09:13 - INFO - dist: 0.0; number: 300
+2026-04-02 07:10:45 - INFO - dist: 0.0; number: 350
+2026-04-02 07:12:36 - INFO - dist: 0.0; number: 400
+2026-04-02 07:14:16 - INFO - dist: 0.0; number: 450
+2026-04-02 07:16:02 - INFO - dist: 0.0; number: 500
+2026-04-02 07:17:46 - INFO - dist: 0.0; number: 550
+2026-04-02 07:19:29 - INFO - dist: 0.0; number: 600
+2026-04-02 07:21:15 - INFO - dist: 0.0; number: 650
+2026-04-02 07:23:00 - INFO - dist: 3.9414530118453346; number: 700
+2026-04-02 07:24:53 - INFO - dist: 0.0; number: 750
+2026-04-02 07:26:40 - INFO - dist: 0.0; number: 800
+2026-04-02 07:28:25 - INFO - dist: 0.0; number: 850
+2026-04-02 07:30:08 - INFO - dist: 0.0; number: 900
+2026-04-02 07:31:43 - INFO - dist: 0.0; number: 950
+2026-04-02 07:33:30 - INFO - dist: 0.0; number: 1000
+2026-04-02 07:35:18 - INFO - dist: 0.0; number: 1050
+2026-04-02 07:36:57 - INFO - dist: 0.0; number: 1100
+2026-04-02 07:38:44 - INFO - dist: 0.0; number: 1150
+2026-04-02 07:40:34 - INFO - dist: 3.335386697286392; number: 1200
+2026-04-02 07:42:20 - INFO - dist: 3.3354026200656217; number: 1250
+2026-04-02 07:44:01 - INFO - dist: 0.0; number: 1300
+2026-04-02 07:45:37 - INFO - dist: 0.0; number: 1350
+2026-04-02 07:47:20 - INFO - dist: 0.0; number: 1400
+2026-04-02 07:49:07 - INFO - dist: 0.0; number: 1450
+2026-04-02 07:50:57 - INFO - dist: 0.0; number: 1500
+2026-04-02 07:52:36 - INFO - dist: 0.0; number: 1550
+2026-04-02 07:54:23 - INFO - dist: 4.21434593770213; number: 1600
+2026-04-02 07:56:05 - INFO - dist: 0.0; number: 1650
+2026-04-02 07:57:38 - INFO - dist: 0.0; number: 1700
+2026-04-02 07:59:18 - INFO - dist: 3.652038107536158; number: 1750
+2026-04-02 08:01:03 - INFO - dist: 0.0; number: 1800
+2026-04-02 08:02:40 - INFO - dist: 3.335078891491612; number: 1850
+2026-04-02 08:04:28 - INFO - dist: 3.3352710365511595; number: 1900
+2026-04-02 08:06:18 - INFO - dist: 0.0; number: 1950
+2026-04-02 08:08:00 - INFO - dist: 0.0; number: 2000
+2026-04-02 08:09:41 - INFO - dist: 0.0; number: 2050
+2026-04-02 08:11:26 - INFO - dist: 0.0; number: 2100
+2026-04-02 08:13:15 - INFO - dist: 0.0; number: 2150
+2026-04-02 08:14:57 - INFO - dist: 0.0; number: 2200
+2026-04-02 08:16:38 - INFO - dist: 3.335342171868513; number: 2250
+2026-04-02 08:18:25 - INFO - dist: 0.0; number: 2300
+2026-04-02 08:20:06 - INFO - dist: 0.0; number: 2350
+2026-04-02 08:21:47 - INFO - dist: 0.0; number: 2400
+2026-04-02 08:23:38 - INFO - dist: 0.0; number: 2450
+2026-04-02 08:25:18 - INFO - dist: 0.0; number: 2500
+2026-04-02 08:26:56 - INFO - dist: 0.0; number: 2550
+2026-04-02 08:28:39 - INFO - dist: 3.3351052363098894; number: 2600
+2026-04-02 08:30:27 - INFO - dist: 0.0; number: 2650
+2026-04-02 08:32:11 - INFO - dist: 0.0; number: 2700
+2026-04-02 08:34:01 - INFO - dist: 0.0; number: 2750
+2026-04-02 08:35:44 - INFO - dist: 0.0; number: 2800
+2026-04-02 08:37:30 - INFO - dist: 0.0; number: 2850
+2026-04-02 08:39:11 - INFO - dist: 0.0; number: 2900
+2026-04-02 08:40:55 - INFO - dist: 0.0; number: 2950
+2026-04-02 08:42:36 - INFO - eps: 0.0; dists: 3000
+2026-04-02 08:43:50 - INFO - dist: 0.0; accepted: 30; trials: 37
+2026-04-02 08:45:21 - INFO - dist: 0.0; accepted: 60; trials: 78
+2026-04-02 08:46:34 - INFO - dist: 0.0; accepted: 90; trials: 114
+2026-04-02 08:47:44 - INFO - dist: 0.0; accepted: 120; trials: 150
+2026-04-02 08:49:03 - INFO - dist: 0.0; accepted: 150; trials: 187
+2026-04-02 08:50:07 - INFO - dist: 0.0; accepted: 180; trials: 220
+2026-04-02 08:51:14 - INFO - dist: 0.0; accepted: 210; trials: 255
+2026-04-02 08:52:22 - INFO - dist: 0.0; accepted: 240; trials: 291
+2026-04-02 08:53:22 - INFO - dist: 0.0; accepted: 270; trials: 324
+2026-04-02 08:54:33 - INFO - dist: 0.0; accepted: 300; trials: 359
+2026-04-02 08:56:08 - INFO - dist: 0.0; accepted: 330; trials: 400
+2026-04-02 08:57:32 - INFO - dist: 0.0; accepted: 360; trials: 438
+2026-04-02 08:58:44 - INFO - dist: 0.0; accepted: 390; trials: 473
+2026-04-02 08:59:55 - INFO - dist: 0.0; accepted: 420; trials: 509
+2026-04-02 09:01:18 - INFO - dist: 0.0; accepted: 450; trials: 547
+2026-04-02 09:02:36 - INFO - dist: 0.0; accepted: 480; trials: 585
+2026-04-02 09:03:48 - INFO - dist: 0.0; accepted: 510; trials: 620
+2026-04-02 09:05:07 - INFO - dist: 0.0; accepted: 540; trials: 657
+2026-04-02 09:06:30 - INFO - dist: 0.0; accepted: 570; trials: 695
+2026-04-02 09:07:59 - INFO - dist: 0.0; accepted: 600; trials: 737
+2026-04-02 09:09:02 - INFO - dist: 0.0; accepted: 630; trials: 770
+2026-04-02 09:10:27 - INFO - dist: 0.0; accepted: 660; trials: 809
+2026-04-02 09:11:44 - INFO - dist: 0.0; accepted: 690; trials: 846
+2026-04-02 09:12:57 - INFO - dist: 0.0; accepted: 720; trials: 882
+2026-04-02 09:14:06 - INFO - dist: 0.0; accepted: 750; trials: 917
+2026-04-02 09:15:12 - INFO - dist: 0.0; accepted: 780; trials: 950
+2026-04-02 09:16:27 - INFO - dist: 0.0; accepted: 810; trials: 986
+2026-04-02 09:17:57 - INFO - dist: 0.0; accepted: 840; trials: 1027
+2026-04-02 09:19:00 - INFO - dist: 0.0; accepted: 870; trials: 1060
+2026-04-02 09:20:11 - INFO - dist: 0.0; accepted: 900; trials: 1096
+2026-04-02 09:21:33 - INFO - dist: 0.0; accepted: 930; trials: 1134
+2026-04-02 09:22:54 - INFO - dist: 0.0; accepted: 960; trials: 1173
+2026-04-02 09:24:34 - INFO - dist: 0.0; accepted: 990; trials: 1219
+2026-04-02 09:25:54 - INFO - dist: 0.0; accepted: 1020; trials: 1256
+2026-04-02 09:26:59 - INFO - dist: 0.0; accepted: 1050; trials: 1289
+2026-04-02 09:28:14 - INFO - dist: 0.0; accepted: 1080; trials: 1326
+2026-04-02 09:29:19 - INFO - dist: 0.0; accepted: 1110; trials: 1359
+2026-04-02 09:30:35 - INFO - dist: 0.0; accepted: 1140; trials: 1396
+2026-04-02 09:31:59 - INFO - dist: 0.0; accepted: 1170; trials: 1436
+2026-04-02 09:33:28 - INFO - dist: 0.0; accepted: 1200; trials: 1478
+2026-04-02 09:34:32 - INFO - dist: 0.0; accepted: 1230; trials: 1512
+2026-04-02 09:35:49 - INFO - dist: 0.0; accepted: 1260; trials: 1548
+2026-04-02 09:37:05 - INFO - dist: 0.0; accepted: 1290; trials: 1584
+2026-04-02 09:38:19 - INFO - dist: 0.0; accepted: 1320; trials: 1620
+2026-04-02 09:39:34 - INFO - dist: 0.0; accepted: 1350; trials: 1657
+2026-04-02 09:40:48 - INFO - dist: 0.0; accepted: 1380; trials: 1691
+2026-04-02 09:41:51 - INFO - dist: 0.0; accepted: 1410; trials: 1725
+2026-04-02 09:42:56 - INFO - dist: 0.0; accepted: 1440; trials: 1758
+2026-04-02 09:44:19 - INFO - dist: 0.0; accepted: 1470; trials: 1798
+2026-04-02 09:45:15 - INFO - dist: 0.0; accepted: 1500; trials: 1830
+2026-04-02 09:46:38 - INFO - dist: 0.0; accepted: 1530; trials: 1869
+2026-04-02 09:48:20 - INFO - dist: 0.0; accepted: 1560; trials: 1915
+2026-04-02 09:49:21 - INFO - dist: 0.0; accepted: 1590; trials: 1948
+2026-04-02 09:50:48 - INFO - dist: 0.0; accepted: 1620; trials: 1989
+2026-04-02 09:52:11 - INFO - dist: 0.0; accepted: 1650; trials: 2026
+2026-04-02 09:53:18 - INFO - dist: 0.0; accepted: 1680; trials: 2060
+2026-04-02 09:54:46 - INFO - dist: 0.0; accepted: 1710; trials: 2101
+2026-04-02 09:56:16 - INFO - dist: 0.0; accepted: 1740; trials: 2143
+2026-04-02 09:57:31 - INFO - dist: 0.0; accepted: 1770; trials: 2180
+2026-04-02 09:58:51 - INFO - dist: 0.0; accepted: 1800; trials: 2217
+2026-04-02 09:59:54 - INFO - dist: 0.0; accepted: 1830; trials: 2250
+2026-04-02 10:01:24 - INFO - dist: 0.0; accepted: 1860; trials: 2291
+2026-04-02 10:02:41 - INFO - dist: 0.0; accepted: 1890; trials: 2330
+2026-04-02 10:04:03 - INFO - dist: 0.0; accepted: 1920; trials: 2368
+2026-04-02 10:05:21 - INFO - dist: 0.0; accepted: 1950; trials: 2406
+2026-04-02 10:07:01 - INFO - dist: 0.0; accepted: 1980; trials: 2451
+2026-04-02 10:08:15 - INFO - dist: 0.0; accepted: 2010; trials: 2486
+2026-04-02 10:09:24 - INFO - dist: 0.0; accepted: 2040; trials: 2520
+2026-04-02 10:10:30 - INFO - dist: 0.0; accepted: 2070; trials: 2554
+2026-04-02 10:11:42 - INFO - dist: 0.0; accepted: 2100; trials: 2590
+2026-04-02 10:12:59 - INFO - dist: 0.0; accepted: 2130; trials: 2626
+2026-04-02 10:14:19 - INFO - dist: 0.0; accepted: 2160; trials: 2664
+2026-04-02 10:15:39 - INFO - dist: 0.0; accepted: 2190; trials: 2702
+2026-04-02 10:17:05 - INFO - dist: 0.0; accepted: 2220; trials: 2741
+2026-04-02 10:18:28 - INFO - dist: 0.0; accepted: 2250; trials: 2779
+2026-04-02 10:19:58 - INFO - dist: 0.0; accepted: 2280; trials: 2820
+2026-04-02 10:21:14 - INFO - dist: 0.0; accepted: 2310; trials: 2857
+2026-04-02 10:22:29 - INFO - dist: 0.0; accepted: 2340; trials: 2895
+2026-04-02 10:23:51 - INFO - dist: 0.0; accepted: 2370; trials: 2934
+2026-04-02 10:25:10 - INFO - dist: 0.0; accepted: 2400; trials: 2973
+2026-04-02 10:26:36 - INFO - dist: 0.0; accepted: 2430; trials: 3011
+2026-04-02 10:28:10 - INFO - dist: 0.0; accepted: 2460; trials: 3052
+2026-04-02 10:29:50 - INFO - dist: 0.0; accepted: 2490; trials: 3096
+2026-04-02 10:31:07 - INFO - dist: 0.0; accepted: 2520; trials: 3132
+2026-04-02 10:32:20 - INFO - dist: 0.0; accepted: 2550; trials: 3168
+2026-04-02 10:33:41 - INFO - dist: 0.0; accepted: 2580; trials: 3208
+2026-04-02 10:34:56 - INFO - dist: 0.0; accepted: 2610; trials: 3244
+2026-04-02 10:36:13 - INFO - dist: 0.0; accepted: 2640; trials: 3280
+2026-04-02 10:37:30 - INFO - dist: 0.0; accepted: 2670; trials: 3317
+2026-04-02 10:38:45 - INFO - dist: 0.0; accepted: 2700; trials: 3354
+2026-04-02 10:40:12 - INFO - dist: 0.0; accepted: 2730; trials: 3394
+2026-04-02 10:41:14 - INFO - dist: 0.0; accepted: 2760; trials: 3428
+2026-04-02 10:42:18 - INFO - dist: 0.0; accepted: 2790; trials: 3463
+2026-04-02 10:43:36 - INFO - dist: 0.0; accepted: 2820; trials: 3500
+2026-04-02 10:44:53 - INFO - dist: 0.0; accepted: 2850; trials: 3537
+2026-04-02 10:46:09 - INFO - dist: 0.0; accepted: 2880; trials: 3575
+2026-04-02 10:47:21 - INFO - dist: 0.0; accepted: 2910; trials: 3612
+2026-04-02 10:48:39 - INFO - dist: 0.0; accepted: 2940; trials: 3650
+2026-04-02 10:50:00 - INFO - dist: 0.0; accepted: 2970; trials: 3688
+2026-04-02 10:51:12 - INFO - dist: 0.0; accepted: 3000; trials: 3723
+2026-04-02 10:52:52 - INFO - dist: 0.0; accepted: 3030; trials: 3767
+2026-04-02 10:54:23 - INFO - dist: 0.0; accepted: 3060; trials: 3808
+2026-04-02 10:55:31 - INFO - dist: 0.0; accepted: 3090; trials: 3844
+2026-04-02 10:56:49 - INFO - dist: 0.0; accepted: 3120; trials: 3881
+2026-04-02 10:58:10 - INFO - dist: 0.0; accepted: 3150; trials: 3919
+2026-04-02 10:59:21 - INFO - dist: 0.0; accepted: 3180; trials: 3955
+2026-04-02 11:00:53 - INFO - dist: 0.0; accepted: 3210; trials: 3997
+2026-04-02 11:02:03 - INFO - dist: 0.0; accepted: 3240; trials: 4032
+2026-04-02 11:03:28 - INFO - dist: 0.0; accepted: 3270; trials: 4073
+2026-04-02 11:04:56 - INFO - dist: 0.0; accepted: 3300; trials: 4114
+2026-04-02 11:06:22 - INFO - dist: 0.0; accepted: 3330; trials: 4156
+2026-04-02 11:07:46 - INFO - dist: 0.0; accepted: 3360; trials: 4194
+2026-04-02 11:08:45 - INFO - dist: 0.0; accepted: 3390; trials: 4226
+2026-04-02 11:09:57 - INFO - dist: 0.0; accepted: 3420; trials: 4261
+2026-04-02 11:11:32 - INFO - dist: 0.0; accepted: 3450; trials: 4304
+2026-04-02 11:12:39 - INFO - dist: 0.0; accepted: 3480; trials: 4338
+2026-04-02 11:14:02 - INFO - dist: 0.0; accepted: 3510; trials: 4378
+2026-04-02 11:15:39 - INFO - dist: 0.0; accepted: 3540; trials: 4421
+2026-04-02 11:17:11 - INFO - dist: 0.0; accepted: 3570; trials: 4463
+2026-04-02 11:18:39 - INFO - dist: 0.0; accepted: 3600; trials: 4503
+2026-04-02 11:19:57 - INFO - dist: 0.0; accepted: 3630; trials: 4540
+2026-04-02 11:21:24 - INFO - dist: 0.0; accepted: 3660; trials: 4580
+2026-04-02 11:22:39 - INFO - dist: 0.0; accepted: 3690; trials: 4615
+2026-04-02 11:23:51 - INFO - dist: 0.0; accepted: 3720; trials: 4650
+2026-04-02 11:24:56 - INFO - dist: 0.0; accepted: 3750; trials: 4682
+2026-04-02 11:26:27 - INFO - dist: 0.0; accepted: 3780; trials: 4723
+2026-04-02 11:27:50 - INFO - dist: 0.0; accepted: 3810; trials: 4762
+2026-04-02 11:29:04 - INFO - dist: 0.0; accepted: 3840; trials: 4797
+2026-04-02 11:30:26 - INFO - dist: 0.0; accepted: 3870; trials: 4835
+2026-04-02 11:32:10 - INFO - dist: 0.0; accepted: 3900; trials: 4880
+2026-04-02 11:33:19 - INFO - dist: 0.0; accepted: 3930; trials: 4915
+2026-04-02 11:34:22 - INFO - dist: 0.0; accepted: 3960; trials: 4948
+2026-04-02 11:35:51 - INFO - dist: 0.0; accepted: 3990; trials: 4991
+2026-04-02 11:37:02 - INFO - dist: 0.0; accepted: 4020; trials: 5026
+2026-04-02 11:38:20 - INFO - dist: 0.0; accepted: 4050; trials: 5064
+2026-04-02 11:39:37 - INFO - dist: 0.0; accepted: 4080; trials: 5100
+2026-04-02 11:40:45 - INFO - dist: 0.0; accepted: 4110; trials: 5133
+2026-04-02 11:42:09 - INFO - dist: 0.0; accepted: 4140; trials: 5172
+2026-04-02 11:43:21 - INFO - dist: 0.0; accepted: 4170; trials: 5208
+2026-04-02 11:44:33 - INFO - dist: 0.0; accepted: 4200; trials: 5245
+2026-04-02 11:45:42 - INFO - dist: 0.0; accepted: 4230; trials: 5280
+2026-04-02 11:46:55 - INFO - dist: 0.0; accepted: 4260; trials: 5318
+2026-04-02 11:48:25 - INFO - dist: 0.0; accepted: 4290; trials: 5360
+2026-04-02 11:49:31 - INFO - dist: 0.0; accepted: 4320; trials: 5393
+2026-04-02 11:50:39 - INFO - dist: 0.0; accepted: 4350; trials: 5428
+2026-04-02 11:51:50 - INFO - dist: 0.0; accepted: 4380; trials: 5462
+2026-04-02 11:53:09 - INFO - dist: 0.0; accepted: 4410; trials: 5502
+2026-04-02 11:54:13 - INFO - dist: 0.0; accepted: 4440; trials: 5535
+2026-04-02 11:55:34 - INFO - dist: 0.0; accepted: 4470; trials: 5572
+2026-04-02 11:56:45 - INFO - dist: 0.0; accepted: 4500; trials: 5607
+2026-04-02 11:57:39 - INFO - dist: 0.0; accepted: 4530; trials: 5638
+2026-04-02 11:58:51 - INFO - dist: 0.0; accepted: 4560; trials: 5673
+2026-04-02 12:00:14 - INFO - dist: 0.0; accepted: 4590; trials: 5711
+2026-04-02 12:01:25 - INFO - dist: 0.0; accepted: 4620; trials: 5745
+2026-04-02 12:02:44 - INFO - dist: 0.0; accepted: 4650; trials: 5782
+2026-04-02 12:04:05 - INFO - dist: 0.0; accepted: 4680; trials: 5819
+2026-04-02 12:05:20 - INFO - dist: 0.0; accepted: 4710; trials: 5855
+2026-04-02 12:06:43 - INFO - dist: 0.0; accepted: 4740; trials: 5893
+2026-04-02 12:08:15 - INFO - dist: 0.0; accepted: 4770; trials: 5933
+2026-04-02 12:09:58 - INFO - dist: 0.0; accepted: 4800; trials: 5978
+2026-04-02 12:11:27 - INFO - dist: 0.0; accepted: 4830; trials: 6017
+2026-04-02 12:12:57 - INFO - dist: 0.0; accepted: 4860; trials: 6059
+2026-04-02 12:14:26 - INFO - dist: 0.0; accepted: 4890; trials: 6101
+2026-04-02 12:15:52 - INFO - dist: 0.0; accepted: 4920; trials: 6141
+2026-04-02 12:17:11 - INFO - dist: 0.0; accepted: 4950; trials: 6180
+2026-04-02 12:18:58 - INFO - dist: 0.0; accepted: 4980; trials: 6224
+2026-04-02 12:20:22 - INFO - dist: 0.0; accepted: 5010; trials: 6264
+2026-04-02 12:21:35 - INFO - dist: 0.0; accepted: 5040; trials: 6300
+2026-04-02 12:22:51 - INFO - dist: 0.0; accepted: 5070; trials: 6337
+2026-04-02 12:24:07 - INFO - dist: 0.0; accepted: 5100; trials: 6373
+2026-04-02 12:25:14 - INFO - dist: 0.0; accepted: 5130; trials: 6407
+2026-04-02 12:26:32 - INFO - dist: 0.0; accepted: 5160; trials: 6445
+2026-04-02 12:27:50 - INFO - dist: 0.0; accepted: 5190; trials: 6483
+2026-04-02 12:29:06 - INFO - dist: 0.0; accepted: 5220; trials: 6520
+2026-04-02 12:30:44 - INFO - dist: 0.0; accepted: 5250; trials: 6564
+2026-04-02 12:32:20 - INFO - dist: 0.0; accepted: 5280; trials: 6606
+2026-04-02 12:33:22 - INFO - dist: 0.0; accepted: 5310; trials: 6639
+2026-04-02 12:34:57 - INFO - dist: 0.0; accepted: 5340; trials: 6681
+2026-04-02 12:35:57 - INFO - dist: 0.0; accepted: 5370; trials: 6714
+2026-04-02 12:37:07 - INFO - dist: 0.0; accepted: 5400; trials: 6749
+2026-04-02 12:38:24 - INFO - dist: 0.0; accepted: 5430; trials: 6787
+2026-04-02 12:39:47 - INFO - dist: 0.0; accepted: 5460; trials: 6826
+2026-04-02 12:41:10 - INFO - dist: 0.0; accepted: 5490; trials: 6865
+2026-04-02 12:42:22 - INFO - dist: 0.0; accepted: 5520; trials: 6901
+2026-04-02 12:43:24 - INFO - dist: 0.0; accepted: 5550; trials: 6934
+2026-04-02 12:44:53 - INFO - dist: 0.0; accepted: 5580; trials: 6975
+2026-04-02 12:45:55 - INFO - dist: 0.0; accepted: 5610; trials: 7008
+2026-04-02 12:47:17 - INFO - dist: 0.0; accepted: 5640; trials: 7048
+2026-04-02 12:48:24 - INFO - dist: 0.0; accepted: 5670; trials: 7083
+2026-04-02 12:49:42 - INFO - dist: 0.0; accepted: 5700; trials: 7121
+2026-04-02 12:51:00 - INFO - dist: 0.0; accepted: 5730; trials: 7159
+2026-04-02 12:52:22 - INFO - dist: 0.0; accepted: 5760; trials: 7197
+2026-04-02 12:53:33 - INFO - dist: 0.0; accepted: 5790; trials: 7232
+2026-04-02 12:54:47 - INFO - dist: 0.0; accepted: 5820; trials: 7268
+2026-04-02 12:56:22 - INFO - dist: 0.0; accepted: 5850; trials: 7311
+2026-04-02 12:57:52 - INFO - dist: 0.0; accepted: 5880; trials: 7352
+2026-04-02 12:59:04 - INFO - dist: 0.0; accepted: 5910; trials: 7388
+2026-04-02 13:00:33 - INFO - dist: 0.0; accepted: 5940; trials: 7429
+2026-04-02 13:01:48 - INFO - dist: 0.0; accepted: 5970; trials: 7466
+2026-04-02 13:02:58 - INFO - dist: 0.0; accepted: 6000; trials: 7501
+2026-04-02 13:04:09 - INFO - dist: 0.0; accepted: 6030; trials: 7537
+2026-04-02 13:05:41 - INFO - dist: 0.0; accepted: 6060; trials: 7579
+2026-04-02 13:07:06 - INFO - dist: 0.0; accepted: 6090; trials: 7619
+2026-04-02 13:08:14 - INFO - dist: 0.0; accepted: 6120; trials: 7653
+2026-04-02 13:09:40 - INFO - dist: 0.0; accepted: 6150; trials: 7692
+2026-04-02 13:10:58 - INFO - dist: 0.0; accepted: 6180; trials: 7730
+2026-04-02 13:12:08 - INFO - dist: 0.0; accepted: 6210; trials: 7766
+2026-04-02 13:13:52 - INFO - dist: 0.0; accepted: 6240; trials: 7810
+2026-04-02 13:14:46 - INFO - dist: 0.0; accepted: 6270; trials: 7841
+2026-04-02 13:16:06 - INFO - dist: 0.0; accepted: 6300; trials: 7878
+2026-04-02 13:17:27 - INFO - dist: 0.0; accepted: 6330; trials: 7917
+2026-04-02 13:18:55 - INFO - dist: 0.0; accepted: 6360; trials: 7958
+2026-04-02 13:20:09 - INFO - dist: 0.0; accepted: 6390; trials: 7994
+2026-04-02 13:21:34 - INFO - dist: 0.0; accepted: 6420; trials: 8034
+2026-04-02 13:22:43 - INFO - dist: 0.0; accepted: 6450; trials: 8070
+2026-04-02 13:24:09 - INFO - dist: 0.0; accepted: 6480; trials: 8108
+2026-04-02 13:25:29 - INFO - dist: 0.0; accepted: 6510; trials: 8145
+2026-04-02 13:26:55 - INFO - dist: 0.0; accepted: 6540; trials: 8184
+2026-04-02 13:28:07 - INFO - dist: 0.0; accepted: 6570; trials: 8221
+2026-04-02 13:29:25 - INFO - dist: 0.0; accepted: 6600; trials: 8257
+2026-04-02 13:30:47 - INFO - dist: 0.0; accepted: 6630; trials: 8294
+2026-04-02 13:32:08 - INFO - dist: 0.0; accepted: 6660; trials: 8331
+2026-04-02 13:33:31 - INFO - dist: 0.0; accepted: 6690; trials: 8370
+2026-04-02 13:35:00 - INFO - dist: 0.0; accepted: 6720; trials: 8411
+2026-04-02 13:36:12 - INFO - dist: 0.0; accepted: 6750; trials: 8446
+2026-04-02 13:37:49 - INFO - dist: 0.0; accepted: 6780; trials: 8488
+2026-04-02 13:39:36 - INFO - dist: 0.0; accepted: 6810; trials: 8532
+2026-04-02 13:41:17 - INFO - dist: 0.0; accepted: 6840; trials: 8576
+2026-04-02 13:42:28 - INFO - dist: 0.0; accepted: 6870; trials: 8613
+2026-04-02 13:43:30 - INFO - dist: 0.0; accepted: 6900; trials: 8646
+2026-04-02 13:45:03 - INFO - dist: 0.0; accepted: 6930; trials: 8688
+2026-04-02 13:46:23 - INFO - dist: 0.0; accepted: 6960; trials: 8725
+2026-04-02 13:47:47 - INFO - dist: 0.0; accepted: 6990; trials: 8764
+2026-04-02 13:48:53 - INFO - dist: 0.0; accepted: 7020; trials: 8797
+2026-04-02 13:50:30 - INFO - dist: 0.0; accepted: 7050; trials: 8840
+2026-04-02 13:51:38 - INFO - dist: 0.0; accepted: 7080; trials: 8874
+2026-04-02 13:52:58 - INFO - dist: 0.0; accepted: 7110; trials: 8911
+2026-04-02 13:54:29 - INFO - dist: 0.0; accepted: 7140; trials: 8952
+2026-04-02 13:56:04 - INFO - dist: 0.0; accepted: 7170; trials: 8992
+2026-04-02 13:57:07 - INFO - dist: 0.0; accepted: 7200; trials: 9025
+2026-04-02 13:58:31 - INFO - dist: 0.0; accepted: 7230; trials: 9064
+2026-04-02 14:00:05 - INFO - dist: 0.0; accepted: 7260; trials: 9105
+2026-04-02 14:01:21 - INFO - dist: 0.0; accepted: 7290; trials: 9142
+2026-04-02 14:02:39 - INFO - dist: 0.0; accepted: 7320; trials: 9178
+2026-04-02 14:03:58 - INFO - dist: 0.0; accepted: 7350; trials: 9215
+2026-04-02 14:05:00 - INFO - dist: 0.0; accepted: 7380; trials: 9248
+2026-04-02 14:06:49 - INFO - dist: 0.0; accepted: 7410; trials: 9295
+2026-04-02 14:08:10 - INFO - dist: 0.0; accepted: 7440; trials: 9332
+2026-04-02 14:09:31 - INFO - dist: 0.0; accepted: 7470; trials: 9370
+2026-04-02 14:10:52 - INFO - dist: 0.0; accepted: 7500; trials: 9407
+2026-04-02 14:12:09 - INFO - dist: 0.0; accepted: 7530; trials: 9445
+2026-04-02 14:13:43 - INFO - dist: 0.0; accepted: 7560; trials: 9485
+2026-04-02 14:15:21 - INFO - dist: 0.0; accepted: 7590; trials: 9529
+2026-04-02 14:16:38 - INFO - dist: 0.0; accepted: 7620; trials: 9564
+2026-04-02 14:17:47 - INFO - dist: 0.0; accepted: 7650; trials: 9599
+2026-04-02 14:18:57 - INFO - dist: 0.0; accepted: 7680; trials: 9633
+2026-04-02 14:20:08 - INFO - dist: 0.0; accepted: 7710; trials: 9668
+2026-04-02 14:21:28 - INFO - dist: 0.0; accepted: 7740; trials: 9706
+2026-04-02 14:22:43 - INFO - dist: 0.0; accepted: 7770; trials: 9741
+2026-04-02 14:23:47 - INFO - dist: 0.0; accepted: 7800; trials: 9774
+2026-04-02 14:24:48 - INFO - dist: 0.0; accepted: 7830; trials: 9807
+2026-04-02 14:26:27 - INFO - dist: 0.0; accepted: 7860; trials: 9850
+2026-04-02 14:27:38 - INFO - dist: 0.0; accepted: 7890; trials: 9885
+2026-04-02 14:28:53 - INFO - dist: 0.0; accepted: 7920; trials: 9923
+2026-04-02 14:30:38 - INFO - dist: 0.0; accepted: 7950; trials: 9968
+2026-04-02 14:32:01 - INFO - dist: 0.0; accepted: 7980; trials: 10006
+2026-04-02 14:32:54 - INFO - Accepted: 8000; Trials: 10031; Acceptance rate: 0.7975276642408533
+2026-04-02 14:32:54 - INFO - Posterior mean R0: 1.4340307338208735
+2026-04-02 14:32:54 - INFO - Posterior mean sigma: 0.54604753018466
+2026-04-02 14:32:54 - INFO - Elapsed: 27252.1821 s
