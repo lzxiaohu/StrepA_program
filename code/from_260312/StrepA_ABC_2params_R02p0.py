@@ -245,7 +245,9 @@ def select_epsilon_2params(R0_range, sigma_range, s_obs, scale, n_pilot=5000, qu
     for ii in range(n_pilot):
         R0_sel, sigma_sel = prior_value_2params(R0_range, sigma_range, rng)
         y_sim = simulate_prevalence_v5_numba([R0_sel, sigma_sel], fixed_params, core_params_num, seed)
+        print("y_sim", y_sim)
         s_sim = summary_stats(y_sim, scale=scale)
+        print("s_sim", s_sim)
         tempt = discrepancy(s_sim, s_obs, scale, weights=weights)
         if np.isnan(tempt):
             # print("this is nan")
