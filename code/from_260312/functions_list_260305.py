@@ -80,8 +80,8 @@ def parameters(param: Any) -> Tuple[
     Ntimesteps = time.size
 
     # ---- Initial seeding ----
-    NI0perstrain = 10
-    NR0perstrain = 10
+    NI0perstrain = 10   # Initial number of infections of each strain
+    NR0perstrain = 10   # Initial number of agents immune to each strain
 
     # ---- Epidemiological params ----
     Nstrains = int(Nstrains_in * multiplier)  # number of initial strains (after multiplier)

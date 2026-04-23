@@ -238,7 +238,9 @@ def select_epsilon_3params(R0_range, sigma_range, Dimmunity_range, s_obs, scale,
     for ii in range(n_pilot):
         R0_sel, sigma_sel, Dimmunity_sel = prior_value_3params(R0_range, sigma_range, Dimmunity_range, rng)
         y_sim = simulate_prevalence_v5_numba([R0_sel, sigma_sel, Dimmunity_sel*52.14], fixed_params, core_params_num, seed)
+        print("y_sim:", y_sim)
         s_sim = summary_stats(y_sim, scale=scale)
+        print("s_sim:", s_sim)
         tempt = discrepancy(s_sim, s_obs, scale, weights=weights)
         if np.isnan(tempt):
             # print("this is nan")
@@ -265,7 +267,9 @@ def select_epsilon_2params(R0_range, sigma_range, s_obs, scale, n_pilot=5000, qu
     for ii in range(n_pilot):
         R0_sel, sigma_sel = prior_value_2params(R0_range, sigma_range, rng)
         y_sim = simulate_prevalence_v5_numba([R0_sel, sigma_sel], fixed_params, core_params_num, seed)
+        print("y_sim:", y_sim)
         s_sim = summary_stats(y_sim, scale=scale)
+        print("s_sim:", s_sim)
         tempt = discrepancy(s_sim, s_obs, scale, weights=weights)
         if np.isnan(tempt):
             # print("this is nan")
@@ -330,7 +334,9 @@ def abc_reject_2params(R0_range, sigma_range, core_params_num, s_obs, scale, eps
         trials += 1
         R0_sel, sigma_sel = prior_value_2params(R0_range, sigma_range, rng)
         y_sim = simulate_prevalence_v5_numba([R0_sel, sigma_sel], fixed_params, core_params_num, seed)
+        print("y_sim", y_sim)
         s_sim = summary_stats(y_sim, scale=scale)
+        print("s_sim", s_sim)
         dist = discrepancy(s_sim, s_obs, scale, weights=weights)
 
         if dist <= eps + 0.000001:

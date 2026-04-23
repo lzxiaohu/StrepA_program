@@ -82,8 +82,8 @@ def simulate_prevalence_v5_numba(theta2):
 # ----------------------------
 # Dry run to learn T
 
-_Tdry = simulate_prevalence_v5_numba(np.array([2.0, 1.0], float))
+_Tdry = simulate_prevalence_v5_numba(np.array([2.07, 0.8], float))
 T = _Tdry.size
-print("T's size", T)
-_Tdry1 = simulate_prevalence_v5_numba(np.array([2.0, 1.0], float))
+print("T's size", T, _Tdry)
+_Tdry1 = simulate_prevalence_v5_numba(np.array([2.07, 0.8], float))
 print(np.allclose(_Tdry, _Tdry1), _Tdry.shape == _Tdry1.shape)
