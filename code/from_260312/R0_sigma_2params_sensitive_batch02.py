@@ -27,7 +27,7 @@ omega = 0.2
 x = 10.0
 Cperweek = 34.53
 Nagents = 1000
-alpha = 0.007
+alpha = 7.0
 AgeDeath = 71.0
 
 if core_params_num == 2:
