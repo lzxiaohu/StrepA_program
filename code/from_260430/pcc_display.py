@@ -92,13 +92,13 @@ def kde_all_pcc(
         pcc_col="pcc",
         A1_col="R0",
         B1_col="avg_time",
-        total_sampes=19000,
         bandwidth=0.08,
         gridsize=800,
         dpi=180,
         save_path=None,  # None OR folder OR full .png path
 ):
     x = res_df[pcc_col].to_numpy(dtype=float)
+    total_sampes = x.size
     x = x[np.isfinite(x)]
     n = x.size
     if n < 2:
@@ -178,7 +178,7 @@ def boxplot_pcc_by_A2(
     valid_list = []
     for a2 in a2_vals:
         g = res_df.loc[res_df[A2_col] == a2, pcc_col]
-        samples = 1900
+        samples = len(g)
         valid = int(g.notna().sum())
         arr = g.dropna().to_numpy(dtype=float)
 
@@ -273,7 +273,7 @@ def violin_pcc_by_A2(
     valid_list = []
     for a2 in a2_vals:
         g = res_df.loc[res_df[A2_col] == a2, pcc_col]
-        samples = 1900
+        samples = len(g)
         valid = int(g.notna().sum())
         arr = g.dropna().to_numpy(dtype=float)
 

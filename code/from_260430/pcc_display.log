@@ -142,3 +142,147 @@ kept rows: 12000
 Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_pcc_kde_all.png
 Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_by_R0_pcc_boxplot.png
 Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_by_R0_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 20000
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_time_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_time_by_sigma_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_time_by_sigma_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 53
+kept rows: 19947
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_max_time_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_max_time_by_sigma_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_max_time_by_sigma_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 20000
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_num_strains_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_num_strains_by_sigma_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_num_strains_by_sigma_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 20000
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_time_repeat_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_time_repeat_by_sigma_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_time_repeat_by_sigma_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 20000
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_var_time_repeat_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_var_time_repeat_by_sigma_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_var_time_repeat_by_sigma_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 20000
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_prev_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_prev_by_sigma_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_prev_by_sigma_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 20000
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_var_prev_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_var_prev_by_sigma_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_var_prev_by_sigma_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 20000
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_div_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_div_by_sigma_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_div_by_sigma_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 20000
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_var_div_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_var_div_by_sigma_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_var_div_by_sigma_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 20000
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_max_abundance_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_max_abundance_by_sigma_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_max_abundance_by_sigma_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 20000
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_npmi_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_npmi_by_sigma_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_avg_npmi_by_sigma_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 20000
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_div_all_isolates_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_div_all_isolates_by_sigma_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_R0_vs_ss_panels_by_sigma/R0_vs_div_all_isolates_by_sigma_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 24000
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_by_R0_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_by_R0_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 18
+kept rows: 23982
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_max_time_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_max_time_by_R0_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_max_time_by_R0_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 24000
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_num_strains_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_num_strains_by_R0_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_num_strains_by_R0_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 24000
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_repeat_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_repeat_by_R0_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_repeat_by_R0_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 24000
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_var_time_repeat_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_var_time_repeat_by_R0_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_var_time_repeat_by_R0_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 24000
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_prev_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_prev_by_R0_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_prev_by_R0_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 24000
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_var_prev_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_var_prev_by_R0_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_var_prev_by_R0_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 24000
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_div_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_div_by_R0_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_div_by_R0_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 24000
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_var_div_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_var_div_by_R0_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_var_div_by_R0_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 24000
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_max_abundance_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_max_abundance_by_R0_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_max_abundance_by_R0_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 24000
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_npmi_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_npmi_by_R0_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_avg_npmi_by_R0_pcc_violin.png
+groups too short (<4): 0
+NaN/inf PCC among groups with n>=4: 0
+kept rows: 24000
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_pcc_kde_all.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_by_R0_pcc_boxplot.png
+Saved: ../../figures/from_260430/pcc_sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_by_R0_pcc_violin.png

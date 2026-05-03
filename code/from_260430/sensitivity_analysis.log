@@ -147,3 +147,301 @@ Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isola
 [Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.21, 35)
 Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_median_band_by_R0.png
 [Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.21, 35)
+R0            12
+sigma         10
+run_seed    1000
+dtype: int64
+Saved merged.csv, rows: 120000
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_time_panels_by_sigma.png
+[Y range] mode=robust -> (-2.95, 26.5)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_time_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.95, 26.5)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_time_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.95, 26.5)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_max_time_panels_by_sigma.png
+[Y range] mode=robust -> (-2.2, 27.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_max_time_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.2, 27.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_max_time_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.2, 27.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_num_strains_panels_by_sigma.png
+[Y range] mode=robust -> (-4.2, 39.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_num_strains_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.2, 39.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_num_strains_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.2, 39.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_time_repeat_panels_by_sigma.png
+[Y range] mode=robust -> (0.8, 2.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_time_repeat_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (0.8, 2.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_time_repeat_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (0.8, 2.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_time_repeat_panels_by_sigma.png
+[Y range] mode=robust -> (-1.31, 7.89)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_time_repeat_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-1.31, 7.89)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_time_repeat_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-1.31, 7.89)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_prev_panels_by_sigma.png
+[Y range] mode=robust -> (-85.8, 516)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_prev_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-85.8, 516)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_prev_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-85.8, 516)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_prev_panels_by_sigma.png
+[Y range] mode=robust -> (-9.33e+03, 5.6e+04)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_prev_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-9.33e+03, 5.6e+04)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_prev_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-9.33e+03, 5.6e+04)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_div_panels_by_sigma.png
+[Y range] mode=robust -> (-5.7, 35.4)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_div_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-5.7, 35.4)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_div_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-5.7, 35.4)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_div_panels_by_sigma.png
+[Y range] mode=robust -> (-2.17, 13.8)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_div_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.17, 13.8)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_div_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.17, 13.8)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_max_abundance_panels_by_sigma.png
+[Y range] mode=robust -> (-47.4, 291)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_max_abundance_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-47.4, 291)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_max_abundance_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-47.4, 291)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_npmi_panels_by_sigma.png
+[Y range] mode=robust -> (-0.763, 0.377)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_npmi_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-0.763, 0.377)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_npmi_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-0.763, 0.377)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_div_all_isolates_panels_by_sigma.png
+[Y range] mode=robust -> (-4.21, 35)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_div_all_isolates_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.21, 35)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_div_all_isolates_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.21, 35)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_panels_by_R0.png
+[Y range] mode=robust -> (-2.95, 26.5)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.95, 26.5)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.95, 26.5)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_max_time_panels_by_R0.png
+[Y range] mode=robust -> (-2.2, 27.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_max_time_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.2, 27.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_max_time_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.2, 27.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_num_strains_panels_by_R0.png
+[Y range] mode=robust -> (-4.2, 39.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_num_strains_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.2, 39.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_num_strains_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.2, 39.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_repeat_panels_by_R0.png
+[Y range] mode=robust -> (0.8, 2.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_repeat_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (0.8, 2.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_repeat_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (0.8, 2.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_time_repeat_panels_by_R0.png
+[Y range] mode=robust -> (-1.31, 7.89)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_time_repeat_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-1.31, 7.89)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_time_repeat_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-1.31, 7.89)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_prev_panels_by_R0.png
+[Y range] mode=robust -> (-85.8, 516)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_prev_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-85.8, 516)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_prev_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-85.8, 516)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_prev_panels_by_R0.png
+[Y range] mode=robust -> (-9.33e+03, 5.6e+04)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_prev_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-9.33e+03, 5.6e+04)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_prev_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-9.33e+03, 5.6e+04)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_div_panels_by_R0.png
+[Y range] mode=robust -> (-5.7, 35.4)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_div_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-5.7, 35.4)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_div_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-5.7, 35.4)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_div_panels_by_R0.png
+[Y range] mode=robust -> (-2.17, 13.8)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_div_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.17, 13.8)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_div_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.17, 13.8)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_max_abundance_panels_by_R0.png
+[Y range] mode=robust -> (-47.4, 291)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_max_abundance_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-47.4, 291)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_max_abundance_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-47.4, 291)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_npmi_panels_by_R0.png
+[Y range] mode=robust -> (-0.763, 0.377)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_npmi_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-0.763, 0.377)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_npmi_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-0.763, 0.377)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_panels_by_R0.png
+[Y range] mode=robust -> (-4.21, 35)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.21, 35)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.21, 35)
+R0            12
+sigma         10
+run_seed    2000
+dtype: int64
+Saved merged.csv, rows: 240000
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_time_panels_by_sigma.png
+[Y range] mode=robust -> (-2.95, 26.4)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_time_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.95, 26.4)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_time_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.95, 26.4)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_max_time_panels_by_sigma.png
+[Y range] mode=robust -> (-2.2, 27.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_max_time_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.2, 27.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_max_time_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.2, 27.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_num_strains_panels_by_sigma.png
+[Y range] mode=robust -> (-4.2, 39.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_num_strains_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.2, 39.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_num_strains_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.2, 39.2)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_time_repeat_panels_by_sigma.png
+[Y range] mode=robust -> (0.782, 2.31)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_time_repeat_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (0.782, 2.31)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_time_repeat_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (0.782, 2.31)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_time_repeat_panels_by_sigma.png
+[Y range] mode=robust -> (-1.32, 7.9)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_time_repeat_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-1.32, 7.9)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_time_repeat_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-1.32, 7.9)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_prev_panels_by_sigma.png
+[Y range] mode=robust -> (-85.8, 516)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_prev_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-85.8, 516)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_prev_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-85.8, 516)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_prev_panels_by_sigma.png
+[Y range] mode=robust -> (-9.33e+03, 5.6e+04)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_prev_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-9.33e+03, 5.6e+04)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_prev_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-9.33e+03, 5.6e+04)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_div_panels_by_sigma.png
+[Y range] mode=robust -> (-5.7, 35.4)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_div_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-5.7, 35.4)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_div_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-5.7, 35.4)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_div_panels_by_sigma.png
+[Y range] mode=robust -> (-2.17, 13.9)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_div_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.17, 13.9)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_var_div_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.17, 13.9)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_max_abundance_panels_by_sigma.png
+[Y range] mode=robust -> (-47.4, 291)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_max_abundance_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-47.4, 291)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_max_abundance_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-47.4, 291)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_npmi_panels_by_sigma.png
+[Y range] mode=robust -> (-0.762, 0.373)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_npmi_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-0.762, 0.373)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_avg_npmi_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-0.762, 0.373)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_div_all_isolates_panels_by_sigma.png
+[Y range] mode=robust -> (-4.21, 35)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_div_all_isolates_mean_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.21, 35)
+Saved: ../../figures/from_260430/R0_vs_ss_panels_by_sigma/R0_vs_div_all_isolates_median_band_by_sigma.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.21, 35)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_panels_by_R0.png
+[Y range] mode=robust -> (-2.95, 26.4)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.95, 26.4)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.95, 26.4)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_max_time_panels_by_R0.png
+[Y range] mode=robust -> (-2.2, 27.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_max_time_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.2, 27.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_max_time_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.2, 27.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_num_strains_panels_by_R0.png
+[Y range] mode=robust -> (-4.2, 39.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_num_strains_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.2, 39.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_num_strains_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.2, 39.2)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_repeat_panels_by_R0.png
+[Y range] mode=robust -> (0.782, 2.31)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_repeat_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (0.782, 2.31)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_time_repeat_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (0.782, 2.31)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_time_repeat_panels_by_R0.png
+[Y range] mode=robust -> (-1.32, 7.9)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_time_repeat_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-1.32, 7.9)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_time_repeat_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-1.32, 7.9)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_prev_panels_by_R0.png
+[Y range] mode=robust -> (-85.8, 516)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_prev_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-85.8, 516)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_prev_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-85.8, 516)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_prev_panels_by_R0.png
+[Y range] mode=robust -> (-9.33e+03, 5.6e+04)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_prev_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-9.33e+03, 5.6e+04)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_prev_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-9.33e+03, 5.6e+04)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_div_panels_by_R0.png
+[Y range] mode=robust -> (-5.7, 35.4)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_div_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-5.7, 35.4)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_div_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-5.7, 35.4)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_div_panels_by_R0.png
+[Y range] mode=robust -> (-2.17, 13.9)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_div_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.17, 13.9)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_var_div_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-2.17, 13.9)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_max_abundance_panels_by_R0.png
+[Y range] mode=robust -> (-47.4, 291)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_max_abundance_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-47.4, 291)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_max_abundance_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-47.4, 291)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_npmi_panels_by_R0.png
+[Y range] mode=robust -> (-0.762, 0.373)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_npmi_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-0.762, 0.373)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_avg_npmi_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-0.762, 0.373)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_panels_by_R0.png
+[Y range] mode=robust -> (-4.21, 35)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_mean_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.21, 35)
+Saved: ../../figures/from_260430/sigma_vs_ss_panels_by_R0/sigma_vs_div_all_isolates_median_band_by_R0.png
+[Y range] mode=robust, y_quantiles=(0.01, 0.99) -> (-4.21, 35)

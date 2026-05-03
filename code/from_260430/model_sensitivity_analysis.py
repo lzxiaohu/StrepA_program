@@ -321,7 +321,17 @@ files = [
     "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch06.csv",
     "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch07.csv",
     "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch08.csv",
-    "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch09.csv"
+    "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch09.csv",
+    "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch10.csv",
+    "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch11.csv",
+    "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch12.csv",
+    "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch13.csv",
+    "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch14.csv",
+    "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch15.csv",
+    "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch16.csv",
+    "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch17.csv",
+    "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch18.csv",
+    "../../experimental_data/from_260430/R0_sigma_sensitive_2params_batch19.csv"
 ]
 
 df = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
