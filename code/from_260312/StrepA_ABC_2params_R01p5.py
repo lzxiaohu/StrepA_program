@@ -28,7 +28,7 @@ omega = 0.2     # immunity cross strains: 0.1
 x = 10.0        #
 Cperweek = 34.53    #
 Nagents = 1000      # number of agents
-alpha = 0.007        # migration rate: 3.0
+alpha = 7.0        # migration rate: 3.0
 AgeDeath = 71.0     # life expectancy
 # R0: updated parameter (Basic reproductive number)
 # Sigma: updated parameter ()
@@ -294,12 +294,12 @@ sigma_range = [0.2, 1.0]
 if core_params_num == 2:
     #
     eps, pilots = select_epsilon_2params(R0_range, sigma_range, s_obs_v5_numba, scale,
-                                         n_pilot=1500, quantile=0.2, seed=123)
+                                         n_pilot=1500, quantile=0.05, seed=123)
     print("eps: ", eps)
     print("dists: ", len(pilots))
 
     post, dists_acc, trials, ss = abc_reject_2params(R0_range, sigma_range, core_params_num, s_obs_v5_numba,
-                                                     scale, eps, n_accept=2000, max_trials=2_000_000,
+                                                     scale, eps, n_accept=8000, max_trials=2_000_000,
                                                      seed=123)
     print("Accepted: ", len(post), "Trials: ", trials, "Acceptance rate: ", len(post) / trials)
 
@@ -316,11 +316,11 @@ elif core_params_num == 3:
     #
     Dimmunity_range = [0.05, 0.5]
     eps, pilots = select_epsilon_3params(R0_range, sigma_range, Dimmunity_range, s_obs_v5_numba,
-                                         scale, n_pilot=1500, quantile=0.2, seed=123)
+                                         scale, n_pilot=1500, quantile=0.05, seed=123)
     print("eps: ", eps)
     print("dists: ", len(pilots))
     post, dists_acc, trials, ss = abc_reject_3params(R0_range, sigma_range, Dimmunity_range, core_params_num,
-                                                     s_obs_v5_numba, scale, eps, n_accept=2000,
+                                                     s_obs_v5_numba, scale, eps, n_accept=8000,
                                                      max_trials=2_000_000, seed=123)
     print("Accepted: ", len(post), "Trials: ", trials, "Acceptance rate: ", len(post) / trials)
 
