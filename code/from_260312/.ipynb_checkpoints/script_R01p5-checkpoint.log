@@ -1,0 +1,706 @@
+nohup: ignoring input
+T's size 920
+True True
+scale [5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+weights:  [1. 1. 3. 1.]
+s_obs [0.    0.    0.448 0.   ]
+dist 3.9460066203100035 number:  0
+dist 0.0 number:  50
+dist 3.335325427472496 number:  100
+dist 0.0 number:  150
+dist 3.3350494621950935 number:  200
+dist 4.206837041006219 number:  250
+dist 0.0 number:  300
+dist 0.0 number:  350
+dist 0.0 number:  400
+dist 0.0 number:  450
+dist 0.0 number:  500
+dist 0.0 number:  550
+dist 0.0 number:  600
+dist 0.0 number:  650
+dist 3.649558931492508 number:  700
+dist 0.0 number:  750
+dist 0.0 number:  800
+dist 0.0 number:  850
+dist 0.0 number:  900
+dist 0.0 number:  950
+dist 0.0 number:  1000
+dist 0.0 number:  1050
+dist 0.0 number:  1100
+dist 0.0 number:  1150
+dist 3.3350450368431916 number:  1200
+dist 3.3351562884361146 number:  1250
+dist 0.0 number:  1300
+dist 0.0 number:  1350
+dist 0.0 number:  1400
+dist 0.0 number:  1450
+eps:  0.0
+dists:  1500
+nohup: ignoring input
+T's size 920
+True True
+scale [5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+weights:  [1. 1. 3. 1.]
+s_obs [0.    0.    0.448 0.   ]
+dist 3.9460066203100035 number:  0
+dist 0.0 number:  50
+dist 3.335325427472496 number:  100
+dist 0.0 number:  150
+nohup: ignoring input
+Traceback (most recent call last):
+  File "StrepA_ABC_2params_R01p5.py", line 158, in <module>
+    tprint("T's size", T)
+TypeError: tprint() takes 1 positional argument but 2 were given
+nohup: ignoring input
+T's size 920
+True True
+scale [5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+weights:  [1. 1. 3. 1.]
+s_obs [0.    0.    0.448 0.   ]
+dist 3.9460066203100035 number:  0
+nohup: ignoring input
+T's size 920
+True True
+scale [5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+weights:  [1. 1. 3. 1.]
+s_obs [0.    0.    0.448 0.   ]
+dist 3.9460066203100035 number:  0
+dist 0.0 number:  50
+dist 3.335325427472496 number:  100
+dist 0.0 number:  150
+dist 3.3350494621950935 number:  200
+dist 4.206837041006219 number:  250
+dist 0.0 number:  300
+dist 0.0 number:  350
+dist 0.0 number:  400
+nohup: ignoring input
+  File "StrepA_ABC_2params_R01p5.py", line 161
+    logging.info(f "T's size: {T}")
+                   ^
+SyntaxError: invalid syntax
+nohup: ignoring input
+Traceback (most recent call last):
+  File "StrepA_ABC_2params_R01p5.py", line 56, in <module>
+    stream=sys.stdout  # Important for nohup
+NameError: name 'sys' is not defined
+nohup: ignoring input
+2026-03-28 02:52:55 - INFO - T's size: 920
+T's size 920
+True True
+scale [5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+weights:  [1. 1. 3. 1.]
+s_obs [0.    0.    0.448 0.   ]
+dist 3.9460066203100035 number:  0
+nohup: ignoring input
+2026-03-28 03:09:07 - INFO - T's size: 920
+2026-03-28 03:09:09 - INFO - allclose=True, same_shape=True
+2026-03-28 03:09:09 - INFO - scale:[5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+2026-03-28 03:09:09 - INFO - weights: [1. 1. 3. 1.]
+2026-03-28 03:09:09 - INFO - s_obs: [0.    0.    0.448 0.   ]
+2026-03-28 03:09:13 - INFO - dist: 3.9460066203100035; number: 0
+2026-03-28 03:10:54 - INFO - dist: 0.0; number: 50
+2026-03-28 03:12:42 - INFO - eps: 0.0; dists: [3.9460066203100035, 0.0, 0.0, 3.651736759427137, 3.335036550177533, 0.0, 3.6527006563286033, 0.0, 3.649874368397075, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.335173140464568, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.3351095966176727, 3.335076811326154, 0.0, 3.335179259265752, 0.0, 0.0, 0.0, 0.0, 3.6509609080554624, 0.0, 3.651898381376845, 3.3354578242945614, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.941274123060847, 3.6501933076296056, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+2026-03-28 03:14:02 - INFO - dist: 0.0; accepted: 30; trials: 36
+2026-03-28 03:15:06 - INFO - Accepted: 50; Trials: 62; Acceptance rate: 0.8064516129032258
+2026-03-28 03:15:06 - INFO - Posterior mean R0: 1.438963403780547
+2026-03-28 03:15:06 - INFO - Posterior mean sigma: <built-in method mean of numpy.ndarray object at 0x7ff10dbe3f90>()
+2026-03-28 03:15:06 - INFO - Elapsed: 361.9204 s
+nohup: ignoring input
+2026-03-28 03:16:05 - INFO - T's size: 920
+2026-03-28 03:16:08 - INFO - allclose=True, same_shape=True
+2026-03-28 03:16:08 - INFO - scale:[5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+2026-03-28 03:16:08 - INFO - weights: [1. 1. 3. 1.]
+2026-03-28 03:16:08 - INFO - s_obs: [0.    0.    0.448 0.   ]
+2026-03-28 03:16:11 - INFO - dist: 3.9460066203100035; number: 0
+2026-03-28 03:18:00 - INFO - dist: 0.0; number: 50
+2026-03-28 03:19:45 - INFO - eps: 0.0; dists: 100
+2026-03-28 03:21:01 - INFO - dist: 0.0; accepted: 30; trials: 36
+2026-03-28 03:21:57 - INFO - Accepted: 50; Trials: 62; Acceptance rate: 0.8064516129032258
+2026-03-28 03:21:57 - INFO - Posterior mean R0: 1.438963403780547
+2026-03-28 03:21:57 - INFO - Posterior mean sigma: 0.610520052420024
+2026-03-28 03:21:57 - INFO - Elapsed: 354.5367 s
+nohup: ignoring input
+2026-03-28 03:25:28 - INFO - T's size: 920
+2026-03-28 03:25:29 - INFO - allclose=True, same_shape=True
+2026-03-28 03:25:29 - INFO - scale:[5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+2026-03-28 03:25:29 - INFO - weights: [1. 1. 3. 1.]
+2026-03-28 03:25:29 - INFO - s_obs: [0.    0.    0.448 0.   ]
+2026-03-28 03:25:33 - INFO - dist: 3.9460066203100035; number: 0
+2026-03-28 03:27:26 - INFO - dist: 0.0; number: 50
+2026-03-28 03:29:15 - INFO - dist: 3.335325427472496; number: 100
+2026-03-28 03:30:59 - INFO - dist: 0.0; number: 150
+2026-03-28 03:32:45 - INFO - dist: 3.3350494621950935; number: 200
+2026-03-28 03:34:36 - INFO - dist: 4.206837041006219; number: 250
+2026-03-28 03:36:20 - INFO - dist: 0.0; number: 300
+2026-03-28 03:37:55 - INFO - dist: 0.0; number: 350
+2026-03-28 03:39:49 - INFO - dist: 0.0; number: 400
+2026-03-28 03:41:41 - INFO - dist: 0.0; number: 450
+2026-03-28 03:43:38 - INFO - dist: 0.0; number: 500
+2026-03-28 03:45:21 - INFO - dist: 0.0; number: 550
+2026-03-28 03:47:07 - INFO - dist: 0.0; number: 600
+2026-03-28 03:48:59 - INFO - dist: 0.0; number: 650
+2026-03-28 03:50:52 - INFO - dist: 3.649558931492508; number: 700
+2026-03-28 03:52:54 - INFO - dist: 0.0; number: 750
+2026-03-28 03:54:38 - INFO - dist: 0.0; number: 800
+2026-03-28 03:56:28 - INFO - dist: 0.0; number: 850
+2026-03-28 03:58:24 - INFO - dist: 0.0; number: 900
+2026-03-28 04:00:03 - INFO - dist: 0.0; number: 950
+2026-03-28 04:01:56 - INFO - dist: 0.0; number: 1000
+2026-03-28 04:03:54 - INFO - dist: 0.0; number: 1050
+2026-03-28 04:05:37 - INFO - dist: 0.0; number: 1100
+2026-03-28 04:07:26 - INFO - dist: 0.0; number: 1150
+2026-03-28 04:09:18 - INFO - dist: 3.3350450368431916; number: 1200
+2026-03-28 04:10:59 - INFO - dist: 3.3351562884361146; number: 1250
+2026-03-28 04:12:46 - INFO - dist: 0.0; number: 1300
+2026-03-28 04:14:33 - INFO - dist: 0.0; number: 1350
+2026-03-28 04:16:17 - INFO - dist: 0.0; number: 1400
+2026-03-28 04:18:07 - INFO - dist: 0.0; number: 1450
+2026-03-28 04:19:51 - INFO - eps: 0.0; dists: 1500
+2026-03-28 04:21:17 - INFO - dist: 0.0; accepted: 30; trials: 36
+2026-03-28 04:22:48 - INFO - dist: 0.0; accepted: 60; trials: 74
+2026-03-28 04:23:53 - INFO - dist: 0.0; accepted: 90; trials: 105
+2026-03-28 04:25:18 - INFO - dist: 0.0; accepted: 120; trials: 141
+2026-03-28 04:26:29 - INFO - dist: 0.0; accepted: 150; trials: 175
+2026-03-28 04:27:37 - INFO - dist: 0.0; accepted: 180; trials: 209
+2026-03-28 04:28:52 - INFO - dist: 0.0; accepted: 210; trials: 245
+2026-03-28 04:30:09 - INFO - dist: 0.0; accepted: 240; trials: 280
+2026-03-28 04:31:18 - INFO - dist: 0.0; accepted: 270; trials: 313
+2026-03-28 04:32:20 - INFO - dist: 0.0; accepted: 300; trials: 345
+2026-03-28 04:33:39 - INFO - dist: 0.0; accepted: 330; trials: 380
+2026-03-28 04:35:04 - INFO - dist: 0.0; accepted: 360; trials: 416
+2026-03-28 04:36:22 - INFO - dist: 0.0; accepted: 390; trials: 451
+2026-03-28 04:37:43 - INFO - dist: 0.0; accepted: 420; trials: 487
+2026-03-28 04:38:56 - INFO - dist: 0.0; accepted: 450; trials: 521
+2026-03-28 04:40:07 - INFO - dist: 0.0; accepted: 480; trials: 553
+2026-03-28 04:41:33 - INFO - dist: 0.0; accepted: 510; trials: 590
+2026-03-28 04:42:39 - INFO - dist: 0.0; accepted: 540; trials: 622
+2026-03-28 04:43:53 - INFO - dist: 0.0; accepted: 570; trials: 656
+2026-03-28 04:45:08 - INFO - dist: 0.0; accepted: 600; trials: 690
+2026-03-28 04:46:42 - INFO - dist: 0.0; accepted: 630; trials: 728
+2026-03-28 04:47:52 - INFO - dist: 0.0; accepted: 660; trials: 760
+2026-03-28 04:49:16 - INFO - dist: 0.0; accepted: 690; trials: 799
+2026-03-28 04:50:22 - INFO - dist: 0.0; accepted: 720; trials: 831
+2026-03-28 04:51:33 - INFO - dist: 0.0; accepted: 750; trials: 864
+2026-03-28 04:53:10 - INFO - dist: 0.0; accepted: 780; trials: 904
+2026-03-28 04:54:14 - INFO - dist: 0.0; accepted: 810; trials: 938
+2026-03-28 04:55:24 - INFO - dist: 0.0; accepted: 840; trials: 973
+2026-03-28 04:56:54 - INFO - dist: 0.0; accepted: 870; trials: 1013
+2026-03-28 04:57:56 - INFO - dist: 0.0; accepted: 900; trials: 1044
+2026-03-28 04:59:03 - INFO - dist: 0.0; accepted: 930; trials: 1077
+2026-03-28 05:00:02 - INFO - dist: 0.0; accepted: 960; trials: 1109
+2026-03-28 05:01:25 - INFO - dist: 0.0; accepted: 990; trials: 1147
+2026-03-28 05:02:45 - INFO - dist: 0.0; accepted: 1020; trials: 1183
+2026-03-28 05:04:14 - INFO - dist: 0.0; accepted: 1050; trials: 1224
+2026-03-28 05:05:25 - INFO - dist: 0.0; accepted: 1080; trials: 1259
+2026-03-28 05:06:34 - INFO - dist: 0.0; accepted: 1110; trials: 1291
+2026-03-28 05:07:55 - INFO - dist: 0.0; accepted: 1140; trials: 1328
+2026-03-28 05:08:59 - INFO - dist: 0.0; accepted: 1170; trials: 1360
+2026-03-28 05:10:17 - INFO - dist: 0.0; accepted: 1200; trials: 1395
+2026-03-28 05:11:41 - INFO - dist: 0.0; accepted: 1230; trials: 1431
+2026-03-28 05:13:11 - INFO - dist: 0.0; accepted: 1260; trials: 1468
+2026-03-28 05:14:12 - INFO - dist: 0.0; accepted: 1290; trials: 1499
+2026-03-28 05:15:30 - INFO - dist: 0.0; accepted: 1320; trials: 1536
+2026-03-28 05:16:41 - INFO - dist: 0.0; accepted: 1350; trials: 1570
+2026-03-28 05:18:01 - INFO - dist: 0.0; accepted: 1380; trials: 1608
+2026-03-28 05:19:27 - INFO - dist: 0.0; accepted: 1410; trials: 1643
+2026-03-28 05:20:33 - INFO - dist: 0.0; accepted: 1440; trials: 1674
+2026-03-28 05:21:39 - INFO - dist: 0.0; accepted: 1470; trials: 1706
+2026-03-28 05:22:50 - INFO - dist: 0.0; accepted: 1500; trials: 1739
+2026-03-28 05:24:08 - INFO - dist: 0.0; accepted: 1530; trials: 1773
+2026-03-28 05:25:17 - INFO - dist: 0.0; accepted: 1560; trials: 1806
+2026-03-28 05:26:24 - INFO - dist: 0.0; accepted: 1590; trials: 1840
+2026-03-28 05:27:50 - INFO - dist: 0.0; accepted: 1620; trials: 1877
+2026-03-28 05:29:15 - INFO - dist: 0.0; accepted: 1650; trials: 1914
+2026-03-28 05:30:12 - INFO - dist: 0.0; accepted: 1680; trials: 1945
+2026-03-28 05:31:24 - INFO - dist: 0.0; accepted: 1710; trials: 1978
+2026-03-28 05:32:34 - INFO - dist: 0.0; accepted: 1740; trials: 2012
+2026-03-28 05:33:48 - INFO - dist: 0.0; accepted: 1770; trials: 2046
+2026-03-28 05:35:00 - INFO - dist: 0.0; accepted: 1800; trials: 2081
+2026-03-28 05:36:16 - INFO - dist: 0.0; accepted: 1830; trials: 2114
+2026-03-28 05:37:50 - INFO - dist: 0.0; accepted: 1860; trials: 2153
+2026-03-28 05:39:07 - INFO - dist: 0.0; accepted: 1890; trials: 2187
+2026-03-28 05:40:25 - INFO - dist: 0.0; accepted: 1920; trials: 2221
+2026-03-28 05:41:39 - INFO - dist: 0.0; accepted: 1950; trials: 2256
+2026-03-28 05:43:07 - INFO - dist: 0.0; accepted: 1980; trials: 2296
+2026-03-28 05:44:32 - INFO - dist: 0.0; accepted: 2010; trials: 2334
+2026-03-28 05:45:31 - INFO - dist: 0.0; accepted: 2040; trials: 2365
+2026-03-28 05:46:49 - INFO - dist: 0.0; accepted: 2070; trials: 2400
+2026-03-28 05:48:31 - INFO - dist: 0.0; accepted: 2100; trials: 2440
+2026-03-28 05:49:43 - INFO - dist: 0.0; accepted: 2130; trials: 2475
+2026-03-28 05:50:50 - INFO - dist: 0.0; accepted: 2160; trials: 2508
+2026-03-28 05:52:05 - INFO - dist: 0.0; accepted: 2190; trials: 2543
+2026-03-28 05:53:14 - INFO - dist: 0.0; accepted: 2220; trials: 2575
+2026-03-28 05:54:40 - INFO - dist: 0.0; accepted: 2250; trials: 2612
+2026-03-28 05:56:01 - INFO - dist: 0.0; accepted: 2280; trials: 2646
+2026-03-28 05:57:30 - INFO - dist: 0.0; accepted: 2310; trials: 2682
+2026-03-28 05:59:06 - INFO - dist: 0.0; accepted: 2340; trials: 2721
+2026-03-28 06:00:36 - INFO - dist: 0.0; accepted: 2370; trials: 2760
+2026-03-28 06:01:54 - INFO - dist: 0.0; accepted: 2400; trials: 2796
+2026-03-28 06:03:20 - INFO - dist: 0.0; accepted: 2430; trials: 2837
+2026-03-28 06:04:27 - INFO - dist: 0.0; accepted: 2460; trials: 2869
+2026-03-28 06:05:45 - INFO - dist: 0.0; accepted: 2490; trials: 2905
+2026-03-28 06:07:02 - INFO - dist: 0.0; accepted: 2520; trials: 2941
+2026-03-28 06:08:37 - INFO - dist: 0.0; accepted: 2550; trials: 2979
+2026-03-28 06:09:58 - INFO - dist: 0.0; accepted: 2580; trials: 3015
+2026-03-28 06:11:30 - INFO - dist: 0.0; accepted: 2610; trials: 3052
+2026-03-28 06:13:03 - INFO - dist: 0.0; accepted: 2640; trials: 3090
+2026-03-28 06:14:24 - INFO - dist: 0.0; accepted: 2670; trials: 3125
+2026-03-28 06:15:47 - INFO - dist: 0.0; accepted: 2700; trials: 3163
+2026-03-28 06:16:54 - INFO - dist: 0.0; accepted: 2730; trials: 3197
+2026-03-28 06:18:02 - INFO - dist: 0.0; accepted: 2760; trials: 3232
+2026-03-28 06:19:16 - INFO - dist: 0.0; accepted: 2790; trials: 3268
+2026-03-28 06:20:33 - INFO - dist: 0.0; accepted: 2820; trials: 3304
+2026-03-28 06:21:47 - INFO - dist: 0.0; accepted: 2850; trials: 3339
+2026-03-28 06:23:02 - INFO - dist: 0.0; accepted: 2880; trials: 3374
+2026-03-28 06:24:21 - INFO - dist: 0.0; accepted: 2910; trials: 3411
+2026-03-28 06:25:21 - INFO - dist: 0.0; accepted: 2940; trials: 3442
+2026-03-28 06:26:29 - INFO - dist: 0.0; accepted: 2970; trials: 3477
+2026-03-28 06:27:39 - INFO - dist: 0.0; accepted: 3000; trials: 3510
+2026-03-28 06:28:58 - INFO - dist: 0.0; accepted: 3030; trials: 3545
+2026-03-28 06:30:16 - INFO - dist: 0.0; accepted: 3060; trials: 3580
+2026-03-28 06:31:26 - INFO - dist: 0.0; accepted: 3090; trials: 3614
+2026-03-28 06:32:42 - INFO - dist: 0.0; accepted: 3120; trials: 3650
+2026-03-28 06:34:03 - INFO - dist: 0.0; accepted: 3150; trials: 3686
+2026-03-28 06:35:18 - INFO - dist: 0.0; accepted: 3180; trials: 3719
+2026-03-28 06:36:42 - INFO - dist: 0.0; accepted: 3210; trials: 3756
+2026-03-28 06:38:01 - INFO - dist: 0.0; accepted: 3240; trials: 3793
+2026-03-28 06:39:12 - INFO - dist: 0.0; accepted: 3270; trials: 3826
+2026-03-28 06:40:25 - INFO - dist: 0.0; accepted: 3300; trials: 3860
+2026-03-28 06:41:42 - INFO - dist: 0.0; accepted: 3330; trials: 3895
+2026-03-28 06:42:57 - INFO - dist: 0.0; accepted: 3360; trials: 3929
+2026-03-28 06:44:33 - INFO - dist: 0.0; accepted: 3390; trials: 3967
+2026-03-28 06:45:52 - INFO - dist: 0.0; accepted: 3420; trials: 4004
+2026-03-28 06:47:06 - INFO - dist: 0.0; accepted: 3450; trials: 4039
+2026-03-28 06:48:43 - INFO - dist: 0.0; accepted: 3480; trials: 4077
+2026-03-28 06:50:08 - INFO - dist: 0.0; accepted: 3510; trials: 4113
+2026-03-28 06:51:25 - INFO - dist: 0.0; accepted: 3540; trials: 4150
+2026-03-28 06:52:39 - INFO - dist: 0.0; accepted: 3570; trials: 4187
+2026-03-28 06:53:41 - INFO - dist: 0.0; accepted: 3600; trials: 4221
+2026-03-28 06:54:54 - INFO - dist: 0.0; accepted: 3630; trials: 4256
+2026-03-28 06:56:23 - INFO - dist: 0.0; accepted: 3660; trials: 4294
+2026-03-28 06:57:36 - INFO - dist: 0.0; accepted: 3690; trials: 4328
+2026-03-28 06:58:41 - INFO - dist: 0.0; accepted: 3720; trials: 4361
+2026-03-28 06:59:59 - INFO - dist: 0.0; accepted: 3750; trials: 4399
+2026-03-28 07:01:38 - INFO - dist: 0.0; accepted: 3780; trials: 4443
+2026-03-28 07:02:52 - INFO - dist: 0.0; accepted: 3810; trials: 4479
+2026-03-28 07:04:11 - INFO - dist: 0.0; accepted: 3840; trials: 4516
+2026-03-28 07:05:27 - INFO - dist: 0.0; accepted: 3870; trials: 4553
+2026-03-28 07:06:49 - INFO - dist: 0.0; accepted: 3900; trials: 4590
+2026-03-28 07:07:51 - INFO - dist: 0.0; accepted: 3930; trials: 4622
+2026-03-28 07:09:01 - INFO - dist: 0.0; accepted: 3960; trials: 4656
+2026-03-28 07:10:13 - INFO - dist: 0.0; accepted: 3990; trials: 4692
+2026-03-28 07:10:41 - INFO - Accepted: 4000; Trials: 4704; Acceptance rate: 0.8503401360544217
+2026-03-28 07:10:41 - INFO - Posterior mean R0: 1.4496403998417815
+2026-03-28 07:10:41 - INFO - Posterior mean sigma: 0.643659655106703
+2026-03-28 07:10:41 - INFO - Elapsed: 13515.8204 s
+nohup: ignoring input
+T's size 920
+True True
+y_obs_array.mean 0.20978260869565218
+R0 (2000,) [1.69466687 1.73123531 2.83792502 1.68626336 2.37335778 1.79349265
+ 2.26538074 1.44626744 2.99388595 2.25699618]
+sigma (2000,) [0.33272319 0.38385715 0.63577232 0.37473458 0.51506412 0.45091235
+ 0.56650923 0.23178129 0.65568066 0.52409525]
+theta (2000, 2) [[1.69466687 0.33272319]
+ [1.73123531 0.38385715]
+ [2.83792502 0.63577232]
+ [1.68626336 0.37473458]
+ [2.37335778 0.51506412]
+ [1.79349265 0.45091235]
+ [2.26538074 0.56650923]
+ [1.44626744 0.23178129]
+ [2.99388595 0.65568066]
+ [2.25699618 0.52409525]]
+nohup: ignoring input
+T's size 920
+True True
+y_obs_array.mean 0.0
+Traceback (most recent call last):
+  File "ppc_sigma0p6_R01p5.py", line 164, in <module>
+    plot_dots(R0_samps, sigma_samps, title="R0 vs sigma", save_path="../../figures/from_260312/ppc/sigma0p7/R01p5/")
+  File "ppc_sigma0p6_R01p5.py", line 123, in plot_dots
+    plt.savefig(f"{save_path}{title}.png", dpi=300, bbox_inches="tight")
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/matplotlib/pyplot.py", line 1023, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/matplotlib/figure.py", line 3378, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2366, in print_figure
+    result = print_method(
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2232, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 509, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 458, in _print_pil
+    mpl.image.imsave(
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/matplotlib/image.py", line 1689, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/PIL/Image.py", line 2563, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/strepa/StrepA_program/figures/from_260312/ppc/sigma0p7/R01p5/R0 vs sigma.png'
+nohup: ignoring input
+T's size 920
+True True
+y_obs_array.mean 0.0
+start to simulate:
+rmse: 0.0
+mae: 0.0
+coverage: 1.0
+Elapsed: 195.7077 s
+Worst strain coverage: 1.0
+Best strain coverage: 1.0
+Worst strain MAE: 0.0
+Worst time coverage: 1.0
+Best time coverage: 1.0
+Worst time MAE: 0.0
+============================================================
+POSTERIOR PREDICTIVE CHECK RESULTS
+============================================================
+Ground truth:      R0 = 1.5, sigma = 0.6
+Posterior samples: 100
+R0 posterior:      1.430 ± 0.284
+sigma posterior:   0.620 ± 0.211
+------------------------------------------------------------
+RMSE:              0.000000
+MAE:               0.000000
+90% CI Coverage:   100.00%
+Expected Coverage: 90.00%
+------------------------------------------------------------
+Status: ⚠ Over-coverage (model underconfident)
+============================================================
+nohup: ignoring input
+T's size 920
+True True
+y_obs_array.mean 0.0
+start to simulate:
+rmse: 0.0
+mae: 0.0
+coverage: 1.0
+Elapsed: 7467.2549 s
+Worst strain coverage: 1.0
+Best strain coverage: 1.0
+Worst strain MAE: 0.0
+Worst time coverage: 1.0
+Best time coverage: 1.0
+Worst time MAE: 0.0
+============================================================
+POSTERIOR PREDICTIVE CHECK RESULTS
+============================================================
+Ground truth:      R0 = 1.5, sigma = 0.6
+Posterior samples: 4000
+R0 posterior:      1.450 ± 0.279
+sigma posterior:   0.644 ± 0.209
+------------------------------------------------------------
+RMSE:              0.000000
+MAE:               0.000000
+90% CI Coverage:   100.00%
+Expected Coverage: 90.00%
+------------------------------------------------------------
+Status: ⚠ Over-coverage (model underconfident)
+============================================================
+nohup: ignoring input
+2026-04-29 04:44:39 - INFO - T's size: 920
+2026-04-29 04:44:41 - INFO - allclose=True, same_shape=True
+2026-04-29 04:44:41 - INFO - scale:[5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+2026-04-29 04:44:41 - INFO - weights: [1. 1. 3. 1.]
+2026-04-29 04:44:41 - INFO - s_obs: [12.39130435  9.91206396 -0.34299727  4.91916859]
+2026-04-29 04:44:45 - INFO - dist: 0.6080778651959039; number: 0
+2026-04-29 04:46:49 - INFO - dist: 0.9600264417844045; number: 50
+2026-04-29 04:48:55 - INFO - dist: 0.42649561870710284; number: 100
+2026-04-29 04:50:58 - INFO - dist: 0.19261781630125924; number: 150
+2026-04-29 04:53:03 - INFO - dist: 0.11326008819406373; number: 200
+2026-04-29 04:55:15 - INFO - dist: 0.6191762932996635; number: 250
+2026-04-29 04:57:21 - INFO - dist: 1.3289116657681175; number: 300
+2026-04-29 04:59:21 - INFO - dist: 0.5686214063861571; number: 350
+2026-04-29 05:01:30 - INFO - dist: 0.4880471977444508; number: 400
+2026-04-29 05:03:36 - INFO - dist: 0.7534890018723434; number: 450
+2026-04-29 05:05:42 - INFO - dist: 0.34225329189490367; number: 500
+2026-04-29 05:07:50 - INFO - dist: 0.7554227680764009; number: 550
+2026-04-29 05:09:54 - INFO - dist: 0.15317763641795165; number: 600
+2026-04-29 05:12:02 - INFO - dist: 0.4802045629503862; number: 650
+2026-04-29 05:14:07 - INFO - dist: 0.08846373375882159; number: 700
+2026-04-29 05:16:15 - INFO - dist: 0.7664674596379422; number: 750
+2026-04-29 05:18:19 - INFO - dist: 1.3320363078322637; number: 800
+2026-04-29 05:20:24 - INFO - dist: 0.27776661548332643; number: 850
+2026-04-29 05:22:32 - INFO - dist: 0.4395478350719721; number: 900
+2026-04-29 05:24:33 - INFO - dist: 0.2215147690016536; number: 950
+2026-04-29 05:26:41 - INFO - dist: 0.4787394276734573; number: 1000
+2026-04-29 05:28:46 - INFO - dist: 0.21977073426509355; number: 1050
+2026-04-29 05:30:46 - INFO - dist: 0.36921635949756915; number: 1100
+2026-04-29 05:32:52 - INFO - dist: 0.45711757896164684; number: 1150
+2026-04-29 05:34:59 - INFO - dist: 0.6203901567389785; number: 1200
+2026-04-29 05:37:06 - INFO - dist: 0.19422803717624756; number: 1250
+2026-04-29 05:39:14 - INFO - dist: 0.7468223075890399; number: 1300
+2026-04-29 05:41:18 - INFO - dist: 0.7565968530847722; number: 1350
+2026-04-29 05:43:23 - INFO - dist: 0.2697177811794547; number: 1400
+2026-04-29 05:45:28 - INFO - dist: 0.4129002110147693; number: 1450
+2026-04-29 05:47:32 - INFO - eps: 0.06753541987447569; dists: 1500
+2026-04-29 06:12:30 - INFO - dist: 0.048089907754354184; accepted: 30; trials: 596
+2026-04-29 06:42:31 - INFO - dist: 0.057521099023757516; accepted: 60; trials: 1313
+2026-04-29 07:05:06 - INFO - dist: 0.06522831066081795; accepted: 90; trials: 1856
+2026-04-29 07:26:11 - INFO - dist: 0.06611325142011676; accepted: 120; trials: 2358
+2026-04-29 07:48:51 - INFO - dist: 0.037456596084909005; accepted: 150; trials: 2895
+2026-04-29 08:08:50 - INFO - dist: 0.021456183664430886; accepted: 180; trials: 3369
+2026-04-29 08:26:25 - INFO - dist: 0.05072384325683298; accepted: 210; trials: 3789
+2026-04-29 08:55:06 - INFO - dist: 0.05881567665028155; accepted: 240; trials: 4468
+2026-04-29 09:19:10 - INFO - dist: 0.05961906053304756; accepted: 270; trials: 5037
+2026-04-29 09:43:19 - INFO - dist: 0.033535483029675295; accepted: 300; trials: 5618
+2026-04-29 10:00:35 - INFO - dist: 0.06015578975914579; accepted: 330; trials: 6028
+2026-04-29 10:19:56 - INFO - dist: 0.05740170357535597; accepted: 360; trials: 6482
+2026-04-29 10:38:31 - INFO - dist: 0.06601492604248123; accepted: 390; trials: 6926
+2026-04-29 11:11:02 - INFO - dist: 0.06247193836910384; accepted: 420; trials: 7701
+2026-04-29 11:35:35 - INFO - dist: 0.06216822413387262; accepted: 450; trials: 8284
+2026-04-29 12:03:04 - INFO - dist: 0.047422794044027695; accepted: 480; trials: 8933
+2026-04-29 12:20:35 - INFO - dist: 0.02996839017098047; accepted: 510; trials: 9348
+2026-04-29 12:52:18 - INFO - dist: 0.040371707617875036; accepted: 540; trials: 10103
+2026-04-29 13:18:38 - INFO - dist: 0.06103378893880306; accepted: 570; trials: 10734
+2026-04-29 13:44:03 - INFO - dist: 0.02545629489985076; accepted: 600; trials: 11339
+2026-04-29 14:06:47 - INFO - dist: 0.041253777812112216; accepted: 630; trials: 11873
+2026-04-29 14:29:14 - INFO - dist: 0.040990633517747795; accepted: 660; trials: 12409
+2026-04-29 14:43:37 - INFO - dist: 0.06705370174088794; accepted: 690; trials: 12747
+2026-04-29 15:11:18 - INFO - dist: 0.050253358956158706; accepted: 720; trials: 13399
+2026-04-29 15:38:21 - INFO - dist: 0.06662618468136601; accepted: 750; trials: 14035
+2026-04-29 16:02:11 - INFO - dist: 0.05578691481675521; accepted: 780; trials: 14602
+2026-04-29 16:27:08 - INFO - dist: 0.024948300943880806; accepted: 810; trials: 15195
+2026-04-29 16:49:43 - INFO - dist: 0.046153183116920286; accepted: 840; trials: 15739
+2026-04-29 17:09:15 - INFO - dist: 0.003744002917970982; accepted: 870; trials: 16201
+2026-04-29 17:34:12 - INFO - dist: 0.04964082981400168; accepted: 900; trials: 16799
+2026-04-29 17:58:58 - INFO - dist: 0.018959440811557485; accepted: 930; trials: 17377
+2026-04-29 18:20:58 - INFO - dist: 0.0501242152845153; accepted: 960; trials: 17883
+2026-04-29 18:39:14 - INFO - dist: 0.026021843374784095; accepted: 990; trials: 18318
+2026-04-29 18:57:31 - INFO - dist: 0.051569279050600374; accepted: 1020; trials: 18754
+2026-04-29 19:25:56 - INFO - dist: 0.057146945880548215; accepted: 1050; trials: 19430
+2026-04-29 19:51:55 - INFO - dist: 0.06668755140901901; accepted: 1080; trials: 20046
+2026-04-29 20:12:43 - INFO - dist: 0.05773143893290688; accepted: 1110; trials: 20545
+2026-04-29 20:30:42 - INFO - dist: 0.05251924563439602; accepted: 1140; trials: 20975
+2026-04-29 20:56:06 - INFO - dist: 0.05987999957687488; accepted: 1170; trials: 21577
+2026-04-29 21:18:33 - INFO - dist: 0.05469313646315421; accepted: 1200; trials: 22117
+2026-04-29 21:45:48 - INFO - dist: 0.06302156625980807; accepted: 1230; trials: 22766
+2026-04-29 22:10:05 - INFO - dist: 0.04258132851626503; accepted: 1260; trials: 23348
+2026-04-29 22:35:12 - INFO - dist: 0.019970917296820972; accepted: 1290; trials: 23945
+2026-04-29 23:01:49 - INFO - dist: 0.026570103170021363; accepted: 1320; trials: 24579
+2026-04-29 23:24:05 - INFO - dist: 0.05534861537760269; accepted: 1350; trials: 25108
+2026-04-29 23:46:33 - INFO - dist: 0.04034020277993874; accepted: 1380; trials: 25645
+2026-04-30 00:02:25 - INFO - dist: 0.037710223078581025; accepted: 1410; trials: 26023
+2026-04-30 00:28:25 - INFO - dist: 0.030656408727208755; accepted: 1440; trials: 26646
+2026-04-30 00:45:29 - INFO - dist: 0.05427597826463336; accepted: 1470; trials: 27051
+2026-04-30 01:07:51 - INFO - dist: 0.048166212481760125; accepted: 1500; trials: 27579
+2026-04-30 01:32:32 - INFO - dist: 0.009643865639165194; accepted: 1530; trials: 28171
+2026-04-30 02:04:53 - INFO - dist: 0.01599794611049071; accepted: 1560; trials: 28941
+2026-04-30 02:19:05 - INFO - dist: 0.03633612950522808; accepted: 1590; trials: 29279
+2026-04-30 02:40:33 - INFO - dist: 0.033919301397620956; accepted: 1620; trials: 29791
+2026-04-30 03:01:10 - INFO - dist: 0.05791078552657705; accepted: 1650; trials: 30278
+2026-04-30 03:22:54 - INFO - dist: 0.01582202945976043; accepted: 1680; trials: 30793
+2026-04-30 03:44:54 - INFO - dist: 0.03948275840333848; accepted: 1710; trials: 31318
+2026-04-30 04:14:07 - INFO - dist: 0.02671103053098455; accepted: 1740; trials: 32015
+2026-04-30 04:37:46 - INFO - dist: 0.06495331333798336; accepted: 1770; trials: 32580
+2026-04-30 04:59:51 - INFO - dist: 0.05577947228059139; accepted: 1800; trials: 33111
+2026-04-30 05:20:21 - INFO - dist: 0.056277875223878504; accepted: 1830; trials: 33601
+2026-04-30 05:44:46 - INFO - dist: 0.028038560089241344; accepted: 1860; trials: 34183
+2026-04-30 06:02:55 - INFO - dist: 0.040327829220618804; accepted: 1890; trials: 34612
+2026-04-30 06:29:42 - INFO - dist: 0.0627625968889366; accepted: 1920; trials: 35249
+2026-04-30 06:51:25 - INFO - dist: 0.02597187865553887; accepted: 1950; trials: 35764
+2026-04-30 07:18:02 - INFO - dist: 0.03477357096393972; accepted: 1980; trials: 36402
+2026-04-30 07:43:14 - INFO - dist: 0.015959201740752892; accepted: 2010; trials: 37011
+2026-04-30 08:08:22 - INFO - dist: 0.04176179637539908; accepted: 2040; trials: 37617
+2026-04-30 08:28:29 - INFO - dist: 0.051976905239468435; accepted: 2070; trials: 38097
+2026-04-30 08:44:24 - INFO - dist: 0.031097261053587965; accepted: 2100; trials: 38476
+2026-04-30 09:15:17 - INFO - dist: 0.016258583530106407; accepted: 2130; trials: 39206
+2026-04-30 09:40:40 - INFO - dist: 0.014496041414067046; accepted: 2160; trials: 39817
+2026-04-30 10:05:28 - INFO - dist: 0.054453303393476364; accepted: 2190; trials: 40407
+2026-04-30 10:27:52 - INFO - dist: 0.05665544055103982; accepted: 2220; trials: 40943
+2026-04-30 10:51:07 - INFO - dist: 0.05671821523742582; accepted: 2250; trials: 41497
+2026-04-30 11:14:01 - INFO - dist: 0.041191563328200745; accepted: 2280; trials: 42036
+2026-04-30 11:42:54 - INFO - dist: 0.05585587119035466; accepted: 2310; trials: 42722
+2026-04-30 12:06:14 - INFO - dist: 0.03468224333562976; accepted: 2340; trials: 43269
+2026-04-30 12:37:00 - INFO - dist: 0.017548809750092133; accepted: 2370; trials: 44010
+2026-04-30 12:52:49 - INFO - dist: 0.043983168623279584; accepted: 2400; trials: 44389
+2026-04-30 13:15:44 - INFO - dist: 0.06080884860549606; accepted: 2430; trials: 44936
+2026-04-30 13:36:25 - INFO - dist: 0.044681427051693964; accepted: 2460; trials: 45425
+2026-04-30 14:07:41 - INFO - dist: 0.05037259720078255; accepted: 2490; trials: 46168
+2026-04-30 14:27:43 - INFO - dist: 0.06334908883960186; accepted: 2520; trials: 46646
+2026-04-30 14:54:09 - INFO - dist: 0.04575304727282754; accepted: 2550; trials: 47276
+2026-04-30 15:15:44 - INFO - dist: 0.05372413148767083; accepted: 2580; trials: 47788
+2026-04-30 15:37:25 - INFO - dist: 0.054162574936558065; accepted: 2610; trials: 48308
+2026-04-30 15:55:06 - INFO - dist: 0.023097701030528835; accepted: 2640; trials: 48730
+2026-04-30 16:19:39 - INFO - dist: 0.04669066286044527; accepted: 2670; trials: 49313
+2026-04-30 16:48:05 - INFO - dist: 0.008667454889271519; accepted: 2700; trials: 49993
+2026-04-30 17:14:40 - INFO - dist: 0.028533989080260384; accepted: 2730; trials: 50627
+2026-04-30 17:36:58 - INFO - dist: 0.05190768218602003; accepted: 2760; trials: 51160
+2026-04-30 18:06:02 - INFO - dist: 0.054223387747327156; accepted: 2790; trials: 51849
+2026-04-30 18:29:42 - INFO - dist: 0.04491870849478809; accepted: 2820; trials: 52408
+2026-04-30 18:51:53 - INFO - dist: 0.0580922263510939; accepted: 2850; trials: 52930
+2026-04-30 19:18:35 - INFO - dist: 0.04130888625184818; accepted: 2880; trials: 53563
+2026-04-30 19:40:09 - INFO - dist: 0.05440562740557073; accepted: 2910; trials: 54077
+2026-04-30 20:01:47 - INFO - dist: 0.011712612662215544; accepted: 2940; trials: 54592
+2026-04-30 20:24:15 - INFO - dist: 0.058029643456089436; accepted: 2970; trials: 55122
+2026-04-30 20:43:54 - INFO - dist: 0.024757117406588564; accepted: 3000; trials: 55584
+2026-04-30 21:02:51 - INFO - dist: 0.0626656316483883; accepted: 3030; trials: 56034
+2026-04-30 21:26:45 - INFO - dist: 0.0048764182051980786; accepted: 3060; trials: 56600
+2026-04-30 21:49:12 - INFO - dist: 0.042490438982698046; accepted: 3090; trials: 57133
+2026-04-30 22:18:06 - INFO - dist: 0.045907173244721225; accepted: 3120; trials: 57820
+2026-04-30 22:44:58 - INFO - dist: 0.04955551770310331; accepted: 3150; trials: 58458
+2026-04-30 23:08:46 - INFO - dist: 0.026503259413733254; accepted: 3180; trials: 59021
+2026-04-30 23:32:56 - INFO - dist: 0.06552344820448029; accepted: 3210; trials: 59602
+2026-05-01 00:03:28 - INFO - dist: 0.05643614131283398; accepted: 3240; trials: 60325
+2026-05-01 00:35:06 - INFO - dist: 0.06059857393067205; accepted: 3270; trials: 61081
+2026-05-01 00:55:02 - INFO - dist: 0.04688906596485358; accepted: 3300; trials: 61555
+2026-05-01 01:18:58 - INFO - dist: 0.028645918185592274; accepted: 3330; trials: 62122
+2026-05-01 01:45:23 - INFO - dist: 0.03104484236762994; accepted: 3360; trials: 62748
+2026-05-01 02:09:01 - INFO - dist: 0.042062793797394034; accepted: 3390; trials: 63310
+2026-05-01 02:31:14 - INFO - dist: 0.05998583870502192; accepted: 3420; trials: 63838
+2026-05-01 02:49:27 - INFO - dist: 0.03891756613179811; accepted: 3450; trials: 64270
+2026-05-01 03:08:59 - INFO - dist: 0.06441296532579145; accepted: 3480; trials: 64734
+2026-05-01 03:36:44 - INFO - dist: 0.017537799754638903; accepted: 3510; trials: 65391
+2026-05-01 04:01:39 - INFO - dist: 0.05801682724730353; accepted: 3540; trials: 65984
+2026-05-01 04:19:39 - INFO - dist: 0.046414464554774916; accepted: 3570; trials: 66411
+2026-05-01 04:45:44 - INFO - dist: 0.022774851141267413; accepted: 3600; trials: 67033
+2026-05-01 05:14:38 - INFO - dist: 0.050928082451350595; accepted: 3630; trials: 67718
+2026-05-01 05:37:26 - INFO - dist: 0.05900349531823685; accepted: 3660; trials: 68259
+2026-05-01 05:59:40 - INFO - dist: 0.04574621773572793; accepted: 3690; trials: 68785
+2026-05-01 06:29:02 - INFO - dist: 0.0507027400665654; accepted: 3720; trials: 69474
+2026-05-01 06:49:01 - INFO - dist: 0.0645570554651914; accepted: 3750; trials: 69946
+2026-05-01 07:10:21 - INFO - dist: 0.06619747168750201; accepted: 3780; trials: 70454
+2026-05-01 07:26:53 - INFO - dist: 0.06571060714030057; accepted: 3810; trials: 70852
+2026-05-01 07:51:14 - INFO - dist: 0.042078337854408676; accepted: 3840; trials: 71432
+2026-05-01 08:14:34 - INFO - dist: 0.05171572531661442; accepted: 3870; trials: 71989
+2026-05-01 08:41:44 - INFO - dist: 0.05902144298787636; accepted: 3900; trials: 72632
+2026-05-01 09:04:55 - INFO - dist: 0.04309737460288217; accepted: 3930; trials: 73187
+2026-05-01 09:26:39 - INFO - dist: 0.04607574075295464; accepted: 3960; trials: 73706
+2026-05-01 09:51:58 - INFO - dist: 0.050273264610218034; accepted: 3990; trials: 74307
+2026-05-01 10:07:57 - INFO - dist: 0.005495260235391195; accepted: 4020; trials: 74690
+2026-05-01 10:35:12 - INFO - dist: 0.0637690974323909; accepted: 4050; trials: 75334
+2026-05-01 10:54:41 - INFO - dist: 0.05701179816844061; accepted: 4080; trials: 75797
+2026-05-01 11:23:22 - INFO - dist: 0.06353542190314025; accepted: 4110; trials: 76475
+2026-05-01 11:43:38 - INFO - dist: 0.03960392994098569; accepted: 4140; trials: 76958
+2026-05-01 12:04:18 - INFO - dist: 0.0322669832241785; accepted: 4170; trials: 77443
+2026-05-01 12:23:43 - INFO - dist: 0.052030339886483166; accepted: 4200; trials: 77910
+2026-05-01 12:44:47 - INFO - dist: 0.03617037732635521; accepted: 4230; trials: 78409
+2026-05-01 13:08:13 - INFO - dist: 0.06447782152847131; accepted: 4260; trials: 78970
+2026-05-01 13:22:05 - INFO - dist: 0.06550144480144265; accepted: 4290; trials: 79301
+2026-05-01 13:49:49 - INFO - dist: 0.05011355483904489; accepted: 4320; trials: 79962
+2026-05-01 14:11:39 - INFO - dist: 0.030789827783148975; accepted: 4350; trials: 80480
+2026-05-01 14:32:21 - INFO - dist: 0.019481704243598782; accepted: 4380; trials: 80975
+2026-05-01 14:53:47 - INFO - dist: 0.029875370082464995; accepted: 4410; trials: 81488
+2026-05-01 15:07:10 - INFO - dist: 0.02883569371398742; accepted: 4440; trials: 81808
+2026-05-01 15:32:02 - INFO - dist: 0.05691527409488742; accepted: 4470; trials: 82398
+2026-05-01 15:59:59 - INFO - dist: 0.05506197721334816; accepted: 4500; trials: 83071
+2026-05-01 16:18:09 - INFO - dist: 0.04752718938378134; accepted: 4530; trials: 83502
+2026-05-01 16:42:50 - INFO - dist: 0.04291971784541695; accepted: 4560; trials: 84083
+2026-05-01 17:00:25 - INFO - dist: 0.01269873850752835; accepted: 4590; trials: 84503
+2026-05-01 17:15:23 - INFO - dist: 0.031615897580191066; accepted: 4620; trials: 84859
+2026-05-01 17:40:18 - INFO - dist: 0.025179117742704694; accepted: 4650; trials: 85455
+2026-05-01 18:09:14 - INFO - dist: 0.05911202109234236; accepted: 4680; trials: 86146
+2026-05-01 18:26:33 - INFO - dist: 0.05360780277191787; accepted: 4710; trials: 86560
+2026-05-01 18:48:10 - INFO - dist: 0.030825127263690435; accepted: 4740; trials: 87071
+2026-05-01 19:16:14 - INFO - dist: 0.02255630127188452; accepted: 4770; trials: 87735
+2026-05-01 19:49:24 - INFO - dist: 0.019240918996762328; accepted: 4800; trials: 88520
+2026-05-01 20:10:11 - INFO - dist: 0.03195044095991927; accepted: 4830; trials: 89010
+2026-05-01 20:36:57 - INFO - dist: 0.060043148082013796; accepted: 4860; trials: 89641
+2026-05-01 21:06:08 - INFO - dist: 0.03712946980262608; accepted: 4890; trials: 90332
+2026-05-01 21:30:16 - INFO - dist: 0.04276642268895934; accepted: 4920; trials: 90907
+2026-05-01 21:49:24 - INFO - dist: 0.05719996433451149; accepted: 4950; trials: 91365
+2026-05-01 22:13:58 - INFO - dist: 0.0459881648349437; accepted: 4980; trials: 91950
+2026-05-01 22:46:01 - INFO - dist: 0.017801128432672404; accepted: 5010; trials: 92712
+2026-05-01 23:12:49 - INFO - dist: 0.06472862241181686; accepted: 5040; trials: 93343
+2026-05-01 23:37:47 - INFO - dist: 0.05404457803596923; accepted: 5070; trials: 93935
+2026-05-02 00:09:27 - INFO - dist: 0.0634019828662976; accepted: 5100; trials: 94697
+2026-05-02 00:29:26 - INFO - dist: 0.024418905341208275; accepted: 5130; trials: 95172
+2026-05-02 00:58:02 - INFO - dist: 0.05335111246115171; accepted: 5160; trials: 95855
+2026-05-02 01:12:13 - INFO - dist: 0.05356916105604136; accepted: 5190; trials: 96195
+2026-05-02 01:32:53 - INFO - dist: 0.06614722649050712; accepted: 5220; trials: 96686
+2026-05-02 01:55:12 - INFO - dist: 0.05747497041533029; accepted: 5250; trials: 97221
+2026-05-02 02:13:36 - INFO - dist: 0.03625181245111857; accepted: 5280; trials: 97661
+2026-05-02 02:35:11 - INFO - dist: 0.020896877041595194; accepted: 5310; trials: 98175
+2026-05-02 02:56:24 - INFO - dist: 0.054898256911174816; accepted: 5340; trials: 98676
+2026-05-02 03:19:35 - INFO - dist: 0.045844378750996125; accepted: 5370; trials: 99228
+2026-05-02 03:41:52 - INFO - dist: 0.05186328538076472; accepted: 5400; trials: 99762
+2026-05-02 04:03:59 - INFO - dist: 0.050095296946324655; accepted: 5430; trials: 100288
+2026-05-02 04:30:32 - INFO - dist: 0.04015257941734379; accepted: 5460; trials: 100927
+2026-05-02 04:51:54 - INFO - dist: 0.03899200982419774; accepted: 5490; trials: 101436
+2026-05-02 05:10:18 - INFO - dist: 0.024023691894102063; accepted: 5520; trials: 101871
+2026-05-02 05:33:20 - INFO - dist: 0.03801552793841918; accepted: 5550; trials: 102424
+2026-05-02 05:58:29 - INFO - dist: 0.050566001105023184; accepted: 5580; trials: 103020
+2026-05-02 06:17:35 - INFO - dist: 0.05309634761188411; accepted: 5610; trials: 103472
+2026-05-02 06:38:06 - INFO - dist: 0.026046324754276064; accepted: 5640; trials: 103963
+2026-05-02 06:57:20 - INFO - dist: 0.05436278631801888; accepted: 5670; trials: 104419
+2026-05-02 07:16:48 - INFO - dist: 0.06502182408961568; accepted: 5700; trials: 104883
+2026-05-02 07:45:17 - INFO - dist: 0.05621944907161335; accepted: 5730; trials: 105557
+2026-05-02 08:09:44 - INFO - dist: 0.02581921103937475; accepted: 5760; trials: 106140
+2026-05-02 08:37:29 - INFO - dist: 0.0364617433492917; accepted: 5790; trials: 106802
+2026-05-02 08:52:47 - INFO - dist: 0.04864732423239263; accepted: 5820; trials: 107165
+2026-05-02 09:10:07 - INFO - dist: 0.036142968733767954; accepted: 5850; trials: 107576
+2026-05-02 09:30:23 - INFO - dist: 0.04304827577635591; accepted: 5880; trials: 108059
+2026-05-02 09:50:45 - INFO - dist: 0.0368971104890555; accepted: 5910; trials: 108547
+2026-05-02 10:15:46 - INFO - dist: 0.032683878748587525; accepted: 5940; trials: 109142
+2026-05-02 10:41:12 - INFO - dist: 0.0301004281468391; accepted: 5970; trials: 109743
+2026-05-02 11:09:31 - INFO - dist: 0.05853977459192881; accepted: 6000; trials: 110420
+2026-05-02 11:33:05 - INFO - dist: 0.0664674269255119; accepted: 6030; trials: 110983
+2026-05-02 11:58:59 - INFO - dist: 0.05480711412211345; accepted: 6060; trials: 111594
+2026-05-02 12:28:41 - INFO - dist: 0.03639348905612955; accepted: 6090; trials: 112299
+2026-05-02 12:53:13 - INFO - dist: 0.04300174880604491; accepted: 6120; trials: 112881
+2026-05-02 13:14:19 - INFO - dist: 0.06669463030061278; accepted: 6150; trials: 113382
+2026-05-02 13:36:05 - INFO - dist: 0.041905994776451565; accepted: 6180; trials: 113904
+2026-05-02 13:57:04 - INFO - dist: 0.06328667895819194; accepted: 6210; trials: 114403
+2026-05-02 14:18:36 - INFO - dist: 0.04264136166305347; accepted: 6240; trials: 114913
+2026-05-02 14:36:11 - INFO - dist: 0.031155465236594994; accepted: 6270; trials: 115325
+2026-05-02 14:57:39 - INFO - dist: 0.02329965728697553; accepted: 6300; trials: 115833
+2026-05-02 15:17:23 - INFO - dist: 0.04488458197124852; accepted: 6330; trials: 116303
+2026-05-02 15:44:31 - INFO - dist: 0.06116502547908211; accepted: 6360; trials: 116948
+2026-05-02 16:04:52 - INFO - dist: 0.04553967137784057; accepted: 6390; trials: 117430
+2026-05-02 16:21:49 - INFO - dist: 0.025800838703336465; accepted: 6420; trials: 117828
+2026-05-02 16:40:10 - INFO - dist: 0.0467452930678851; accepted: 6450; trials: 118265
+2026-05-02 16:59:31 - INFO - dist: 0.058282337181236966; accepted: 6480; trials: 118721
+2026-05-02 17:19:43 - INFO - dist: 0.03220272130504681; accepted: 6510; trials: 119207
+2026-05-02 17:41:23 - INFO - dist: 0.04787535833846543; accepted: 6540; trials: 119728
+2026-05-02 17:59:14 - INFO - dist: 0.055053519896368364; accepted: 6570; trials: 120155
+2026-05-02 18:24:11 - INFO - dist: 0.06642085801098366; accepted: 6600; trials: 120754
+2026-05-02 18:45:36 - INFO - dist: 0.03904952929141973; accepted: 6630; trials: 121262
+2026-05-02 19:13:29 - INFO - dist: 0.06264272511403376; accepted: 6660; trials: 121930
+2026-05-02 19:35:41 - INFO - dist: 0.06410942444670568; accepted: 6690; trials: 122456
+2026-05-02 19:55:24 - INFO - dist: 0.05831633481484104; accepted: 6720; trials: 122926
+2026-05-02 20:17:48 - INFO - dist: 0.04459923580436651; accepted: 6750; trials: 123455
+2026-05-02 20:45:18 - INFO - dist: 0.045401939100323974; accepted: 6780; trials: 124116
+2026-05-02 21:08:31 - INFO - dist: 0.026592417016328314; accepted: 6810; trials: 124667
+2026-05-02 21:33:53 - INFO - dist: 0.058398483965498; accepted: 6840; trials: 125272
+2026-05-02 22:00:27 - INFO - dist: 0.052032334928002515; accepted: 6870; trials: 125906
+2026-05-02 22:20:03 - INFO - dist: 0.029019330838755835; accepted: 6900; trials: 126375
+2026-05-02 22:39:36 - INFO - dist: 0.02347483903538014; accepted: 6930; trials: 126842
+2026-05-02 23:08:14 - INFO - dist: 0.05722900441863768; accepted: 6960; trials: 127520
+2026-05-02 23:31:50 - INFO - dist: 0.012234146206845691; accepted: 6990; trials: 128082
+2026-05-02 23:58:09 - INFO - dist: 0.0531132197110179; accepted: 7020; trials: 128707
+2026-05-03 00:17:23 - INFO - dist: 0.06398311219080256; accepted: 7050; trials: 129163
+2026-05-03 00:35:09 - INFO - dist: 0.06431462872858135; accepted: 7080; trials: 129585
+2026-05-03 01:02:03 - INFO - dist: 0.04370375098015105; accepted: 7110; trials: 130222
+2026-05-03 01:23:06 - INFO - dist: 0.06202495964697538; accepted: 7140; trials: 130726
+2026-05-03 01:46:07 - INFO - dist: 0.03341158689367305; accepted: 7170; trials: 131275
+2026-05-03 02:05:56 - INFO - dist: 0.01322573036863891; accepted: 7200; trials: 131744
+2026-05-03 02:36:03 - INFO - dist: 0.049228327209731394; accepted: 7230; trials: 132457
+2026-05-03 02:59:43 - INFO - dist: 0.03783685984093977; accepted: 7260; trials: 133018
+2026-05-03 03:23:04 - INFO - dist: 0.0418312589059203; accepted: 7290; trials: 133567
+2026-05-03 03:47:55 - INFO - dist: 0.048734782974191364; accepted: 7320; trials: 134153
+2026-05-03 04:09:55 - INFO - dist: 0.041793237948034107; accepted: 7350; trials: 134675
+2026-05-03 04:24:12 - INFO - dist: 0.04694769869599622; accepted: 7380; trials: 135009
+2026-05-03 04:55:16 - INFO - dist: 0.0506153491442236; accepted: 7410; trials: 135753
+2026-05-03 05:15:37 - INFO - dist: 0.05197235076080024; accepted: 7440; trials: 136231
+2026-05-03 05:43:33 - INFO - dist: 0.011765578522705385; accepted: 7470; trials: 136891
+2026-05-03 06:03:28 - INFO - dist: 0.023041810082373344; accepted: 7500; trials: 137366
+2026-05-03 06:25:25 - INFO - dist: 0.048765751791841144; accepted: 7530; trials: 137884
+2026-05-03 06:50:23 - INFO - dist: 0.06622087671732714; accepted: 7560; trials: 138483
+2026-05-03 07:18:21 - INFO - dist: 0.05158814483142133; accepted: 7590; trials: 139142
+2026-05-03 07:44:41 - INFO - dist: 0.06220120166179401; accepted: 7620; trials: 139766
+2026-05-03 08:07:56 - INFO - dist: 0.06439619766188262; accepted: 7650; trials: 140318
+2026-05-03 08:30:17 - INFO - dist: 0.02939215553249992; accepted: 7680; trials: 140849
+2026-05-03 08:55:39 - INFO - dist: 0.033978569083631116; accepted: 7710; trials: 141447
+2026-05-03 09:16:21 - INFO - dist: 0.05590898659121615; accepted: 7740; trials: 141942
+2026-05-03 09:35:19 - INFO - dist: 0.045552114084803856; accepted: 7770; trials: 142389
+2026-05-03 10:00:18 - INFO - dist: 0.03682979867420548; accepted: 7800; trials: 142984
+2026-05-03 10:27:22 - INFO - dist: 0.05477665470773; accepted: 7830; trials: 143621
+2026-05-03 10:51:14 - INFO - dist: 0.024183992587897364; accepted: 7860; trials: 144194
+2026-05-03 11:17:05 - INFO - dist: 0.05841823724658482; accepted: 7890; trials: 144810
+2026-05-03 11:38:58 - INFO - dist: 0.03613949668923412; accepted: 7920; trials: 145329
+2026-05-03 11:54:36 - INFO - dist: 0.05831833148052444; accepted: 7950; trials: 145704
+2026-05-03 12:19:12 - INFO - dist: 0.013109290531826082; accepted: 7980; trials: 146292
+2026-05-03 12:36:07 - INFO - Accepted: 8000; Trials: 146692; Acceptance rate: 0.05453603468491806
+2026-05-03 12:36:07 - INFO - Posterior mean R0: 1.5936180645609233
+2026-05-03 12:36:07 - INFO - Posterior mean sigma: 0.7115060704370737
+2026-05-03 12:36:07 - INFO - Elapsed: 373899.0179 s
