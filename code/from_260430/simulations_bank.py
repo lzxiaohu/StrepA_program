@@ -141,7 +141,7 @@ def abc_simulation_batched_arrays(
         fixed_params,
         core_params_num,
         n_simulations=500_000,
-        output_dir='simulation_banks',
+        output_dir='../../experimental_data/from_260430/simulation_banks',
         max_file_size_mb=95,
         n_jobs=30,
         master_seed=123
@@ -345,10 +345,10 @@ if __name__ == '__main__':
             sigma_range=sigma_range,
             fixed_params=fixed_params,
             core_params_num=core_params_num,
-            n_simulations=500_000,
-            output_dir='simulation_banks',
+            n_simulations=1_000,
+            output_dir='../../experimental_data/from_260430/simulation_banks',
             max_file_size_mb=95,
-            n_jobs=30,
+            n_jobs=40,
             master_seed=123
         )
 
