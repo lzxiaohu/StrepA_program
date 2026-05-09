@@ -58,6 +58,7 @@ def calculate_summary_stats_single_file(
 
     input_path = Path(input_dir)
     files = sorted(input_path.glob('simulation_bank_part_*.h5'))
+    # files = sorted(input_path.glob('simulation_bank_part_0000.h5'))
 
     # Count total samples
     total_samples = 0
@@ -248,7 +249,7 @@ if __name__ == "__main__":
     calculate_summary_stats_single_file(
         input_dir='../../experimental_data/from_260430/simulation_banks',
         output_file='../../experimental_data/from_260430/all_summary_statistics.h5',
-        n_jobs=24
+        n_jobs=40
     )
 
     # Show how to use
