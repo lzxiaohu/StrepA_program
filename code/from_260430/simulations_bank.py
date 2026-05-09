@@ -345,10 +345,10 @@ if __name__ == '__main__':
             sigma_range=sigma_range,
             fixed_params=fixed_params,
             core_params_num=core_params_num,
-            n_simulations=1_000,
+            n_simulations=500_000,
             output_dir='../../experimental_data/from_260430/simulation_banks',
-            max_file_size_mb=95,
-            n_jobs=40,
+            max_file_size_mb=90,
+            n_jobs=45,
             master_seed=123
         )
 
