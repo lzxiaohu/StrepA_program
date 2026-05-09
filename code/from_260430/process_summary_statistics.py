@@ -10,86 +10,61 @@ from tqdm import tqdm
 
 
 def load_and_prepare_data(
-        summary_stats_file='../../experimental_data/from_260430/all_summary_statistics.h5',
+        summary_stats_file='../../experimental_data/from_260430/all_summary_statistics_clean.h5',
         output_dir='../../experimental_data/from_260430'
 ):
-    """
-    Load summary statistics and parameters, normalize, and save.
-
-    Returns:
-    --------
-    dict with normalized data and normalization coefficients
-    """
+    """Load, normalize, and save summary statistics (both raw and normalized CSV)."""
 
     print("=" * 70)
     print("LOADING AND PREPARING DATA")
     print("=" * 70)
 
-    # Load data
+    # Load
     print(f"\nLoading from: {summary_stats_file}")
     with h5py.File(summary_stats_file, 'r') as f:
-        summary_stats = f['summary_stats'][:]  # (n_samples, 4)
+        summary_stats = f['summary_stats'][:]
         R0 = f['R0'][:]
         sigma = f['sigma'][:]
         columns = list(f.attrs['columns'])
 
     n_samples = len(R0)
     print(f"✓ Loaded {n_samples:,} samples")
-    print(f"  Columns: {columns}")
 
-    # Get min and max for normalization
+    # Normalize
     col_min = summary_stats.min(axis=0)
     col_max = summary_stats.max(axis=0)
-
-    print(f"\nSummary Statistics Ranges:")
-    for i, col in enumerate(columns):
-        print(f"  {col:20s}: [{col_min[i]:10.4f}, {col_max[i]:10.4f}]")
-
-    # Normalize summary statistics to [0, 1]
-    print(f"\nNormalizing summary statistics to [0, 1]...")
     summary_stats_norm = (summary_stats - col_min) / (col_max - col_min)
 
-    # Save normalized data
+    # Save
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 
-    # Save as HDF5 (efficient)
+    # HDF5
     norm_file = output_path / 'summary_stats_normalized.h5'
-    print(f"\nSaving normalized data to: {norm_file}")
-
     with h5py.File(norm_file, 'w') as f:
         f.create_dataset('summary_stats_normalized', data=summary_stats_norm, compression='gzip')
         f.create_dataset('summary_stats_raw', data=summary_stats, compression='gzip')
         f.create_dataset('R0', data=R0, compression='gzip')
         f.create_dataset('sigma', data=sigma, compression='gzip')
-
-        # Save normalization coefficients
         f.create_dataset('col_min', data=col_min)
         f.create_dataset('col_max', data=col_max)
-
-        # Metadata
         f.attrs['columns'] = columns
         f.attrs['n_samples'] = n_samples
 
-    # Also save as CSV for compatibility
-    csv_file = output_path / 'summary_stats.csv'
-    R0_file = output_path / 'R0.csv'
-    sigma_file = output_path / 'sigma.csv'
-
-    print(f"Saving CSV files...")
-    pd.DataFrame(summary_stats, columns=columns).to_csv(csv_file, index=False, header=False)
-    pd.DataFrame(R0).to_csv(R0_file, index=False, header=False)
-    pd.DataFrame(sigma).to_csv(sigma_file, index=False, header=False)
+    # CSV - BOTH raw and normalized
+    csv_raw = output_path / 'summary_stats.csv'
+    csv_norm = output_path / 'summary_stats_normalized.csv'
+    
+    pd.DataFrame(summary_stats).to_csv(csv_raw, index=False, header=False)
+    pd.DataFrame(summary_stats_norm).to_csv(csv_norm, index=False, header=False)
+    pd.DataFrame(R0).to_csv(output_path / 'R0.csv', index=False, header=False)
+    pd.DataFrame(sigma).to_csv(output_path / 'sigma.csv', index=False, header=False)
 
     print(f"\n✓ Saved:")
     print(f"  - {norm_file}")
-    print(f"  - {csv_file}")
-    print(f"  - {R0_file}")
-    print(f"  - {sigma_file}")
-
-    print(f"\nNormalization Coefficients:")
-    print(f"  col_min: {col_min}")
-    print(f"  col_max: {col_max}")
+    print(f"  - {csv_raw} (raw)")
+    print(f"  - {csv_norm} (normalized)")
+    print(f"  - R0.csv, sigma.csv")
 
     return {
         'summary_stats': summary_stats,
@@ -101,6 +76,7 @@ def load_and_prepare_data(
         'col_max': col_max,
         'n_samples': n_samples
     }
+
 
 
 def normalize_standard_point(standard_point, col_min, col_max):
