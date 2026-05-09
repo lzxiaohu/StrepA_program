@@ -327,7 +327,7 @@ def find_optimal_weights(
 if __name__ == "__main__":
     # Step 1: Load and prepare data
     data = load_and_prepare_data(
-        summary_stats_file='../../experimental_data/from_260430/all_summary_statistics.h5',
+        summary_stats_file='../../experimental_data/from_260430/all_summary_statistics_clean.h5',
         output_dir='../../experimental_data/from_260430'
     )
 
