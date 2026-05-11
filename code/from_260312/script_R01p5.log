@@ -361,3 +361,14 @@ dist 0.05638293863980724 accepted:  7770 trials:  136855
 dist 0.01724476039820941 accepted:  7800 trials:  137349
 dist 0.05299399238369918 accepted:  7830 trials:  138008
 dist 0.03842648861410267 accepted:  7860 trials:  138491
+Traceback (most recent call last):
+  File "StrepA_ABC_2params_R01p5.py", line 14, in <module>
+    import functions_list_260305 as functions_list
+  File "/Users/hucao/Documents/strepa_model/StrepA_program/code/from_260312/functions_list_260305.py", line 4, in <module>
+    from numba import njit
+ModuleNotFoundError: No module named 'numba'
+T's size 920
+True True
+s_obs [ 7.08695652  4.76648378 -0.26799987  4.0351467 ]
+scale [5.20e+02 5.67e+04 4.48e-01 2.64e+01]
+dist 0.5663401119392324 number:  0
