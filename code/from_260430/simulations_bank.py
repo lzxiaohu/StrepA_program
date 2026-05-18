@@ -207,11 +207,12 @@ def abc_simulation_batched_arrays(
     logging.info("")
 
     start_time = time.perf_counter()
+    start_sample_id = 500000
 
     # Process each output file
-    for file_idx in range(n_files):
-        file_start = file_idx * samples_per_file
-        file_end = min(file_start + samples_per_file, n_simulations)
+    for file_idx in range(14, 14 + n_files):
+        file_start = (file_idx - 14) * samples_per_file + start_sample_id
+        file_end = min(file_start + samples_per_file, n_simulations + start_sample_id)
         n_samples_this_file = file_end - file_start
 
         output_file = output_path / f'simulation_bank_part_{file_idx:04d}.h5'
@@ -345,7 +346,7 @@ if __name__ == '__main__':
             sigma_range=sigma_range,
             fixed_params=fixed_params,
             core_params_num=core_params_num,
-            n_simulations=500_000,
+            n_simulations=500,
             output_dir='../../experimental_data/from_260430/simulation_banks',
             max_file_size_mb=90,
             n_jobs=60,
