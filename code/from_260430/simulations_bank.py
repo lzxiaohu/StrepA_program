@@ -25,11 +25,11 @@ core_params_num = 2  # core params: R0 and sigma
 
 # fixed parameters
 DurationSimulation = 20.0     # years: 20.0
-Nstrains = 40       # number of strains: 42
+Nstrains = 42       # number of strains: 42
 omega = 0.2     # immunity cross strains: 0.1
 x = 10.0        #
 Cperweek = 34.53    #
-Nagents = 1000      # number of agents
+Nagents = 2500      # number of agents
 alpha = 7.0        # migration rate: 3.0
 AgeDeath = 71.0     # life expectancy
 # R0: updated parameter (Basic reproductive number)
@@ -150,7 +150,7 @@ def abc_simulation_batched_arrays(
     Run ABC simulations with OPTIMIZED HDF5 storage using batched arrays.
 
     Instead of creating 500k small datasets, we create 3 large arrays:
-    - simulations: (n_samples, 40, 23) - all simulation results
+    - simulations: (n_samples, 42, 23) - all simulation results
     - R0_values: (n_samples,) - all R0 values
     - sigma_values: (n_samples,) - all sigma values
 
@@ -195,7 +195,7 @@ def abc_simulation_batched_arrays(
     output_path.mkdir(exist_ok=True)
 
     # Calculate samples per file
-    # Each sample: 40*23*8 (simulation) + 8 (R0) + 8 (sigma) = 7,376 bytes
+    # Each sample: 42*23*8 (simulation) + 8 (R0) + 8 (sigma) = 7,376 bytes
     # With compression (~65%): ~2,600 bytes per sample
     # For batched arrays, we can fit more due to better compression
     bytes_per_sample = 2500  # Slightly better with batched storage
@@ -222,7 +222,7 @@ def abc_simulation_batched_arrays(
         logging.info("=" * 70)
 
         # Pre-allocate arrays for this file
-        simulations_batch = np.zeros((n_samples_this_file, 40, 23), dtype=np.float32)
+        simulations_batch = np.zeros((n_samples_this_file, 42, 23), dtype=np.float32)
         R0_batch = np.zeros(n_samples_this_file, dtype=np.float32)
         sigma_batch = np.zeros(n_samples_this_file, dtype=np.float32)
 
@@ -271,7 +271,7 @@ def abc_simulation_batched_arrays(
                 data=simulations_batch,
                 compression='gzip',
                 compression_opts=6,
-                chunks=(min(1000, n_samples_this_file), 40, 23)  # Optimal chunk size
+                chunks=(min(1000, n_samples_this_file), 42, 23)  # Optimal chunk size
             )
 
             f.create_dataset(
@@ -348,7 +348,7 @@ if __name__ == '__main__':
             n_simulations=500_000,
             output_dir='../../experimental_data/from_260430/simulation_banks',
             max_file_size_mb=90,
-            n_jobs=45,
+            n_jobs=60,
             master_seed=123
         )
 

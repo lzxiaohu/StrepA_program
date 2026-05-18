@@ -308,16 +308,16 @@ if __name__ == "__main__":
     )
 
     # Step 2: Set your observed data (standard point)
-    standard_point = (26.65217391, 26.81859717, -0.50242938, 6.56234257)
+    standard_point = (9.56521739, 7.06351758, -0.59527674, 18.33333333)
     standard_point_norm = normalize_standard_point(
         standard_point,
         data['col_min'],
         data['col_max']
     )
 
-    # Step 3: Set true parameter values
-    true_R0 = 2.5
-    true_sigma = 0.8
+    # Step 3: Set assumed parameter values 
+    true_R0 = 0.0
+    true_sigma = 0.0
 
     print(f"\n{'=' * 70}")
     print(f"TRUE PARAMETERS:")
@@ -345,7 +345,7 @@ if __name__ == "__main__":
     print(results_df.head(20).to_string(index=False))
 
     # Step 6: Save results
-    output_file = '../../experimental_data/from_260430/optimal_weights_results.csv'
+    output_file = '../../experimental_data/from_260430/optimal_weights_results_observations.csv'
     results_df.to_csv(output_file, index=False)
     print(f"\n✓ Saved full results to: {output_file}")
 

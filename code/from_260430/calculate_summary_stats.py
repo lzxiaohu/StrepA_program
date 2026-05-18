@@ -215,7 +215,7 @@ if __name__ == "__main__":
     calculate_summary_stats_clean(
         input_dir='../../experimental_data/from_260430/simulation_banks',
         output_file='../../experimental_data/from_260430/all_summary_statistics_clean.h5',
-        n_jobs=40
+        n_jobs=30
     )
     
     print("\n" + "="*70)
