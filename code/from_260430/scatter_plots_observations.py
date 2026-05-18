@@ -2,6 +2,134 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+def plot_dots_percentile_colors(file_dists='dists.csv', 
+                                file_R0='R0.csv', 
+                                file_sigma='sigma.csv',
+                                percentile=1,
+                                true_R0=None,
+                                true_sigma=None,
+                                title="R0 vs sigma - Color by Distance",
+                                save_path='../../experimental_data/from_260312/',
+                                xlim=(1, 8),
+                                ylim=(0.2, 1.0),
+                                cmap='viridis_r'):  # 'viridis_r' = purple (close) to yellow (far)
+    """
+    Plot R0 vs sigma with colors representing distance from standard point.
+    
+    Parameters:
+    -----------
+    file_dists : str
+        CSV file with distances (single column)
+    file_R0 : str
+        CSV file with R0 samples
+    file_sigma : str
+        CSV file with sigma samples
+    percentile : float
+        Percentile threshold (e.g., 1 means keep closest 1%)
+    true_R0 : float, optional
+        True R0 value to mark on plot
+    true_sigma : float, optional
+        True sigma value to mark on plot
+    title : str
+        Figure title
+    save_path : str
+        Directory to save figure
+    xlim : tuple
+        X-axis limits (R0 range)
+    ylim : tuple
+        Y-axis limits (sigma range)
+    cmap : str
+        Colormap name. Options:
+        - 'viridis_r': purple (close) → yellow (far)
+        - 'RdYlGn_r': red (far) → green (close)
+        - 'coolwarm': blue (close) → red (far)
+        - 'plasma_r': purple (close) → yellow (far)
+    """
+    
+    # Load data
+    print("Loading data...")
+    distances = pd.read_csv(file_dists, header=None).values.ravel()
+    data_R0 = pd.read_csv(file_R0, header=None).values.ravel()
+    data_sigma = pd.read_csv(file_sigma, header=None).values.ravel()
+    
+    print(f"✓ Loaded {len(distances):,} samples")
+    print(f"  Distance range: [{distances.min():.6f}, {distances.max():.6f}]")
+    
+    # Select samples based on percentile
+    threshold = np.percentile(distances, percentile)
+    selected_indices = np.where(distances <= threshold)[0]
+    n_selected = len(selected_indices)
+    
+    print(f"\nPercentile {percentile}%:")
+    print(f"  Threshold: {threshold:.6f}")
+    print(f"  Selected: {n_selected:,} samples ({100*n_selected/len(distances):.2f}%)")
+    
+    # Get selected data
+    selected_R0 = data_R0[selected_indices]
+    selected_sigma = data_sigma[selected_indices]
+    selected_dist = distances[selected_indices]
+    
+    print(f"  Distance range of selected: [{selected_dist.min():.6f}, {selected_dist.max():.6f}]")
+    
+    # Create figure
+    fig, ax = plt.subplots(figsize=(12, 10))
+    
+    # Create scatter plot with color mapping
+    scatter = ax.scatter(
+        selected_R0, 
+        selected_sigma, 
+        c=selected_dist,  # Color by distance
+        cmap=cmap,
+        s=50,  # Point size
+        alpha=0.7,
+        edgecolors='black',
+        linewidths=0.5,
+        vmin=selected_dist.min(),
+        vmax=selected_dist.max()
+    )
+    
+    # Add colorbar
+    cbar = plt.colorbar(scatter, ax=ax, label='Distance from Standard Point', pad=0.02)
+    cbar.ax.tick_params(labelsize=11)
+    
+    # Mark true values if provided
+    if true_R0 is not None and true_sigma is not None:
+        ax.scatter(true_R0, true_sigma, s=400, c='red', marker='*',
+                  edgecolors='black', linewidths=3, label='True value', zorder=10)
+        ax.legend(loc='best', fontsize=12, framealpha=0.9)
+    
+    # Set fixed ranges
+    ax.set_xlim(xlim)
+    ax.set_ylim(ylim)
+    
+    # Labels and title
+    ax.set_xlabel('R0', fontsize=14, fontweight='bold')
+    ax.set_ylabel('sigma', fontsize=14, fontweight='bold')
+    ax.set_title(
+        f'{title}\n'
+        f'{percentile}% closest to standard point '
+        f'({n_selected:,} samples, dist ≤ {threshold:.4f})',
+        fontsize=16, fontweight='bold', pad=20
+    )
+    ax.grid(True, alpha=0.3, linestyle='--')
+    
+    # Add statistics text box
+    textstr = f'Distance Range:\n  Min: {selected_dist.min():.6f}\n  Max: {selected_dist.max():.6f}\n  Mean: {selected_dist.mean():.6f}'
+    props = dict(boxstyle='round', facecolor='wheat', alpha=0.8)
+    ax.text(0.02, 0.98, textstr, transform=ax.transAxes, fontsize=10,
+            verticalalignment='top', bbox=props)
+    
+    plt.tight_layout()
+    
+    # Save figure
+    import os
+    os.makedirs(save_path, exist_ok=True)
+    save_file = f"{save_path}{title.replace(' ', '_').replace('-', '')}_p{percentile}.png"
+    plt.savefig(save_file, dpi=300, bbox_inches='tight')
+    print(f"\n✓ Saved to: {save_file}")
+    plt.close()
+ 
+
 def plot_dots_multiple_percentiles(file_dists='dists.csv', 
                                    file_R0='R0.csv', 
                                    file_sigma='sigma.csv',
@@ -220,4 +348,60 @@ if __name__ == "__main__":
         ylim=(0.2, 1.0)   # sigma range
     )
     
-    print("\n✅ All plots generated successfully!")
+plot_dots_percentile_colors(
+        file_dists='../../experimental_data/from_260430/dists_observations_recal.csv',
+        file_R0='../../experimental_data/from_260430/R0.csv',
+        file_sigma='../../experimental_data/from_260430/sigma.csv',
+        percentile=1,  # Show closest 5%
+        true_R0=0.0,
+        true_sigma=0.0,
+        title="ABC Posterior - Top 1%",
+        save_path="../../figures/from_260430/ppc/observations/",
+        xlim=(1, 8),
+        ylim=(0.2, 1.0),
+        cmap='viridis_r'  # Purple (close) to yellow (far)
+    )
+
+plot_dots_percentile_colors(
+        file_dists='../../experimental_data/from_260430/dists_observations_recal.csv',
+        file_R0='../../experimental_data/from_260430/R0.csv',
+        file_sigma='../../experimental_data/from_260430/sigma.csv',
+        percentile=0.1,  # Show closest 5%
+        true_R0=0.0,
+        true_sigma=0.0,
+        title="ABC Posterior - Top 0.1%",
+        save_path="../../figures/from_260430/ppc/observations/",
+        xlim=(1, 8),
+        ylim=(0.2, 1.0),
+        cmap='viridis_r'  # Purple (close) to yellow (far)
+    )
+
+plot_dots_percentile_colors(
+        file_dists='../../experimental_data/from_260430/dists_observations_recal.csv',
+        file_R0='../../experimental_data/from_260430/R0.csv',
+        file_sigma='../../experimental_data/from_260430/sigma.csv',
+        percentile=0.05,  # Show closest 5%
+        true_R0=0.0,
+        true_sigma=0.0,
+        title="ABC Posterior - Top 0.05%",
+        save_path="../../figures/from_260430/ppc/observations/",
+        xlim=(1, 8),
+        ylim=(0.2, 1.0),
+        cmap='viridis_r'  # Purple (close) to yellow (far)
+    )
+
+plot_dots_percentile_colors(
+        file_dists='../../experimental_data/from_260430/dists_observations_recal.csv',
+        file_R0='../../experimental_data/from_260430/R0.csv',
+        file_sigma='../../experimental_data/from_260430/sigma.csv',
+        percentile=0.01,  # Show closest 5%
+        true_R0=0.0,
+        true_sigma=0.0,
+        title="ABC Posterior - Top 0.01%",
+        save_path="../../figures/from_260430/ppc/observations/",
+        xlim=(1, 8),
+        ylim=(0.2, 1.0),
+        cmap='viridis_r'  # Purple (close) to yellow (far)
+    )
+
+print("\n✅ All plots generated successfully!")
