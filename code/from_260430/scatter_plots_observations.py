@@ -316,6 +316,7 @@ def plot_histograms_multiple_percentiles(
     print(f"\n✓ Saved to: {save_file}")
     plt.close()
  
+
 def plot_dots_percentile_colors(file_dists='dists.csv', 
                                 file_R0='R0.csv', 
                                 file_sigma='sigma.csv',
@@ -577,6 +578,8 @@ def plot_dots_multiple_percentiles_colors(
     plt.savefig(save_file, dpi=300, bbox_inches='tight')
     print(f"\n✓ Saved to: {save_file}")
     plt.close()
+
+
 def plot_dots_multiple_percentiles(file_dists='dists.csv', 
                                    file_R0='R0.csv', 
                                    file_sigma='sigma.csv',
@@ -833,8 +836,8 @@ if __name__ == "__main__":
             file_R0='../../experimental_data/from_260430/R0.csv',
             file_sigma='../../experimental_data/from_260430/sigma.csv',
             percentile=1,  # Show closest 1%
-            true_R0=0.0,
-            true_sigma=0.0,
+            true_R0=None,
+            true_sigma=None,
             title="ABC Posterior - Top 1%",
             save_path="../../figures/from_260430/ppc/observations/",
             xlim=(1, 8),
@@ -847,8 +850,8 @@ if __name__ == "__main__":
             file_R0='../../experimental_data/from_260430/R0.csv',
             file_sigma='../../experimental_data/from_260430/sigma.csv',
             percentile=0.1,  # Show closest 0.1%
-            true_R0=0.0,
-            true_sigma=0.0,
+            true_R0=None,
+            true_sigma=None,
             title="ABC Posterior - Top 0.1%",
             save_path="../../figures/from_260430/ppc/observations/",
             xlim=(1, 8),
@@ -861,8 +864,8 @@ if __name__ == "__main__":
             file_R0='../../experimental_data/from_260430/R0.csv',
             file_sigma='../../experimental_data/from_260430/sigma.csv',
             percentile=0.05,  # Show closest 0.05%
-            true_R0=0.0,
-            true_sigma=0.0,
+            true_R0=None,
+            true_sigma=None,
             title="ABC Posterior - Top 0.05%",
             save_path="../../figures/from_260430/ppc/observations/",
             xlim=(1, 8),
@@ -875,8 +878,8 @@ if __name__ == "__main__":
             file_R0='../../experimental_data/from_260430/R0.csv',
             file_sigma='../../experimental_data/from_260430/sigma.csv',
             percentile=0.01,  # Show closest 0.01%
-            true_R0=0.0,
-            true_sigma=0.0,
+            true_R0=None,
+            true_sigma=None,
             title="ABC Posterior - Top 0.01%",
             save_path="../../figures/from_260430/ppc/observations/",
             xlim=(1, 8),

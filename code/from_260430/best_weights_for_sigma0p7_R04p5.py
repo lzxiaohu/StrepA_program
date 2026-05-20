@@ -308,7 +308,7 @@ if __name__ == "__main__":
     )
 
     # Step 2: Set your observed data (standard point)
-    standard_point = (126.69565217, 64.06419705, -0.37577592, 16.19834209)
+    standard_point = (112., 58.14480357, -0.32861731, 15.04004208)
     standard_point_norm = normalize_standard_point(
         standard_point,
         data['col_min'],

@@ -2,7 +2,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
-
+from matplotlib.colors import Normalize
+from matplotlib.cm import ScalarMappable
 
 def plot_histograms_with_kde(
     file_dists='dists.csv',
@@ -444,6 +445,142 @@ def plot_dots_percentile_colors(file_dists='dists.csv',
     print(f"\n✓ Saved to: {save_file}")
     plt.close()
 
+
+def plot_dots_multiple_percentiles_colors(
+    file_dists='dists.csv',
+    file_R0='R0.csv',
+    file_sigma='sigma.csv',
+    percentiles=[10, 5, 2, 1, 0.5, 0.1],
+    true_R0=None,
+    true_sigma=None,
+    title="ABC Posterior - Distance-Colored",
+    save_path='../../experimental_data/from_260312/',
+    xlim=(1, 8),
+    ylim=(0.2, 1.0),
+    cmap='viridis_r',
+    vmin=None,  # Manual color scale min (optional)
+    vmax=None   # Manual color scale max (optional)
+):
+    """
+    Create a 6-panel plot with different percentiles, all color-coded by distance.
+    
+    Parameters:
+    -----------
+    vmin : float, optional
+        Manual minimum for color scale. If None, uses tightest percentile's min.
+        Use this to ensure consistent colors across multiple plots.
+    vmax : float, optional
+        Manual maximum for color scale. If None, uses tightest percentile's max.
+        Use this to ensure consistent colors across multiple plots.
+    """
+    
+    # Load data
+    print("Loading data...")
+    distances = pd.read_csv(file_dists, header=None).values.ravel()
+    data_R0 = pd.read_csv(file_R0, header=None).values.ravel()
+    data_sigma = pd.read_csv(file_sigma, header=None).values.ravel()
+    
+    print(f"✓ Loaded {len(distances):,} samples")
+    
+    # Create figure with 6 subplots
+    fig, axes = plt.subplots(2, 3, figsize=(18, 12))
+    axes = axes.ravel()
+    
+    # First pass: determine the appropriate color range
+    if vmin is not None and vmax is not None:
+        # Use manual color range
+        color_vmin = vmin
+        color_vmax = vmax
+        print(f"\nUsing MANUAL color scale: [{color_vmin:.6f}, {color_vmax:.6f}]")
+    else:
+        # Auto-detect from the tightest percentile (smallest p)
+        min_p = min(percentiles)
+        threshold_min = np.percentile(distances, min_p)
+        indices_min = np.where(distances <= threshold_min)[0]
+        dist_min_selection = distances[indices_min]
+        
+        color_vmin = dist_min_selection.min()
+        color_vmax = dist_min_selection.max()
+        
+        print(f"\nAuto-detected color scale: [{color_vmin:.6f}, {color_vmax:.6f}]")
+        print(f"(Based on {min_p}% percentile selection)")
+        print(f"💡 Tip: To ensure consistent colors across multiple plots, use:")
+        print(f"   vmin={color_vmin:.6f}, vmax={color_vmax:.6f}")
+    
+    print()
+    
+    for idx, p in enumerate(percentiles):
+        ax = axes[idx]
+        
+        # Select samples
+        threshold = np.percentile(distances, p)
+        selected_indices = np.where(distances <= threshold)[0]
+        n_selected = len(selected_indices)
+        
+        selected_R0 = data_R0[selected_indices]
+        selected_sigma = data_sigma[selected_indices]
+        selected_dist = distances[selected_indices]
+        
+        print(f"Percentile {p}%: {n_selected:,} samples")
+        print(f"  Threshold: {threshold:.6f}")
+        print(f"  Distance range: [{selected_dist.min():.6f}, {selected_dist.max():.6f}]")
+        
+        # Scatter plot with SHARED color scale
+        scatter = ax.scatter(
+            selected_R0,
+            selected_sigma,
+            c=selected_dist,
+            cmap=cmap,
+            s=30,
+            alpha=0.6,
+            edgecolors='none',
+            vmin=color_vmin,  # Shared min
+            vmax=color_vmax   # Shared max
+        )
+        
+        # Mark true values
+        if true_R0 is not None and true_sigma is not None:
+            ax.scatter(true_R0, true_sigma, s=300, c='red', marker='*',
+                      edgecolors='black', linewidths=2, zorder=10)
+        
+        # Set fixed ranges
+        ax.set_xlim(xlim)
+        ax.set_ylim(ylim)
+        
+        # Labels
+        ax.set_xlabel('R0', fontsize=12)
+        ax.set_ylabel('sigma', fontsize=12)
+        ax.set_title(
+            f'{p}% closest\n({n_selected:,} samples, dist ≤ {threshold:.4f})',
+            fontsize=13, fontweight='bold'
+        )
+        ax.grid(True, alpha=0.3, linestyle='--')
+    
+    # Add shared colorbar on the right
+    fig.subplots_adjust(right=0.92)
+    cbar_ax = fig.add_axes([0.94, 0.15, 0.02, 0.7])
+    norm = Normalize(vmin=color_vmin, vmax=color_vmax)
+    sm = ScalarMappable(cmap=cmap, norm=norm)
+    sm.set_array([])
+    cbar = fig.colorbar(sm, cax=cbar_ax)
+    cbar.set_label(f'Distance from Standard Point\n[{color_vmin:.4f}, {color_vmax:.4f}]', 
+                  fontsize=12, fontweight='bold')
+    cbar.ax.tick_params(labelsize=11)
+    
+    # Overall title
+    fig.suptitle(title, fontsize=18, fontweight='bold', y=0.98)
+    
+    plt.tight_layout(rect=[0, 0, 0.92, 0.96])
+    
+    # Save
+    import os
+    os.makedirs(save_path, exist_ok=True)
+    save_file = f"{save_path}{title.replace(' ', '_').replace('-', '')}.png"
+    plt.savefig(save_file, dpi=300, bbox_inches='tight')
+    print(f"\n✓ Saved to: {save_file}")
+    plt.close()
+
+
 def plot_dots_multiple_percentiles(file_dists='dists.csv', 
                                    file_R0='R0.csv', 
                                    file_sigma='sigma.csv',
@@ -635,31 +772,63 @@ if __name__ == "__main__":
     )
     
     # 2. Plot with higher percentiles (10%, 5%, 4%, 3%, 2%, 1%)
-    plot_dots_multiple_percentiles(
+    # plot_dots_multiple_percentiles(
+    #     file_dists='../../experimental_data/from_260430/dists_sigma0p5_R01p5_recal.csv',
+    #     file_R0='../../experimental_data/from_260430/R0.csv',
+    #     file_sigma='../../experimental_data/from_260430/sigma.csv',
+    #     percentiles=[10, 5, 4, 3, 2, 1],
+    #     true_R0=1.5,
+    #     true_sigma=0.5,
+    #     title="R0 vs sigma - Multiple Percentiles-euclidean1",
+    #     save_path="../../figures/from_260430/ppc/sigma0p5/R01p5/",
+    #     xlim=(1, 8),      # R0 range
+    #     ylim=(0.2, 1.0)   # sigma range
+    # )
+
+    plot_dots_multiple_percentiles_colors(
         file_dists='../../experimental_data/from_260430/dists_sigma0p5_R01p5_recal.csv',
         file_R0='../../experimental_data/from_260430/R0.csv',
         file_sigma='../../experimental_data/from_260430/sigma.csv',
         percentiles=[10, 5, 4, 3, 2, 1],
         true_R0=1.5,
         true_sigma=0.5,
-        title="R0 vs sigma - Multiple Percentiles-euclidean1",
+        title="ABC Posterior - Distance Colored1",
         save_path="../../figures/from_260430/ppc/sigma0p5/R01p5/",
-        xlim=(1, 8),      # R0 range
-        ylim=(0.2, 1.0)   # sigma range
+        xlim=(1, 8),
+        ylim=(0.2, 1.0),
+        cmap='viridis_r', 
+        vmin=0.000904, 
+        vmax=0.012378
     )
     
     # 3. Plot with lower percentiles (2%, 1%, 0.5%, 0.4%, 0.2%, 0.1%)
-    plot_dots_multiple_percentiles(
+    # plot_dots_multiple_percentiles(
+    #     file_dists='../../experimental_data/from_260430/dists_sigma0p5_R01p5_recal.csv',
+    #     file_R0='../../experimental_data/from_260430/R0.csv',
+    #     file_sigma='../../experimental_data/from_260430/sigma.csv',
+    #     percentiles=[2, 1, 0.5, 0.1, 0.05, 0.01],
+    #     true_R0=1.5,
+    #     true_sigma=0.5,
+    #     title="R0 vs sigma - Multiple Percentiles-euclidean",
+    #     save_path="../../figures/from_260430/ppc/sigma0p5/R01p5/",
+    #     xlim=(1, 8),      # R0 range
+    #     ylim=(0.2, 1.0)   # sigma range
+    # )
+
+    plot_dots_multiple_percentiles_colors(
         file_dists='../../experimental_data/from_260430/dists_sigma0p5_R01p5_recal.csv',
         file_R0='../../experimental_data/from_260430/R0.csv',
         file_sigma='../../experimental_data/from_260430/sigma.csv',
-        percentiles=[2, 1, 0.5, 0.4, 0.2, 0.1],
+        percentiles=[2, 1, 0.5, 0.1, 0.05, 0.01],
         true_R0=1.5,
         true_sigma=0.5,
-        title="R0 vs sigma - Multiple Percentiles-euclidean",
+        title="ABC Posterior - Distance Colored",
         save_path="../../figures/from_260430/ppc/sigma0p5/R01p5/",
-        xlim=(1, 8),      # R0 range
-        ylim=(0.2, 1.0)   # sigma range
+        xlim=(1, 8),
+        ylim=(0.2, 1.0),
+        cmap='viridis_r', 
+        vmin=0.000904, 
+        vmax=0.012378
     )
     
     plot_dots_percentile_colors(
@@ -739,7 +908,7 @@ if __name__ == "__main__":
         file_dists='../../experimental_data/from_260430/dists_sigma0p5_R01p5_recal.csv',
         file_R0='../../experimental_data/from_260430/R0.csv',
         file_sigma='../../experimental_data/from_260430/sigma.csv',
-        percentiles=[5, 2, 1, 0.1, 0.05, 0.01],
+        percentiles=[2, 1, 0.5, 0.1, 0.05, 0.01],
         true_R0=1.5,
         true_sigma=0.5,
         title="ABC Posterior Evolution - R0=1.5, sigma=0.5",
