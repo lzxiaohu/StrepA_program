@@ -346,7 +346,7 @@ if __name__ == '__main__':
             sigma_range=sigma_range,
             fixed_params=fixed_params,
             core_params_num=core_params_num,
-            n_simulations=500,
+            n_simulations=500_000,
             output_dir='../../experimental_data/from_260430/simulation_banks',
             max_file_size_mb=90,
             n_jobs=60,
