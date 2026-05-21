@@ -1,6 +1,6 @@
-scatter_plots_observations.py:571: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+scatter_plots_observations.py:572: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
   plt.tight_layout(rect=[0, 0, 0.92, 0.96])
-scatter_plots_observations.py:571: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+scatter_plots_observations.py:572: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
   plt.tight_layout(rect=[0, 0, 0.92, 0.96])
 Done. Results saved to '../../experimental_data/from_260430/dists_observations_recal.csv'.
 Loading data...
@@ -42,15 +42,15 @@ Percentile 1%: 4,997 samples
 Percentile 0.5%: 2,499 samples
   Threshold: 0.074026
   Distance range: [0.050584, 0.074025]
-Percentile 0.4%: 1,999 samples
-  Threshold: 0.072924
-  Distance range: [0.050584, 0.072923]
-Percentile 0.2%: 1,000 samples
-  Threshold: 0.069752
-  Distance range: [0.050584, 0.069751]
 Percentile 0.1%: 500 samples
   Threshold: 0.066837
   Distance range: [0.050584, 0.066820]
+Percentile 0.05%: 250 samples
+  Threshold: 0.064365
+  Distance range: [0.050584, 0.064365]
+Percentile 0.01%: 50 samples
+  Threshold: 0.058749
+  Distance range: [0.050584, 0.058729]
 
 ✓ Saved to: ../../figures/from_260430/ppc/observations/ABC_Posterior__Distance_Colored.png
 Loading data...
@@ -96,7 +96,9 @@ Percentile 0.01%:
 Percentile 0.01%: 50 samples selected
 ✓ Saved to: ../../figures/from_260430/ppc/observations/ABC_Posterior__R0=None,_sigma=None_kde_p0.01.png
 Loaded 499,665 samples
+Percentile 2%: 9,994 samples
 Percentile 1%: 4,997 samples
+Percentile 0.5%: 2,499 samples
 Percentile 0.1%: 500 samples
 Percentile 0.05%: 250 samples
 Percentile 0.01%: 50 samples
