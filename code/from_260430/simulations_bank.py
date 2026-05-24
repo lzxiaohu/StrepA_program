@@ -207,11 +207,12 @@ def abc_simulation_batched_arrays(
     logging.info("")
 
     start_time = time.perf_counter()
-    start_sample_id = 500_000 + 500_000
+    start_sample_id = 500_000 * 3
+    # filenum = 14 * 3
 
     # Process each output file
-    for file_idx in range(28, 28 + n_files):
-        file_start = (file_idx - 28) * samples_per_file + start_sample_id
+    for file_idx in range(42, 42 + n_files):
+        file_start = (file_idx - 42) * samples_per_file + start_sample_id
         file_end = min(file_start + samples_per_file, n_simulations + start_sample_id)
         n_samples_this_file = file_end - file_start
 
