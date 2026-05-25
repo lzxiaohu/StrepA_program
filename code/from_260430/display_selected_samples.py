@@ -114,6 +114,8 @@ def display_selected_samples(
     print(f"\n✓ Saved summary to: {output_file}")
     
     return summary_df
+
+
 def load_and_plot_simulations(
     sample_ids,
     simulation_banks_dir='../../experimental_data/from_260430/simulation_banks',
@@ -330,25 +332,29 @@ def plot_samples_5x2(
     file_R0='../../experimental_data/from_260430/R0.csv',
     file_sigma='../../experimental_data/from_260430/sigma.csv',
     file_dists='../../experimental_data/from_260430/dists_observations_recal.csv',
+    valid_indices_file='../../experimental_data/from_260430/valid_indices.csv',
     title="Selected Simulations",
     save_path='../../figures/from_260430/ppc/observations/',
     save_filename='specific_samples_5x2.png'
 ):
     """
     Plot exactly 10 specific sample IDs in a 5x2 grid.
+    NOW WITH MAPPING SUPPORT!
     
     Parameters:
     -----------
     sample_ids : list or array
-        List of 10 sample IDs to plot
+        List of 10 CLEAN sample IDs (indices in CSV files)
     simulation_banks_dir : str
         Directory containing simulation bank HDF5 files
     file_R0 : str
-        CSV file with R0 values
+        CSV file with R0 values (clean data)
     file_sigma : str
-        CSV file with sigma values
+        CSV file with sigma values (clean data)
     file_dists : str, optional
-        CSV file with distances (optional, for displaying distance)
+        CSV file with distances (clean data)
+    valid_indices_file : str
+        Mapping file: clean_id → original_id
     title : str
         Overall figure title
     save_path : str
@@ -361,7 +367,6 @@ def plot_samples_5x2(
     sample_ids = np.array(sample_ids)
     if len(sample_ids) != 10:
         print(f"⚠️  Warning: Expected 10 sample IDs, got {len(sample_ids)}")
-        print(f"    Using first 10 or padding with None")
         if len(sample_ids) > 10:
             sample_ids = sample_ids[:10]
         else:
@@ -369,21 +374,38 @@ def plot_samples_5x2(
                                constant_values=-1)
     
     print("="*70)
-    print(f"PLOTTING 10 SPECIFIC SAMPLES IN 5×2 GRID")
+    print(f"PLOTTING 10 SPECIFIC SAMPLES IN 5×2 GRID (WITH MAPPING)")
     print("="*70)
-    print(f"Sample IDs: {sample_ids}")
+    print(f"Clean IDs: {sample_ids}")
     
-    # Load parameters
+    # Load mapping
+    print(f"\nLoading index mapping from: {valid_indices_file}")
+    try:
+        valid_indices = np.loadtxt(valid_indices_file, dtype=int)
+        print(f"✓ Loaded mapping: {len(valid_indices):,} entries")
+        has_mapping = True
+    except FileNotFoundError:
+        print(f"⚠️  Warning: Mapping file not found!")
+        print(f"   Assuming clean_id = original_id (no NaN removal)")
+        valid_indices = None
+        has_mapping = False
+    
+    # Load parameters from clean CSV files
+    print("\nLoading clean data from CSV files...")
     R0_array = pd.read_csv(file_R0, header=None).values.ravel()
     sigma_array = pd.read_csv(file_sigma, header=None).values.ravel()
+    
+    print(f"✓ R0: {len(R0_array):,} samples")
+    print(f"✓ sigma: {len(sigma_array):,} samples")
     
     # Load distances if available
     try:
         distances = pd.read_csv(file_dists, header=None).values.ravel()
         has_distances = True
+        print(f"✓ distances: {len(distances):,} samples")
     except:
         has_distances = False
-        print("Note: No distance file provided, skipping distance display")
+        print("  (No distance file)")
     
     # Find simulation bank files
     sim_files = sorted(Path(simulation_banks_dir).glob('simulation_bank_part_*.h5'))
@@ -396,34 +418,51 @@ def plot_samples_5x2(
     with h5py.File(sim_files[0], 'r') as f:
         samples_per_file = len(f['R0'])
     
-    print(f"Found {len(sim_files)} simulation bank files")
-    print(f"Samples per file: {samples_per_file:,}")
+    print(f"\n✓ Found {len(sim_files)} simulation bank files")
+    print(f"✓ Samples per file: {samples_per_file:,}")
     
     # Create 5x2 grid
     fig, axes = plt.subplots(5, 2, figsize=(14, 20))
     axes = axes.ravel()
     
-    for i, sample_id in enumerate(sample_ids):
+    print("\nPlotting samples...")
+    
+    for i, clean_id in enumerate(sample_ids):
         ax = axes[i]
         
-        if sample_id < 0 or sample_id >= len(R0_array):
-            # Invalid sample ID, leave blank
+        if clean_id < 0 or clean_id >= len(R0_array):
+            # Invalid sample ID
             ax.axis('off')
-            ax.text(0.5, 0.5, f'Invalid ID: {sample_id}', 
+            ax.text(0.5, 0.5, f'Invalid ID: {clean_id}', 
                    ha='center', va='center', fontsize=12)
             continue
         
-        # Determine which file contains this sample
-        file_idx = int(sample_id // samples_per_file)
-        local_idx = int(sample_id % samples_per_file)
+        # Get R0, sigma, distance from clean CSV files
+        R0_val = R0_array[clean_id]
+        sigma_val = sigma_array[clean_id]
+        
+        if has_distances:
+            dist_val = distances[clean_id]
+        
+        # Map to original index for loading simulation
+        if has_mapping:
+            original_id = valid_indices[clean_id]
+        else:
+            original_id = clean_id
+        
+        print(f"  Sample {i+1}: Clean ID {clean_id} → Original ID {original_id}")
+        
+        # Determine which file contains this original sample
+        file_idx = int(original_id // samples_per_file)
+        local_idx = int(original_id % samples_per_file)
         
         if file_idx >= len(sim_files):
             ax.axis('off')
-            ax.text(0.5, 0.5, f'ID {sample_id} out of range', 
+            ax.text(0.5, 0.5, f'Original ID {original_id}\nout of range', 
                    ha='center', va='center', fontsize=12)
             continue
         
-        # Load simulation matrix
+        # Load simulation matrix using original ID
         sim_file = sim_files[file_idx]
         
         try:
@@ -431,40 +470,40 @@ def plot_samples_5x2(
                 simulation = f['simulations'][local_idx]  # Shape: (40, 23)
         except Exception as e:
             ax.axis('off')
-            ax.text(0.5, 0.5, f'Error loading\nID {sample_id}', 
+            ax.text(0.5, 0.5, f'Error loading\nOriginal ID {original_id}', 
                    ha='center', va='center', fontsize=12)
-            print(f"Error loading sample {sample_id}: {e}")
+            print(f"    ✗ Error: {e}")
             continue
-        
-        # Get parameters
-        R0_val = R0_array[sample_id]
-        sigma_val = sigma_array[sample_id]
-        
-        if has_distances:
-            dist_val = distances[sample_id]
         
         # Plot heatmap
         im = ax.imshow(simulation, aspect='auto', cmap='YlOrRd', 
                       interpolation='nearest', vmin=0)
         
-        # Title with parameters
-        title_text = f'ID {sample_id}: R0={R0_val:.3f}, σ={sigma_val:.3f}'
-        if has_distances:
-            title_text += f'\nDist={dist_val:.5f}'
-        
-        ax.set_title(title_text, fontsize=11, fontweight='bold')
-        
-        # Labels
-        ax.set_xlabel('Time', fontsize=9)
-        ax.set_ylabel('Strain', fontsize=9)
-        ax.tick_params(labelsize=8)
-        
         # Colorbar
         cbar = plt.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
         cbar.ax.tick_params(labelsize=8)
-        cbar.set_label('Prevalence', fontsize=8)
         
-        print(f"  ✓ Plotted sample {sample_id}: R0={R0_val:.3f}, σ={sigma_val:.3f}")
+        # Labels
+        ax.set_xlabel('Time Point', fontsize=10)
+        ax.set_ylabel('Strain', fontsize=10)
+        
+        # Title showing both IDs and parameters from clean data
+        title_text = f'Clean ID {clean_id} → Original ID {original_id}\n'
+        title_text += f'R0={R0_val:.3f}, σ={sigma_val:.3f}'
+        if has_distances:
+            title_text += f'\nDist={dist_val:.5f}'
+        
+        ax.set_title(title_text, fontsize=9, fontweight='bold')
+        
+        # Ticks
+        ax.set_xticks(np.arange(0, 23, 5))
+        ax.set_yticks(np.arange(0, 40, 10))
+        ax.tick_params(labelsize=8)
+        
+        # Grid
+        ax.grid(True, alpha=0.2, linestyle='--', linewidth=0.5)
+        
+        print(f"    ✓ R0={R0_val:.3f}, σ={sigma_val:.3f}")
     
     # Overall title
     fig.suptitle(title, fontsize=18, fontweight='bold', y=0.995)
@@ -485,28 +524,32 @@ def plot_matrices_scatter_5x2(
     file_R0='../../experimental_data/from_260430/R0.csv',
     file_sigma='../../experimental_data/from_260430/sigma.csv',
     file_dists='../../experimental_data/from_260430/dists_observations_recal.csv',
+    valid_indices_file='../../experimental_data/from_260430/valid_indices.csv',
     title="Simulation Matrices - Scatter View",
     save_path='../../figures/from_260430/ppc/observations/',
     save_filename='matrices_scatter_5x2.png',
     vmin=0,      # Minimum value for color scale
-    vmax=80      # Maximum value for color scale
+    vmax=20      # Maximum value for color scale
 ):
     """
     Plot 10 simulation matrices as scatter plots in a 5x2 grid.
     Each point represents a non-zero prevalence value at (time, strain).
+    NOW WITH MAPPING SUPPORT!
     
     Parameters:
     -----------
     sample_ids : list or array
-        List of 10 sample IDs to plot
+        List of 10 CLEAN sample IDs (indices in CSV files)
     simulation_banks_dir : str
         Directory containing simulation bank HDF5 files
     file_R0 : str
-        CSV file with R0 values
+        CSV file with R0 values (clean data)
     file_sigma : str
-        CSV file with sigma values
+        CSV file with sigma values (clean data)
     file_dists : str, optional
-        CSV file with distances
+        CSV file with distances (clean data)
+    valid_indices_file : str
+        Mapping file: clean_id → original_id
     title : str
         Overall figure title
     save_path : str
@@ -516,7 +559,7 @@ def plot_matrices_scatter_5x2(
     vmin : float
         Minimum value for color scale (default: 0)
     vmax : float
-        Maximum value for color scale (default: 80)
+        Maximum value for color scale (default: 20)
     """
     
     # Ensure exactly 10 samples
@@ -532,18 +575,36 @@ def plot_matrices_scatter_5x2(
     print("="*70)
     print(f"PLOTTING 10 SIMULATION MATRICES AS SCATTER PLOTS (5×2 GRID)")
     print("="*70)
-    print(f"Sample IDs: {sample_ids}")
+    print(f"Clean IDs: {sample_ids}")
     
-    # Load parameters
+    # Load mapping
+    print(f"\nLoading index mapping from: {valid_indices_file}")
+    try:
+        valid_indices = np.loadtxt(valid_indices_file, dtype=int)
+        print(f"✓ Loaded mapping: {len(valid_indices):,} entries")
+        has_mapping = True
+    except FileNotFoundError:
+        print(f"⚠️  Warning: Mapping file not found!")
+        print(f"   Assuming clean_id = original_id")
+        valid_indices = None
+        has_mapping = False
+    
+    # Load parameters from clean CSV files
+    print("\nLoading clean data from CSV files...")
     R0_array = pd.read_csv(file_R0, header=None).values.ravel()
     sigma_array = pd.read_csv(file_sigma, header=None).values.ravel()
+    
+    print(f"✓ R0: {len(R0_array):,} samples")
+    print(f"✓ sigma: {len(sigma_array):,} samples")
     
     # Load distances if available
     try:
         distances = pd.read_csv(file_dists, header=None).values.ravel()
         has_distances = True
+        print(f"✓ distances: {len(distances):,} samples")
     except:
         has_distances = False
+        print("  (No distance file)")
     
     # Find simulation bank files
     sim_files = sorted(Path(simulation_banks_dir).glob('simulation_bank_part_*.h5'))
@@ -562,27 +623,39 @@ def plot_matrices_scatter_5x2(
     fig, axes = plt.subplots(5, 2, figsize=(14, 20))
     axes = axes.ravel()
     
-    for i, sample_id in enumerate(sample_ids):
+    for i, clean_id in enumerate(sample_ids):
         ax = axes[i]
         
-        if sample_id < 0 or sample_id >= len(R0_array):
-            # Invalid sample ID
+        if clean_id < 0 or clean_id >= len(R0_array):
             ax.axis('off')
-            ax.text(0.5, 0.5, f'Invalid ID: {sample_id}', 
+            ax.text(0.5, 0.5, f'Invalid ID: {clean_id}', 
                    ha='center', va='center', fontsize=12)
             continue
         
-        # Determine which file contains this sample
-        file_idx = int(sample_id // samples_per_file)
-        local_idx = int(sample_id % samples_per_file)
+        # Get R0, sigma, distance from clean CSV files
+        R0_val = R0_array[clean_id]
+        sigma_val = sigma_array[clean_id]
+        
+        if has_distances:
+            dist_val = distances[clean_id]
+        
+        # Map to original index for loading simulation
+        if has_mapping:
+            original_id = valid_indices[clean_id]
+        else:
+            original_id = clean_id
+        
+        # Determine which file contains this original sample
+        file_idx = int(original_id // samples_per_file)
+        local_idx = int(original_id % samples_per_file)
         
         if file_idx >= len(sim_files):
             ax.axis('off')
-            ax.text(0.5, 0.5, f'ID {sample_id} out of range', 
+            ax.text(0.5, 0.5, f'ID {clean_id} out of range', 
                    ha='center', va='center', fontsize=12)
             continue
         
-        # Load simulation matrix
+        # Load simulation matrix using original ID
         sim_file = sim_files[file_idx]
         
         try:
@@ -590,17 +663,10 @@ def plot_matrices_scatter_5x2(
                 simulation = f['simulations'][local_idx]  # Shape: (40, 23)
         except Exception as e:
             ax.axis('off')
-            ax.text(0.5, 0.5, f'Error loading\nID {sample_id}', 
+            ax.text(0.5, 0.5, f'Error loading\nID {clean_id}', 
                    ha='center', va='center', fontsize=12)
-            print(f"Error loading sample {sample_id}: {e}")
+            print(f"Error loading sample {clean_id}: {e}")
             continue
-        
-        # Get parameters
-        R0_val = R0_array[sample_id]
-        sigma_val = sigma_array[sample_id]
-        
-        if has_distances:
-            dist_val = distances[sample_id]
         
         # Convert matrix to scatter points
         # For each non-zero value, create a point at (time, strain)
@@ -624,8 +690,12 @@ def plot_matrices_scatter_5x2(
         ax.set_xlim(-0.5, 22.5)
         ax.set_ylim(-0.5, 39.5)
         
-        # Title with parameters
-        title_text = f'ID {sample_id}: R0={R0_val:.3f}, σ={sigma_val:.3f}'
+        # Title with parameters from clean data
+        if has_mapping:
+            title_text = f'Clean ID {clean_id} → Orig {original_id}\n'
+        else:
+            title_text = f'ID {clean_id}\n'
+        title_text += f'R0={R0_val:.3f}, σ={sigma_val:.3f}'
         if has_distances:
             title_text += f'\nDist={dist_val:.5f}'
         
@@ -642,7 +712,7 @@ def plot_matrices_scatter_5x2(
         
         # Print info
         n_nonzero = (simulation > 0).sum()
-        print(f"  ✓ Sample {sample_id}: R0={R0_val:.3f}, σ={sigma_val:.3f}, "
+        print(f"  ✓ Clean {clean_id} → Orig {original_id}: R0={R0_val:.3f}, σ={sigma_val:.3f}, "
               f"{n_nonzero} non-zero points")
     
     # Overall title
@@ -656,7 +726,8 @@ def plot_matrices_scatter_5x2(
     plt.savefig(save_file, dpi=300, bbox_inches='tight')
     print(f"\n✓ Saved to: {save_file}")
     plt.close()
- 
+
+
 def plot_matrices_scatter_single(
     sample_ids,
     simulation_banks_dir='../../experimental_data/from_260430/simulation_banks',
@@ -823,7 +894,7 @@ def plot_observation_scatter(
     save_path='../../figures/from_260430/ppc/observations/',
     save_filename='observation_scatter.png',
     vmin=0,   # Minimum value for color scale
-    vmax=80   # Maximum value for color scale
+    vmax=20   # Maximum value for color scale
 ):
     """
     Plot observation matrix as a scatter plot.
@@ -842,7 +913,7 @@ def plot_observation_scatter(
     vmin : float
         Minimum value for color scale (default: 0)
     vmax : float
-        Maximum value for color scale (default: 80)
+        Maximum value for color scale (default: 20)
     """
     
     if observation_matrix is None:
@@ -994,42 +1065,35 @@ def calculate_summary_stats_comparison(
     file_R0='../../experimental_data/from_260430/R0.csv',
     file_sigma='../../experimental_data/from_260430/sigma.csv',
     file_dists='../../experimental_data/from_260430/dists_observations_recal.csv',
+    valid_indices_file='../../experimental_data/from_260430/valid_indices.csv',
     save_path='../../experimental_data/from_260430/ppc/observations/',
     save_filename='summary_stats_comparison.csv'
 ):
     """
     Calculate summary statistics for observation and selected samples.
+    NOW WITH MAPPING SUPPORT!
     
-    Parameters:
-    -----------
-    sample_ids : list or array
-        List of sample IDs to analyze
-    observation_matrix : np.ndarray, optional
-        Observation matrix (40x23). If None, uses default.
-    simulation_banks_dir : str
-        Directory with simulation bank files
-    file_R0 : str
-        R0 values CSV
-    file_sigma : str
-        Sigma values CSV
-    file_dists : str
-        Distances CSV
-    save_path : str
-        Where to save results
-    save_filename : str
-        Output CSV filename
-    
-    Returns:
-    --------
-    pd.DataFrame : Comparison table
+    sample_ids should be CLEAN IDs (indices in CSV files)
     """
     
     if observation_matrix is None:
         observation_matrix = observations
     
     print("="*70)
-    print("CALCULATING SUMMARY STATISTICS COMPARISON")
+    print("CALCULATING SUMMARY STATISTICS COMPARISON (WITH MAPPING)")
     print("="*70)
+    
+    # Load mapping
+    print(f"\nLoading index mapping from: {valid_indices_file}")
+    try:
+        valid_indices = np.loadtxt(valid_indices_file, dtype=int)
+        print(f"✓ Loaded mapping: {len(valid_indices):,} entries")
+        has_mapping = True
+    except FileNotFoundError:
+        print(f"⚠️  Warning: Mapping file not found!")
+        print(f"   Assuming clean_id = original_id")
+        valid_indices = None
+        has_mapping = False
     
     # Calculate observation statistics
     print("\nCalculating observation statistics...")
@@ -1039,10 +1103,15 @@ def calculate_summary_stats_comparison(
     for key, value in obs_stats.items():
         print(f"  {key:25s}: {value:.6f}")
     
-    # Load parameters
+    # Load parameters from clean CSV files
+    print("\nLoading clean data from CSV files...")
     R0_array = pd.read_csv(file_R0, header=None).values.ravel()
     sigma_array = pd.read_csv(file_sigma, header=None).values.ravel()
     distances = pd.read_csv(file_dists, header=None).values.ravel()
+    
+    print(f"✓ R0: {len(R0_array):,} samples")
+    print(f"✓ sigma: {len(sigma_array):,} samples")
+    print(f"✓ distances: {len(distances):,} samples")
     
     # Find simulation files
     sim_files = sorted(Path(simulation_banks_dir).glob('simulation_bank_part_*.h5'))
@@ -1050,12 +1119,15 @@ def calculate_summary_stats_comparison(
     with h5py.File(sim_files[0], 'r') as f:
         samples_per_file = len(f['R0'])
     
+    print(f"✓ Simulation banks: {len(sim_files)} files")
+    
     # Calculate statistics for each sample
     results = []
     
     # Add observation as first row
     results.append({
-        'ID': 'Observation',
+        'clean_id': 'Observation',
+        'original_id': 'N/A',
         'R0': np.nan,
         'sigma': np.nan,
         'distance': np.nan,
@@ -1067,32 +1139,39 @@ def calculate_summary_stats_comparison(
     
     print(f"\nCalculating statistics for {len(sample_ids)} samples...")
     
-    for idx, sample_id in enumerate(sample_ids, 1):
-        if sample_id < 0 or sample_id >= len(R0_array):
-            print(f"  Skipping invalid sample ID: {sample_id}")
+    for idx, clean_id in enumerate(sample_ids, 1):
+        if clean_id < 0 or clean_id >= len(R0_array):
+            print(f"  Skipping invalid clean ID: {clean_id}")
             continue
         
-        # Load simulation
-        file_idx = int(sample_id // samples_per_file)
-        local_idx = int(sample_id % samples_per_file)
+        # Get R0, sigma, distance from clean CSV files
+        R0_val = R0_array[clean_id]
+        sigma_val = sigma_array[clean_id]
+        dist_val = distances[clean_id]
+        
+        # Map to original index for loading simulation
+        if has_mapping:
+            original_id = valid_indices[clean_id]
+        else:
+            original_id = clean_id
+        
+        # Load simulation using original ID
+        file_idx = int(original_id // samples_per_file)
+        local_idx = int(original_id % samples_per_file)
         
         try:
             with h5py.File(sim_files[file_idx], 'r') as f:
                 simulation = f['simulations'][local_idx]
         except Exception as e:
-            print(f"  Error loading sample {sample_id}: {e}")
+            print(f"  Error loading clean {clean_id} → original {original_id}: {e}")
             continue
-        
-        # Get parameters
-        R0_val = R0_array[sample_id]
-        sigma_val = sigma_array[sample_id]
-        dist_val = distances[sample_id]
         
         # Calculate statistics
         sim_stats = calculate_summary_stats_single(simulation)
         
         results.append({
-            'ID': int(sample_id),
+            'clean_id': int(clean_id),
+            'original_id': int(original_id),
             'R0': R0_val,
             'sigma': sigma_val,
             'distance': dist_val,
@@ -1102,12 +1181,12 @@ def calculate_summary_stats_comparison(
             'div_all_isolates_obs': sim_stats['div_all_isolates_obs']
         })
         
-        print(f"  ✓ Sample {sample_id}: R0={R0_val:.3f}, σ={sigma_val:.3f}")
+        print(f"  ✓ Clean {clean_id} → Orig {original_id}: R0={R0_val:.3f}, σ={sigma_val:.3f}")
     
     # Create DataFrame
     df = pd.DataFrame(results)
     
-    # Calculate differences from observation
+    # Calculate differences from observation (skip first row which is observation)
     for col in ['avg_prev_obs', 'var_prev_obs', 'avg_npmi_obs', 'div_all_isolates_obs']:
         obs_value = obs_stats[col]
         df[f'{col}_diff'] = df[col] - obs_value
@@ -1119,7 +1198,7 @@ def calculate_summary_stats_comparison(
     print("="*70)
     
     # Show main statistics
-    display_cols = ['ID', 'R0', 'sigma', 'distance', 
+    display_cols = ['clean_id', 'original_id', 'R0', 'sigma', 'distance', 
                    'avg_prev_obs', 'var_prev_obs', 'avg_npmi_obs', 'div_all_isolates_obs']
     print("\n" + df[display_cols].to_string(index=False))
     
@@ -1128,7 +1207,7 @@ def calculate_summary_stats_comparison(
     print("DIFFERENCES FROM OBSERVATION")
     print("="*70)
     
-    diff_cols = ['ID'] + [col for col in df.columns if '_diff' in col and '_pct' not in col]
+    diff_cols = ['clean_id', 'original_id'] + [col for col in df.columns if '_diff' in col and '_pct' not in col]
     print("\n" + df[diff_cols].to_string(index=False))
     
     # Save to CSV
@@ -1138,6 +1217,173 @@ def calculate_summary_stats_comparison(
     print(f"\n✓ Saved full comparison to: {output_file}")
     
     return df
+ 
+def plot_samples_from_dataframe(
+    summary_df,
+    n_samples=10,
+    simulation_banks_dir='../../experimental_data/from_260430/simulation_banks',
+    plot_type='scatter',  # 'scatter' or 'heatmap'
+    title="Selected Samples",
+    save_path='../../figures/from_260430/ppc/observations/',
+    save_filename='selected_samples.png',
+    vmin=0,
+    vmax=20
+):
+    """
+    Plot samples using the summary DataFrame from display_selected_samples.
+    Handles the index mapping automatically.
+    
+    Parameters:
+    -----------
+    summary_df : pd.DataFrame
+        DataFrame from display_selected_samples (has clean_id and original_id)
+    n_samples : int
+        Number of samples to plot (max 10 for 5x2 grid)
+    simulation_banks_dir : str
+        Directory with simulation banks
+    plot_type : str
+        'scatter' or 'heatmap'
+    title : str
+        Plot title
+    save_path : str
+        Save directory
+    save_filename : str
+        Save filename
+    vmin, vmax : float
+        Color scale range
+    """
+    
+    if n_samples > 10:
+        print(f"⚠️  Warning: n_samples={n_samples} > 10, using first 10 only")
+        n_samples = 10
+    
+    # Get the data
+    top_samples = summary_df.head(n_samples)
+    
+    print("="*70)
+    print(f"PLOTTING {len(top_samples)} SAMPLES")
+    print("="*70)
+    
+    # Check which columns exist
+    has_clean_id = 'clean_id' in top_samples.columns
+    has_original_id = 'original_id' in top_samples.columns
+    
+    if has_original_id:
+        original_ids = top_samples['original_id'].values
+        print("✓ Using original_id for loading simulations")
+    elif 'sample_id' in top_samples.columns:
+        original_ids = top_samples['sample_id'].values
+        print("✓ Using sample_id (assuming no mapping needed)")
+    else:
+        raise ValueError("DataFrame must have 'original_id' or 'sample_id' column")
+    
+    # Pad to 10 if needed
+    if len(original_ids) < 10:
+        original_ids = np.pad(original_ids, (0, 10 - len(original_ids)), 
+                             constant_values=-1)
+    
+    # Get parameters
+    R0_vals = top_samples['R0'].values
+    sigma_vals = top_samples['sigma'].values
+    dist_vals = top_samples['distance'].values
+    
+    # Pad parameters too
+    if len(R0_vals) < 10:
+        R0_vals = np.pad(R0_vals, (0, 10 - len(R0_vals)), constant_values=np.nan)
+        sigma_vals = np.pad(sigma_vals, (0, 10 - len(sigma_vals)), constant_values=np.nan)
+        dist_vals = np.pad(dist_vals, (0, 10 - len(dist_vals)), constant_values=np.nan)
+    
+    # Find simulation files
+    sim_files = sorted(Path(simulation_banks_dir).glob('simulation_bank_part_*.h5'))
+    
+    with h5py.File(sim_files[0], 'r') as f:
+        samples_per_file = len(f['R0'])
+    
+    print(f"Found {len(sim_files)} simulation bank files")
+    print(f"Loading {len(original_ids)} simulations...")
+    
+    # Create figure
+    fig, axes = plt.subplots(5, 2, figsize=(14, 20))
+    axes = axes.ravel()
+    
+    for i, original_id in enumerate(original_ids):
+        ax = axes[i]
+        
+        if original_id < 0 or np.isnan(R0_vals[i]):
+            ax.axis('off')
+            continue
+        
+        # Load simulation
+        file_idx = int(original_id // samples_per_file)
+        local_idx = int(original_id % samples_per_file)
+        
+        try:
+            with h5py.File(sim_files[file_idx], 'r') as f:
+                simulation = f['simulations'][local_idx]
+        except Exception as e:
+            ax.axis('off')
+            ax.text(0.5, 0.5, f'Error loading\nID {original_id}', 
+                   ha='center', va='center')
+            print(f"  ✗ Error loading ID {original_id}: {e}")
+            continue
+        
+        # Plot based on type
+        if plot_type == 'scatter':
+            # Scatter plot
+            strains, times = np.where(simulation > 0)
+            prevalences = simulation[strains, times]
+            
+            scatter = ax.scatter(times, strains, 
+                               c=prevalences, 
+                               s=prevalences * 10,
+                               cmap='YlOrRd', 
+                               alpha=0.7,
+                               edgecolors='black',
+                               linewidths=0.3,
+                               vmin=vmin,
+                               vmax=vmax)
+            
+            ax.set_xlim(-0.5, 22.5)
+            ax.set_ylim(-0.5, 39.5)
+            
+            # Colorbar
+            cbar = plt.colorbar(scatter, ax=ax, fraction=0.046, pad=0.04)
+            cbar.ax.tick_params(labelsize=8)
+            cbar.set_label('Prevalence', fontsize=8)
+            
+        else:  # heatmap
+            im = ax.imshow(simulation, aspect='auto', cmap='YlOrRd', 
+                          interpolation='nearest', vmin=vmin, vmax=vmax)
+            
+            # Colorbar
+            cbar = plt.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
+            cbar.ax.tick_params(labelsize=8)
+        
+        # Labels
+        ax.set_xlabel('Time', fontsize=10)
+        ax.set_ylabel('Strain', fontsize=10)
+        
+        # Title
+        rank = i + 1
+        title_text = f'Rank {rank}: ID {original_id}\nR0={R0_vals[i]:.3f}, σ={sigma_vals[i]:.3f}, D={dist_vals[i]:.5f}'
+        ax.set_title(title_text, fontsize=10, fontweight='bold')
+        
+        ax.grid(True, alpha=0.3, linestyle='--')
+        
+        print(f"  ✓ Rank {rank}: ID {original_id}")
+    
+    # Overall title
+    fig.suptitle(title, fontsize=18, fontweight='bold', y=0.995)
+    plt.tight_layout(rect=[0, 0, 1, 0.99])
+    
+    # Save
+    Path(save_path).mkdir(parents=True, exist_ok=True)
+    save_file = f"{save_path}{save_filename}"
+    plt.savefig(save_file, dpi=300, bbox_inches='tight')
+    print(f"\n✓ Saved to: {save_file}")
+    plt.close()
+ 
+
 
 # ============================================================================
 # MAIN EXECUTION
@@ -1156,59 +1402,39 @@ if __name__ == "__main__":
         n_display=20,
         save_path='../../experimental_data/from_260430/ppc/observations/'
     )
-    
-    # Step 2: Plot top 5 simulations individually
-    top_sample_ids = summary_df['sample_id'].values[:5]
-    
-    load_and_plot_simulations(
-        sample_ids=top_sample_ids,
-        simulation_banks_dir='../../experimental_data/from_260430/simulation_banks',
-        summary_df=summary_df,
-        n_plot=5,
-        save_path='../../figures/from_260430/ppc/observations/'
-    )
-    
-    # Step 3: Create comparison grid of top 9 samples
-    top_9_ids = summary_df['sample_id'].values[:9]
-    
-    plot_comparison_grid(
-        sample_ids=top_9_ids,
-        simulation_banks_dir='../../experimental_data/from_260430/simulation_banks',
-        summary_df=summary_df,
-        n_cols=3,
-        save_path='../../figures/from_260430/ppc/observations/'
-    )
-    
-    print("\n" + "="*70)
-    print("✅ ANALYSIS COMPLETE!")
-    print("="*70)
 
-    # my_sample_ids = [125516, 479082, 114075, 80433, 302555, 
-    #                  95410, 162873, 360406, 395833, 60592]
-    my_sample_ids = [125516, 479082, 114075, 80433, 302555, 
+    
+    
+
+    my_clean_ids = [125516, 479082, 114075, 80433, 302555, 
                      95410, 162873, 360406, 395833, 60592]
+    my_original_ids = [125598, 479398, 114151,  80488, 302743, 
+                     95475, 162977, 360642, 396091, 60632]
 
 
-    
-    
     plot_samples_5x2(
-        sample_ids=my_sample_ids,
-        simulation_banks_dir='../../experimental_data/from_260430/simulation_banks',
-        file_R0='../../experimental_data/from_260430/R0.csv',
-        file_sigma='../../experimental_data/from_260430/sigma.csv',
-        file_dists='../../experimental_data/from_260430/dists_observations_recal.csv',
-        title="Selected Simulations - 5×2 Grid",
-        save_path='../../figures/from_260430/ppc/observations/',
-        save_filename='my_selected_samples.png'
+    sample_ids=my_clean_ids,  # ← CLEAN IDs, not original IDs!
+    simulation_banks_dir='../../experimental_data/from_260430/simulation_banks',
+    file_R0='../../experimental_data/from_260430/R0.csv',
+    file_sigma='../../experimental_data/from_260430/sigma.csv',
+    file_dists='../../experimental_data/from_260430/dists_observations_recal.csv',
+    valid_indices_file='../../experimental_data/from_260430/valid_indices.csv',  # ← Key!
+    title="Top 10 Samples - Correct Mapping",
+    save_path='../../figures/from_260430/ppc/observations/',
+    save_filename='top_10_correct.png'
     )
-
+    
     plot_matrices_scatter_5x2(
-        sample_ids=my_sample_ids,
-        simulation_banks_dir='../../experimental_data/from_260430/simulation_banks',
-        title="Specified 10 Simulations - Scatter View",
-        save_filename='matrices_scatter_grid.png',
-        vmin=0,   # Color scale minimum
-        vmax=80   # Color scale maximum)
+    sample_ids=my_clean_ids,  # ← CLEAN IDs!
+    simulation_banks_dir='../../experimental_data/from_260430/simulation_banks',
+    file_R0='../../experimental_data/from_260430/R0.csv',
+    file_sigma='../../experimental_data/from_260430/sigma.csv',
+    file_dists='../../experimental_data/from_260430/dists_observations_recal.csv',
+    valid_indices_file='../../experimental_data/from_260430/valid_indices.csv',  # ← Add this!
+    title=" Specified 10 Simulations - Scatter View",
+    save_filename='matrices_scatter_grid.png',
+    vmin=0,
+    vmax=20
     )
 
     observations = np.array([
@@ -1261,8 +1487,10 @@ plot_observation_both(
         save_path='../../figures/from_260430/ppc/observations/'
     )
 
+
 df = calculate_summary_stats_comparison(
-        sample_ids=my_sample_ids,
+        sample_ids=my_clean_ids,  # ← CLEAN IDs!
         observation_matrix=observations,
-        save_filename='summary_stats_comparison_top10.csv'
+        valid_indices_file='../../experimental_data/from_260430/valid_indices.csv',  # ← Add this!
+        save_filename='summary_stats_comparison_specified10.csv'
     )
