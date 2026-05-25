@@ -1,0 +1,77 @@
+nohup: ignoring input
+======================================================================
+DISPLAYING SAMPLES AT 0.01% PERCENTILE
+======================================================================
+
+Loading index mapping...
+✓ Loaded mapping: 499,665 clean → original indices
+
+Loading data...
+✓ Loaded 499,665 samples
+
+Percentile 0.01%:
+  Threshold: 0.058749
+  Selected: 50 samples (0.010%)
+
+======================================================================
+TOP 20 CLOSEST SAMPLES:
+======================================================================
+clean_id    = index in R0.csv/sigma.csv/distances (499,665 samples)
+original_id = index in simulation_bank_*.h5 files (500,000 samples)
+
+ rank  clean_id  original_id  distance       R0    sigma
+    1    443366       443660  0.050584 1.702242 0.860356
+    2    391352       391608  0.050985 1.690271 0.922871
+    3    276611       276781  0.051534 1.678672 0.758660
+    4    313570       313766  0.051541 2.044548 0.986733
+    5    125516       125598  0.052439 1.055655 0.921259
+    6    163076       163180  0.052757 1.563667 0.635662
+    7      5643         5648  0.052911 1.068024 0.236455
+    8    158278       158380  0.053096 1.100145 0.512572
+    9    113876       113952  0.053285 1.287350 0.631053
+   10    226379       226520  0.053553 1.264906 0.792692
+   11    479082       479398  0.053827 1.127464 0.931003
+   12    454862       455162  0.054022 1.902579 0.993842
+   13    400090       400349  0.054271 1.252387 0.659769
+   14      3280         3281  0.054402 2.649214 0.961864
+   15    164633       164737  0.054439 1.577567 0.719608
+   16     95410        95475  0.054544 1.896836 0.930775
+   17    271763       271931  0.054840 2.221530 0.976014
+   18    415067       415337  0.054964 1.724213 0.890475
+   19    341370       341586  0.055014 1.078475 0.972445
+   20    438737       439029  0.055237 2.529791 0.983106
+
+======================================================================
+STATISTICS OF SELECTED SAMPLES:
+======================================================================
+Distance range: [0.050584, 0.058729]
+Distance mean:  0.055688
+
+R0:
+  Range: [1.056, 7.777]
+  Mean:  1.904 ± 0.948
+
+Sigma:
+  Range: [0.236, 0.997]
+  Mean:  0.864 ± 0.147
+
+✓ Saved summary to: ../../experimental_data/from_260430/ppc/observations/selected_samples_p0.01.csv
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3653, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 147, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 176, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'sample_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "display_selected_samples.py", line 1161, in <module>
+    top_sample_ids = summary_df['sample_id'].values[:5]
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/pandas/core/frame.py", line 3761, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3655, in get_loc
+    raise KeyError(key) from err
+KeyError: 'sample_id'
