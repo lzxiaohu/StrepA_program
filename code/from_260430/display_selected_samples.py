@@ -335,11 +335,13 @@ def plot_samples_5x2(
     valid_indices_file='../../experimental_data/from_260430/valid_indices.csv',
     title="Selected Simulations",
     save_path='../../figures/from_260430/ppc/observations/',
-    save_filename='specific_samples_5x2.png'
+    save_filename='specific_samples_5x2.png',
+    vmin=0,   # Minimum value for color scale
+    vmax=80   # Maximum value for color scale
 ):
     """
     Plot exactly 10 specific sample IDs in a 5x2 grid.
-    NOW WITH MAPPING SUPPORT!
+    NOW WITH MAPPING SUPPORT AND UNIFORM COLOR SCALE!
     
     Parameters:
     -----------
@@ -361,6 +363,10 @@ def plot_samples_5x2(
         Directory to save figure
     save_filename : str
         Filename for saved figure
+    vmin : float
+        Minimum value for color scale (default: 0)
+    vmax : float
+        Maximum value for color scale (default: 80)
     """
     
     # Ensure exactly 10 samples
@@ -477,7 +483,7 @@ def plot_samples_5x2(
         
         # Plot heatmap
         im = ax.imshow(simulation, aspect='auto', cmap='YlOrRd', 
-                      interpolation='nearest', vmin=0)
+                      interpolation='nearest', vmin=vmin, vmax=vmax)
         
         # Colorbar
         cbar = plt.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
@@ -516,6 +522,7 @@ def plot_samples_5x2(
     plt.savefig(save_file, dpi=300, bbox_inches='tight')
     print(f"\n✓ Saved to: {save_file}")
     plt.close()
+ 
 
 
 def plot_matrices_scatter_5x2(
@@ -816,7 +823,9 @@ def plot_observation_heatmap(
     observation_matrix=None,
     title="Observed Data - Heatmap",
     save_path='../../figures/from_260430/ppc/observations/',
-    save_filename='observation_heatmap.png'
+    save_filename='observation_heatmap.png',
+    vmin=0,   # Minimum value for color scale
+    vmax=20   # Maximum value for color scale
 ):
     """
     Plot observation matrix as a heatmap.
@@ -831,6 +840,10 @@ def plot_observation_heatmap(
         Directory to save figure
     save_filename : str
         Filename for saved figure
+    vmin : float
+        Minimum value for color scale (default: 0)
+    vmax : float
+        Maximum value for color scale (default: 80)
     """
     
     if observation_matrix is None:
@@ -849,7 +862,7 @@ def plot_observation_heatmap(
     
     # Heatmap
     im = ax.imshow(observation_matrix, aspect='auto', cmap='YlOrRd', 
-                   interpolation='nearest', vmin=0)
+                   interpolation='nearest', vmin=vmin, vmax=vmax)
     
     # Colorbar
     cbar = plt.colorbar(im, ax=ax, pad=0.02)
@@ -873,7 +886,8 @@ def plot_observation_heatmap(
     # Add text box with statistics
     stats_text = (f"Total infections: {observation_matrix.sum():.0f}\n"
                  f"Non-zero entries: {(observation_matrix > 0).sum()}\n"
-                 f"Max prevalence: {observation_matrix.max():.0f}")
+                 f"Max prevalence: {observation_matrix.max():.0f}\n"
+                 f"Color scale: [{vmin}, {vmax}]")
     props = dict(boxstyle='round', facecolor='wheat', alpha=0.8)
     ax.text(0.02, 0.98, stats_text, transform=ax.transAxes, fontsize=11,
             verticalalignment='top', bbox=props)
@@ -941,7 +955,7 @@ def plot_observation_scatter(
         times, 
         strains, 
         c=prevalences,
-        s=prevalences * 30,  # Size proportional to prevalence
+        s=prevalences * 10,  # Size proportional to prevalence
         cmap='YlOrRd',
         alpha=0.7,
         edgecolors='black',
@@ -1016,7 +1030,9 @@ def plot_observation_both(
         observation_matrix=observation_matrix,
         title="Observed Data - Heatmap",
         save_path=save_path,
-        save_filename='observation_heatmap.png'
+        save_filename='observation_heatmap.png',
+        vmin=0,   # Minimum value for color scale
+        vmax=20   # Maximum value for color scale
     )
     
     # Version 2: Scatter
@@ -1024,7 +1040,9 @@ def plot_observation_both(
         observation_matrix=observation_matrix,
         title="Observed Data - Scatter Plot",
         save_path=save_path,
-        save_filename='observation_scatter.png'
+        save_filename='observation_scatter.png', 
+        vmin=0,   # Minimum value for color scale
+        vmax=20   # Maximum value for color scale
     )
     
     print("\n" + "="*70)
@@ -1406,10 +1424,16 @@ if __name__ == "__main__":
     
     
 
-    my_clean_ids = [125516, 479082, 114075, 80433, 302555, 
-                     95410, 162873, 360406, 395833, 60592]
-    my_original_ids = [125598, 479398, 114151,  80488, 302743, 
-                     95475, 162977, 360642, 396091, 60632]
+    # my_clean_ids = [125516, 479082, 114075, 80433, 302555, 
+    #                  95410, 162873, 360406, 395833, 60592]
+    # my_original_ids = [125598, 479398, 114151,  80488, 302743, 
+    #                  95475, 162977, 360642, 396091, 60632]
+
+    my_clean_ids = [125516, 95410,    # Row 1
+                479082, 162873,   # Row 2
+                114075, 360406,   # Row 3
+                80433, 395833,    # Row 4
+                302555, 60592]    # Row 5
 
 
     plot_samples_5x2(
@@ -1419,9 +1443,11 @@ if __name__ == "__main__":
     file_sigma='../../experimental_data/from_260430/sigma.csv',
     file_dists='../../experimental_data/from_260430/dists_observations_recal.csv',
     valid_indices_file='../../experimental_data/from_260430/valid_indices.csv',  # ← Key!
-    title="Top 10 Samples - Correct Mapping",
+    title="Specified 10 Simulations - Heatmap View",
     save_path='../../figures/from_260430/ppc/observations/',
-    save_filename='top_10_correct.png'
+    save_filename='matrices_heatmap_grid.png', 
+    vmin=0,   # ← Uniform color scale!
+    vmax=20
     )
     
     plot_matrices_scatter_5x2(
