@@ -1,0 +1,1939 @@
+nohup: ignoring input
+2026-05-28 06:58:20 - INFO - ======================================================================
+2026-05-28 06:58:20 - INFO - ABC SIMULATION - OPTIMIZED BATCHED STORAGE
+2026-05-28 06:58:20 - INFO - ======================================================================
+2026-05-28 06:58:20 - INFO - Platform: 32 vCPUs, 64GB RAM
+2026-05-28 06:58:20 - INFO - Configuration:
+2026-05-28 06:58:20 - INFO -   - Total simulations: 500,000
+2026-05-28 06:58:20 - INFO -   - Parallel workers: 60
+2026-05-28 06:58:20 - INFO -   - R0 range: [1.0, 8.0]
+2026-05-28 06:58:20 - INFO -   - Sigma range: [0.2, 1.0]
+2026-05-28 06:58:20 - INFO -   - Storage: Batched arrays (optimized HDF5)
+2026-05-28 06:58:20 - INFO - ======================================================================
+2026-05-28 06:58:20 - INFO - File splitting: 14 files (~37,748 samples each)
+2026-05-28 06:58:20 - INFO - 
+2026-05-28 06:58:20 - INFO - ======================================================================
+2026-05-28 06:58:20 - INFO - FILE 43/14: simulation_bank_part_0042.h5
+2026-05-28 06:58:20 - INFO - Samples 1,500,000 to 1,537,747 (37,748 total)
+2026-05-28 06:58:20 - INFO - ======================================================================
+2026-05-28 06:58:20 - INFO - Running 37,748 simulations with 60 workers...
+Simulating:   0%|          | 0/37748 [00:00<?, ?sample/s]Simulating:   0%|          | 1/37748 [00:25<270:05:26, 25.76s/sample]Simulating:   0%|          | 14/37748 [00:27<15:00:17,  1.43s/sample]Simulating:   0%|          | 61/37748 [00:28<2:41:37,  3.89sample/s] Simulating:   0%|          | 65/37748 [00:32<3:30:34,  2.98sample/s]Simulating:   0%|          | 75/37748 [00:34<3:01:12,  3.46sample/s]Simulating:   0%|          | 80/37748 [00:34<2:36:58,  4.00sample/s]Simulating:   0%|          | 83/37748 [00:36<3:11:48,  3.27sample/s]Simulating:   0%|          | 87/37748 [00:37<2:58:39,  3.51sample/s]Simulating:   0%|          | 98/37748 [00:38<2:09:01,  4.86sample/s]Simulating:   0%|          | 100/37748 [00:39<2:32:47,  4.11sample/s]Simulating:   0%|          | 113/37748 [00:40<1:41:35,  6.17sample/s]Simulating:   0%|          | 115/37748 [00:41<2:02:31,  5.12sample/s]Simulating:   0%|          | 124/37748 [00:42<1:57:31,  5.34sample/s]Simulating:   0%|          | 126/37748 [00:43<1:48:23,  5.78sample/s]Simulating:   0%|          | 129/37748 [00:44<2:25:51,  4.30sample/s]Simulating:   0%|          | 131/37748 [00:45<3:12:46,  3.25sample/s]Simulating:   0%|          | 133/37748 [00:46<2:48:15,  3.73sample/s]Simulating:   0%|          | 137/37748 [00:47<2:44:42,  3.81sample/s]Simulating:   0%|          | 145/37748 [00:48<2:10:45,  4.79sample/s]Simulating:   0%|          | 154/37748 [00:51<2:34:43,  4.05sample/s]Process ForkPoolWorker-47:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-58:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-43:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-29:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-28:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-15:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-34:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-56:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-39:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-25:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-54:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-40:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-24:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-48:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-13:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-52:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-11:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-21:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-32:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-14:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-53:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-41:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-35:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-33:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-60:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-22:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-12:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-10:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-27:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-50:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-42:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-18:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-37:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-8:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-51:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-6:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-38:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-30:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-55:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-46:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-1:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-31:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-20:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-57:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-3:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-17:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-4:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-49:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-36:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-59:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-5:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-2:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-9:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-26:
+Process ForkPoolWorker-19:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-16:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-45:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-23:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-44:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkPoolWorker-7:
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 131, in worker
+    put((job, i, result))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/pool.py", line 136, in worker
+    put((job, i, (False, wrapped)))
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/queues.py", line 368, in put
+    self._writer.send_bytes(obj)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe

@@ -85,8 +85,8 @@ def prior_value_2params(R0_range, sigma_range, rng):
 
     return R0_sel, sigma_sel
 
-# function: simulate_prevalence_v6_numba
-def simulate_prevalence_v6_numba(theta, fixed_params, core_params_num, seed):
+# function: simulate_prevalence_v5_numba
+def simulate_prevalence_v5_numba(theta, fixed_params, core_params_num, seed):
     #
     #
     seed = seed_from_theta(theta, master_seed=seed)
@@ -103,7 +103,7 @@ def simulate_prevalence_v6_numba(theta, fixed_params, core_params_num, seed):
     return SSPrev_selected.astype(float)
 
 
-def simulate_prevalence_v6_numba(theta, fixed_params, core_params_num, seed):
+def simulate_prevalence_v5_numba(theta, fixed_params, core_params_num, seed):
     seed = seed_from_theta(theta, master_seed=seed)
     rng = default_rng(seed)
     params = build_params(theta, fixed_params, core_params_num)
@@ -120,7 +120,7 @@ def run_single_simulation(args):
 
     rng = np.random.default_rng(master_seed + sample_id)
     R0_sel, sigma_sel = prior_value_2params(R0_range, sigma_range, rng)
-    y_sim = simulate_prevalence_v6_numba(
+    y_sim = simulate_prevalence_v5_numba(
         [R0_sel, sigma_sel],
         fixed_params,
         core_params_num,
@@ -141,7 +141,7 @@ def abc_simulation_batched_arrays(
         fixed_params,
         core_params_num,
         n_simulations=500_000,
-        output_dir='../../experimental_data/from_260528/simulation_banks',
+        output_dir='../../experimental_data/from_260430/simulation_banks',
         max_file_size_mb=95,
         n_jobs=30,
         master_seed=123
@@ -348,7 +348,7 @@ if __name__ == '__main__':
             fixed_params=fixed_params,
             core_params_num=core_params_num,
             n_simulations=500_000,
-            output_dir='../../experimental_data/from_260528/simulation_banks',
+            output_dir='../../experimental_data/from_260430/simulation_banks',
             max_file_size_mb=90,
             n_jobs=60,
             master_seed=123
