@@ -1,0 +1,85 @@
+nohup: ignoring input
+======================================================================
+CALCULATING SUMMARY STATISTICS → CLEAN DATA (NaN REMOVAL)
+======================================================================
+Input directory: ../../experimental_data/from_260528/simulation_banks
+Input files: 1
+Total samples: 2,000
+Output file: ../../experimental_data/from_260528/all_summary_statistics_clean.h5
+Mapping file: ../../experimental_data/from_260528/valid_indices.csv
+Parallel workers: 60
+======================================================================
+
+Allocating arrays for 2,000 samples...
+
+======================================================================
+FILE 1/1: simulation_bank_part_0000.h5
+======================================================================
+Samples in this file: 2,000
+Global index: 0 to 1,999
+Calculating summary statistics with 60 workers...
+  Processing:   0%|                                    | 0/2000 [00:00<?, ?it/s]  Processing:  55%|████████████          | 1099/2000 [00:00<00:00, 10916.20it/s]  Processing: 100%|██████████████████████| 2000/2000 [00:00<00:00, 14310.00it/s]
+Progress: 2,000/2,000 (100.0%)
+Rate: 6651.9 samples/sec
+ETA: 0.0 minutes
+
+======================================================================
+CHECKING FOR NaN VALUES...
+======================================================================
+Original samples: 2,000
+Rows with NaN:    5 (0.250%)
+Valid rows:       1,995 (99.750%)
+
+⚠️  Removing 5 rows with NaN values...
+   Keeping 1,995 clean samples
+
+📋 Creating index mapping:
+   valid_indices[0] = 0 (1st clean sample → original sample 0)
+   valid_indices[1] = 1 (2nd clean sample → original sample 1)
+   ...
+   valid_indices[1994] = 1999 (last clean sample → original sample 1999)
+
+======================================================================
+SAVING INDEX MAPPING...
+======================================================================
+✓ Saved mapping to: ../../experimental_data/from_260528/valid_indices.csv
+  Format: valid_indices[clean_idx] = original_idx
+  Length: 1,995 rows
+
+======================================================================
+SAVING CLEAN DATA TO HDF5...
+======================================================================
+
+======================================================================
+✅ SUMMARY STATISTICS COMPLETE (CLEAN DATA)!
+======================================================================
+Original samples:  2,000
+Removed (NaN):     5 (0.250%)
+Final samples:     1,995
+Total time:        0.0 minutes (0.00 hours)
+Average rate:      6254.9 samples/sec
+Output HDF5:       ../../experimental_data/from_260528/all_summary_statistics_clean.h5 (0.06 MB)
+Mapping CSV:       ../../experimental_data/from_260528/valid_indices.csv
+======================================================================
+
+======================================================================
+HOW TO USE THE MAPPING:
+======================================================================
+
+# Load the mapping
+import numpy as np
+valid_indices = np.loadtxt('valid_indices.csv', dtype=int)
+ 
+# You have a clean index from distance file (0 to 499,664)
+clean_idx = 12345
+ 
+# Map to original simulation bank index (0 to 499,999)
+original_idx = valid_indices[clean_idx]
+ 
+# Now load the correct simulation matrix
+file_idx = original_idx // samples_per_file
+local_idx = original_idx % samples_per_file
+ 
+with h5py.File(f'simulation_bank_part_{file_idx:04d}.h5', 'r') as f:
+    simulation = f['simulations'][local_idx]
+    

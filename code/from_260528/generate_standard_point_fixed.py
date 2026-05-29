@@ -4,7 +4,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from numpy.random import default_rng
-import functions_list_260305 as functions_list
+import functions_list_260528 as functions_list
 import summary_stats_elms_260305 as ss
 import hashlib
 import time
@@ -57,9 +57,10 @@ def simulate_prevalence_v5_numba(theta, fixed_params, core_params_num, seed):
     params = build_params(theta, fixed_params, core_params_num)
     AC, IMM, _ = functions_list.initialise_agents_v5(params, rng=rng)
     
-    SSPrev_selected, SSPrev, AIBKS = functions_list.simulator_v5_numba(
+    SSPrev_selected, SSPrev, AIBKS = functions_list.simulator_v6_numba(
         AC, IMM, params, 0, 1, seed=seed
     )
+    # SSPrev_selected, SSPrev, AIBKS = functions_list.simulator_v6(AC, IMM, params, rng=rng)
     
     return SSPrev_selected.astype(float)
 
@@ -163,8 +164,7 @@ for sigma_val in sigma_values:
         
         # Generate synthetic observed data
         Tdry = simulate_prevalence_v5_numba(theta_true, fixed_params, core_params_num, seed=123)
-
-        print(Tdry)
+        # print(Tdry)
         
         # Calculate summary statistics (this is your standard point)
         s_obs = summary_stats(Tdry)
@@ -195,7 +195,7 @@ print("="*70)
 print(results_df.to_string(index=False))
 
 # Save to CSV
-output_file = '../../experimental_data/from_260430/standard_points.csv'
+output_file = '../../experimental_data/from_260528/standard_points.csv'
 results_df.to_csv(output_file, index=False)
 print(f"\n✓ Saved to: {output_file}")
 

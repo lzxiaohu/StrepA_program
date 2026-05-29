@@ -2899,6 +2899,141 @@ def simulator_v6(AgentCharacteristics, ImmuneStatus, params, rng,
     return SSPrev_selected, SSPrev, AgentsInfectedByKStrains
 
 
+# @njit(cache=True)
+# def _simulator_v6_core(
+#     AgentCharacteristics,
+#     ImmuneStatus,
+#     Nagents, Nstrains, Nst, AgeDeath,
+#     Cpertimestep, MRpertimestep, Precovery, Pimmunityloss,
+#     Ptransmission, x, StrengthImmunity, Immunity,
+#     StrengthCrossImmunity, prevalence_in_migrants, CCC,
+#     time, Ntimesteps, dt_years,
+#     Ntimesteps_selected,
+#     consultations,
+#     time_obs_idx,
+#     pool,
+#     ContactRand, MRRand, U
+# ):
+#     # ---- Everything identical to _simulator_v4_core until RECORDING ----
+#     cr_ptr = np.zeros(1, dtype=np.int64)
+#     mr_ptr = np.zeros(1, dtype=np.int64)
+#     u_ptr  = np.zeros(1, dtype=np.int64)
+
+#     dt_weeks = 1.0 / 7.0
+#     Rrecovery = -np.log(1.0 - Precovery) / dt_weeks
+#     if StrengthCrossImmunity != 1.0:
+#         Rrecovery_cici = 1.0 / ((1.0 / Rrecovery) * (1.0 - StrengthCrossImmunity))
+#         Precovery_cici = 1.0 - np.exp(-dt_weeks * Rrecovery_cici)
+#     else:
+#         Precovery_cici = 1.0
+
+#     SSPrev = np.zeros((Nstrains, Ntimesteps), dtype=np.float64)
+#     SSPrev_selected = np.zeros((Nstrains, Ntimesteps_selected), dtype=np.float64)
+#     AgentsInfectedByKStrains = np.zeros((Nstrains, Ntimesteps), dtype=np.float64)
+
+#     BB = AgentCharacteristics[:, :Nstrains]
+#     SSPrev[:, 0] = BB.sum(axis=0)
+
+#     tot0 = BB.sum()
+#     if tot0 > 1:
+#         kvec = BB.sum(axis=1).astype(np.int64)
+#         kmax = 0
+#         for i in range(kvec.size):
+#             if kvec[i] > kmax:
+#                 kmax = kvec[i]
+#         if kmax > 0:
+#             counts = np.zeros(kmax, dtype=np.int64)
+#             for i in range(kvec.size):
+#                 kv = kvec[i]
+#                 if kv > 0:
+#                     counts[kv - 1] += 1
+#             Klen = counts.size if counts.size < Nstrains else Nstrains
+#             for i in range(Klen):
+#                 AgentsInfectedByKStrains[i, 0] = counts[i]
+#     elif tot0 == 1:
+#         AgentsInfectedByKStrains[0, 0] = 1
+
+#     CICI = np.zeros_like(BB)
+
+#     tmpU  = np.empty(4096, dtype=np.float64)
+#     tmpU2 = np.empty(4096, dtype=np.float64)
+#     tmpU3 = np.empty(4096, dtype=np.float64)
+
+#     ii = 0
+#     for t in range(Ntimesteps - 1):
+
+#         # ===== All sections identical to _simulator_v4_core =====
+#         # (RECOVERY, WANING IMMUNITY, TRANSMISSION, AGE/DEATH/BIRTH, MIGRATION)
+#         # ... [same code as _simulator_v4_core] ...
+
+#         # ===== RECORDING =====
+#         BB = AgentCharacteristics[:, :Nstrains]
+#         for j in range(Nstrains):
+#             SSPrev[j, t + 1] = BB[:, j].sum()
+
+#         # ✅ MODIFIED: single-strain selection per agent
+#         if ii < Ntimesteps_selected and (t + 1) == time_obs_idx[ii]:
+#             k = consultations[ii]
+#             sel = _fisher_yates_first_k(pool, k, U, u_ptr)
+
+#             for r in range(sel.size):
+#                 agent = sel[r]
+
+#                 # count infected strains for this agent
+#                 ns = 0
+#                 for s in range(Nstrains):
+#                     if BB[agent, s] > 0:
+#                         ns += 1
+
+#                 if ns > 0:
+#                     # randomly pick one strain using U stream
+#                     u = _take1d(U, u_ptr)
+#                     idx = int(u * ns)
+#                     if idx >= ns:
+#                         idx = ns - 1
+
+#                     # find the idx-th infected strain
+#                     count = 0
+#                     for s in range(Nstrains):
+#                         if BB[agent, s] > 0:
+#                             if count == idx:
+#                                 SSPrev_selected[s, ii] += 1.0
+#                                 break
+#                             count += 1
+
+#             ii += 1
+
+#         # ===== AgentsInfectedByKStrains (identical to _simulator_v4_core) =====
+#         tot = 0.0
+#         for i in range(Nagents):
+#             for j in range(Nstrains):
+#                 tot += BB[i, j]
+#         if tot > 1:
+#             kmax = 0
+#             for i in range(Nagents):
+#                 kv = 0
+#                 for j in range(Nstrains):
+#                     if BB[i, j] > 0.0:
+#                         kv += 1
+#                 if kv > kmax:
+#                     kmax = kv
+#             if kmax > 0:
+#                 counts = np.zeros(kmax, dtype=np.int64)
+#                 for i in range(Nagents):
+#                     kv = 0
+#                     for j in range(Nstrains):
+#                         if BB[i, j] > 0.0:
+#                             kv += 1
+#                     if kv > 0:
+#                         counts[kv - 1] += 1
+#                 Klen = counts.size if counts.size < Nstrains else Nstrains
+#                 for i in range(Klen):
+#                     AgentsInfectedByKStrains[i, t + 1] = counts[i]
+#         elif tot == 1:
+#             AgentsInfectedByKStrains[0, t + 1] = 1
+
+#     return SSPrev_selected, SSPrev, AgentsInfectedByKStrains
+
 @njit(cache=True)
 def _simulator_v6_core(
     AgentCharacteristics,
@@ -2912,13 +3047,16 @@ def _simulator_v6_core(
     consultations,
     time_obs_idx,
     pool,
-    ContactRand, MRRand, U
+    ContactRand, MRRand, U,
+    U_obs  # ← separate obs stream
 ):
-    # ---- Everything identical to _simulator_v4_core until RECORDING ----
+    # pointer "indices" into random streams
     cr_ptr = np.zeros(1, dtype=np.int64)
     mr_ptr = np.zeros(1, dtype=np.int64)
     u_ptr  = np.zeros(1, dtype=np.int64)
+    u_obs_ptr = np.zeros(1, dtype=np.int64)  # ← separate pointer for obs
 
+    # ---- Cross-immunity-accelerated recovery probability per step ----
     dt_weeks = 1.0 / 7.0
     Rrecovery = -np.log(1.0 - Precovery) / dt_weeks
     if StrengthCrossImmunity != 1.0:
@@ -2927,10 +3065,12 @@ def _simulator_v6_core(
     else:
         Precovery_cici = 1.0
 
+    # ---- Outputs ----
     SSPrev = np.zeros((Nstrains, Ntimesteps), dtype=np.float64)
     SSPrev_selected = np.zeros((Nstrains, Ntimesteps_selected), dtype=np.float64)
     AgentsInfectedByKStrains = np.zeros((Nstrains, Ntimesteps), dtype=np.float64)
 
+    # t = 0
     BB = AgentCharacteristics[:, :Nstrains]
     SSPrev[:, 0] = BB.sum(axis=0)
 
@@ -2953,46 +3093,252 @@ def _simulator_v6_core(
     elif tot0 == 1:
         AgentsInfectedByKStrains[0, 0] = 1
 
+    # Tracks "fast recovery" flags (CICI)
     CICI = np.zeros_like(BB)
 
+    # prealloc tmp buffers
     tmpU  = np.empty(4096, dtype=np.float64)
     tmpU2 = np.empty(4096, dtype=np.float64)
     tmpU3 = np.empty(4096, dtype=np.float64)
 
     ii = 0
     for t in range(Ntimesteps - 1):
+        CurrentAC  = AgentCharacteristics.copy()
+        CurrentImm = ImmuneStatus.copy()
+        DD = CurrentAC[:, :Nst]
 
-        # ===== All sections identical to _simulator_v4_core =====
-        # (RECOVERY, WANING IMMUNITY, TRANSMISSION, AGE/DEATH/BIRTH, MIGRATION)
-        # ... [same code as _simulator_v4_core] ...
+        # ===== RECOVERY =====
+        for i in range(DD.shape[0]):
+            for j in range(DD.shape[1]):
+                if DD[i, j] > 0:
+                    if CICI[i, j] == 0:
+                        if _take1d(U, u_ptr) < Precovery:
+                            AgentCharacteristics[i, j] = 0.0
+                            if Immunity == 1:
+                                ImmuneStatus[i, j] = 1
+                    else:
+                        if _take1d(U, u_ptr) < Precovery_cici:
+                            AgentCharacteristics[i, j] = 0.0
+                            CICI[i, j] = 0
+
+        # ===== WANING IMMUNITY =====
+        for i in range(CurrentImm.shape[0]):
+            for j in range(CurrentImm.shape[1]):
+                if CurrentImm[i, j] == 1:
+                    if _take1d(U, u_ptr) < Pimmunityloss:
+                        ImmuneStatus[i, j] = 0
+
+        # ===== TRANSMISSION =====
+        TotalInf = DD.sum(axis=1)
+        na = 0
+        for i in range(TotalInf.size):
+            if TotalInf[i] > 0:
+                na += 1
+        if na > 0:
+            infected_agents = np.empty(na, dtype=np.int64)
+            k = 0
+            for i in range(TotalInf.size):
+                if TotalInf[i] > 0:
+                    infected_agents[k] = i
+                    k += 1
+
+            P1 = np.empty(Nagents, dtype=np.float64)
+            for i in range(Nagents):
+                s = 1.0 - TotalInf[i] / CCC
+                if s < 0.0:
+                    s = 0.0
+                P1[i] = Ptransmission * (s ** x)
+                if P1[i] < 0.0:
+                    P1[i] = 0.0
+                if P1[i] > 1.0:
+                    P1[i] = 1.0
+
+            InfectionProb = np.empty((Nagents, Nstrains), dtype=np.float64)
+            for i in range(Nagents):
+                for j in range(Nstrains):
+                    InfectionProb[i, j] = P1[i]
+
+            if StrengthImmunity > 0.0:
+                for i in range(Nagents):
+                    for j in range(Nstrains):
+                        if CurrentImm[i, j] == 1:
+                            InfectionProb[i, j] *= (1.0 - StrengthImmunity)
+
+            if StrengthCrossImmunity > 0.0:
+                any_imm = np.zeros(Nagents, dtype=np.uint8)
+                for i in range(Nagents):
+                    ai = 0
+                    for j in range(Nstrains):
+                        if CurrentImm[i, j] == 1:
+                            ai = 1
+                            break
+                    any_imm[i] = ai
+                for i in range(Nagents):
+                    if any_imm[i] == 1:
+                        for j in range(Nstrains):
+                            if CurrentImm[i, j] == 0:
+                                InfectionProb[i, j] *= (1.0 - StrengthCrossImmunity)
+
+            for a in infected_agents:
+                ns = 0
+                for j in range(DD.shape[1]):
+                    if DD[a, j] > 0:
+                        ns += 1
+                if ns == 0:
+                    continue
+                infecting_strains = np.empty(ns, dtype=np.int64)
+                kk = 0
+                for j in range(DD.shape[1]):
+                    if DD[a, j] > 0:
+                        infecting_strains[kk] = j
+                        kk += 1
+
+                X = _take1d(ContactRand, cr_ptr)
+                if X <= 0:
+                    continue
+
+                if X > tmpU.size:
+                    tmpU  = np.empty(X, dtype=np.float64)
+                    tmpU2 = np.empty(X, dtype=np.float64)
+                    tmpU3 = np.empty(X, dtype=np.float64)
+
+                _takeU_many(U, u_ptr, X, tmpU)
+                contacts = (tmpU[:X] * (Nagents - 1)).astype(np.int64)
+                for i in range(X):
+                    if contacts[i] >= a:
+                        contacts[i] += 1
+
+                _takeU_many(U, u_ptr, X, tmpU2)
+                chosen = np.empty(X, dtype=np.int64)
+                if infecting_strains.size == 1:
+                    s0 = infecting_strains[0]
+                    for i in range(X):
+                        chosen[i] = s0
+                else:
+                    m = infecting_strains.size
+                    for i in range(X):
+                        idx = int(tmpU2[i] * m)
+                        if idx >= m:
+                            idx = m - 1
+                        chosen[i] = infecting_strains[idx]
+
+                _takeU_many(U, u_ptr, X, tmpU3)
+                succ_n = 0
+                for i in range(X):
+                    if tmpU3[i] < InfectionProb[contacts[i], chosen[i]]:
+                        succ_n += 1
+                if succ_n == 0:
+                    continue
+
+                succ_contacts = np.empty(succ_n, dtype=np.int64)
+                succ_chosen   = np.empty(succ_n, dtype=np.int64)
+                kk = 0
+                for i in range(X):
+                    if tmpU3[i] < InfectionProb[contacts[i], chosen[i]]:
+                        succ_contacts[kk] = contacts[i]
+                        succ_chosen[kk]   = chosen[i]
+                        kk += 1
+
+                keep = np.ones(succ_n, dtype=np.uint8)
+                for i in range(1, succ_n):
+                    ci = succ_contacts[i]
+                    for j in range(i):
+                        if succ_contacts[j] == ci:
+                            keep[i] = 0
+                            break
+
+                for i in range(succ_n):
+                    if keep[i] == 1:
+                        c = succ_contacts[i]
+                        s = succ_chosen[i]
+                        AgentCharacteristics[c, s] = CurrentAC[c, s] + 1.0
+
+                for i in range(succ_n):
+                    if keep[i] == 1:
+                        c = succ_contacts[i]
+                        s = succ_chosen[i]
+                        for j in range(Nstrains):
+                            if j == s:
+                                continue
+                            if AgentCharacteristics[c, j] > 0.0:
+                                CICI[c, j] = 1
+
+                for i in range(succ_n):
+                    if keep[i] == 1:
+                        c = succ_contacts[i]
+                        for j in range(Nstrains):
+                            InfectionProb[c, j] = 0.0
+
+        # ===== AGE, DEATH, BIRTH =====
+        for i in range(Nagents):
+            AgentCharacteristics[i, Nstrains] = dt_years + CurrentAC[i, Nstrains]
+            if AgentCharacteristics[i, Nstrains] > AgeDeath:
+                for j in range(Nstrains):
+                    AgentCharacteristics[i, j] = 0.0
+                    ImmuneStatus[i, j] = 0
+                    CICI[i, j] = 0
+                AgentCharacteristics[i, Nstrains] = 0.001
+
+        # ===== MIGRATION =====
+        NumMig = _take1d(MRRand, mr_ptr)
+        if NumMig > 0:
+            mig_idx = _fisher_yates_first_k(
+                np.arange(Nagents, dtype=np.int64), NumMig, U, u_ptr)
+
+            infected_mig = np.zeros(NumMig, dtype=np.uint8)
+            for i in range(NumMig):
+                infected_mig[i] = 1 if _take1d(U, u_ptr) < prevalence_in_migrants else 0
+
+            n_im = 0
+            for i in range(NumMig):
+                if infected_mig[i] == 1:
+                    n_im += 1
+            mig_strains = np.empty(n_im, dtype=np.int64)
+            kk = 0
+            for i in range(NumMig):
+                if infected_mig[i] == 1:
+                    u = _take1d(U, u_ptr)
+                    s = int(u * Nst)
+                    if s >= Nst:
+                        s = Nst - 1
+                    mig_strains[kk] = s
+                    kk += 1
+
+            ci = 0
+            for m in range(NumMig):
+                idxm = mig_idx[m]
+                for j in range(Nstrains):
+                    ImmuneStatus[idxm, j] = 0
+                    CICI[idxm, j] = 0
+                    AgentCharacteristics[idxm, j] = 0.0
+                AgentCharacteristics[idxm, Nstrains] = _take1d(U, u_ptr) * AgeDeath
+                if infected_mig[m] == 1:
+                    AgentCharacteristics[idxm, mig_strains[ci]] = 1.0
+                    ci += 1
 
         # ===== RECORDING =====
         BB = AgentCharacteristics[:, :Nstrains]
         for j in range(Nstrains):
             SSPrev[j, t + 1] = BB[:, j].sum()
 
-        # ✅ MODIFIED: single-strain selection per agent
+        # ✅ MODIFIED: single-strain selection using separate U_obs stream
         if ii < Ntimesteps_selected and (t + 1) == time_obs_idx[ii]:
             k = consultations[ii]
+            # ✅ pool selection uses U stream (same as v5_numba)
             sel = _fisher_yates_first_k(pool, k, U, u_ptr)
 
             for r in range(sel.size):
                 agent = sel[r]
-
-                # count infected strains for this agent
                 ns = 0
                 for s in range(Nstrains):
                     if BB[agent, s] > 0:
                         ns += 1
-
                 if ns > 0:
-                    # randomly pick one strain using U stream
-                    u = _take1d(U, u_ptr)
+                    # ✅ strain selection uses U_obs stream (separate)
+                    u = _take1d(U_obs, u_obs_ptr)
                     idx = int(u * ns)
                     if idx >= ns:
                         idx = ns - 1
-
-                    # find the idx-th infected strain
                     count = 0
                     for s in range(Nstrains):
                         if BB[agent, s] > 0:
@@ -3000,10 +3346,9 @@ def _simulator_v6_core(
                                 SSPrev_selected[s, ii] += 1.0
                                 break
                             count += 1
-
             ii += 1
 
-        # ===== AgentsInfectedByKStrains (identical to _simulator_v4_core) =====
+        # ===== AgentsInfectedByKStrains =====
         tot = 0.0
         for i in range(Nagents):
             for j in range(Nstrains):
@@ -3034,17 +3379,13 @@ def _simulator_v6_core(
 
     return SSPrev_selected, SSPrev, AgentsInfectedByKStrains
 
-
+    
 def simulator_v6_numba(AgentCharacteristics, ImmuneStatus, params,
                        specifyPtransmission: int = 0,
                        cross_immunity_effect_on_coinfections: int = 1,
                        seed: int = 123,
                        stream_len: int = 2_000_000):
-    """
-    Reproducible wrapper with single-strain selection modification.
-    - All randomness comes from independent child RNGs derived from one master SeedSequence.
-    - Core _simulator_v6_core is purely deterministic given these arrays.
-    """
+
     # ----------------------------
     # 1) Unpack parameters
     # ----------------------------
@@ -3072,15 +3413,17 @@ def simulator_v6_numba(AgentCharacteristics, ImmuneStatus, params,
     time_obs_idx = (time_obs[time_obs > 0] + 365*18 - 1).astype(np.int64)
 
     # ----------------------------
-    # 3) Master seed → independent child RNGs
+    # 3) Master seed → 5 independent child RNGs
+    #    (added ss_obs for observation sampling)
     # ----------------------------
     ss = SeedSequence(int(seed))
-    ss_pool, ss_contact, ss_migrant, ss_uniform = ss.spawn(4)
+    ss_pool, ss_contact, ss_migrant, ss_uniform, ss_obs = ss.spawn(5)  # ← 5 streams
 
     rng_pool    = default_rng(ss_pool)
     rng_contact = default_rng(ss_contact)
     rng_migrant = default_rng(ss_migrant)
     rng_uniform = default_rng(ss_uniform)
+    rng_obs     = default_rng(ss_obs)  # ← separate stream for observation
 
     # ----------------------------
     # 4) Random draws
@@ -3091,6 +3434,11 @@ def simulator_v6_numba(AgentCharacteristics, ImmuneStatus, params,
     ContactRand = rng_contact.poisson(float(Cpertimestep), size=stream_len).astype(np.int64)
     MRRand      = rng_migrant.poisson(float(MRpertimestep), size=stream_len).astype(np.int64)
     U           = rng_uniform.random(stream_len).astype(np.float64)
+
+    # ← separate observation random stream
+    # max consultations = 211, max strains per agent = 42
+    # so 23 * 211 * 42 is more than enough
+    U_obs = rng_obs.random(23 * 211 * 42).astype(np.float64)
 
     # ----------------------------
     # 5) Call JIT core
@@ -3110,5 +3458,5 @@ def simulator_v6_numba(AgentCharacteristics, ImmuneStatus, params,
         np.ascontiguousarray(ContactRand, dtype=np.int64),
         np.ascontiguousarray(MRRand, dtype=np.int64),
         np.ascontiguousarray(U, dtype=np.float64),
+        np.ascontiguousarray(U_obs, dtype=np.float64),  # ← separate obs stream
     )
-
