@@ -766,7 +766,7 @@ if __name__ == "__main__":
     # 1. Calculate distances with Euclidean metric
     result = analyze_distances(
         filepath="../../experimental_data/from_260528/summary_stats_normalized.csv",
-        standard_point=(0.08494958, 0.12097019, 0.03706735, 0.77058265),  # Fixed: added commas
+        standard_point=(0.0837156, 0.11931128, 0.04651479, 0.69778263),  # Fixed: added commas
         weights=(0.9, 0.9, 0.1, 0.1),  # Fixed: added commas
         metric="euclidean",
         p=3,
@@ -796,11 +796,11 @@ if __name__ == "__main__":
         true_sigma=None,
         title="ABC Posterior - Distance Colored1",
         save_path="../../figures/from_260528/ppc/observations/",
-        xlim=(1, 8),
+        xlim=(1, 4),
         ylim=(0.2, 1.0),
         cmap='viridis_r', 
-        vmin=0.110115, 
-        vmax=0.142201
+        vmin=0.085778, 
+        vmax=0.122681
     )
     
     # 3. Plot with lower percentiles (2%, 1%, 0.5%, 0.4%, 0.2%, 0.1%)
@@ -827,11 +827,11 @@ if __name__ == "__main__":
         true_sigma=None,
         title="ABC Posterior - Distance Colored",
         save_path="../../figures/from_260528/ppc/observations/",
-        xlim=(1, 8),
+        xlim=(1, 4),
         ylim=(0.2, 1.0),
         cmap='viridis_r', 
-        vmin=0.110115, 
-        vmax=0.142201
+        vmin=0.085778, 
+        vmax=0.122681
     )
 
     plot_dots_percentile_colors(
@@ -843,7 +843,7 @@ if __name__ == "__main__":
             true_sigma=None,
             title="ABC Posterior - Top 1%",
             save_path="../../figures/from_260528/ppc/observations/",
-            xlim=(1, 8),
+            xlim=(1, 4),
             ylim=(0.2, 1.0),
             cmap='viridis_r'  # Purple (close) to yellow (far)
         )
@@ -857,7 +857,7 @@ if __name__ == "__main__":
             true_sigma=None,
             title="ABC Posterior - Top 0.1%",
             save_path="../../figures/from_260528/ppc/observations/",
-            xlim=(1, 8),
+            xlim=(1, 4),
             ylim=(0.2, 1.0),
             cmap='viridis_r'  # Purple (close) to yellow (far)
         )
@@ -871,7 +871,7 @@ if __name__ == "__main__":
             true_sigma=None,
             title="ABC Posterior - Top 0.05%",
             save_path="../../figures/from_260528/ppc/observations/",
-            xlim=(1, 8),
+            xlim=(1, 4),
             ylim=(0.2, 1.0),
             cmap='viridis_r'  # Purple (close) to yellow (far)
         )
@@ -885,7 +885,7 @@ if __name__ == "__main__":
             true_sigma=None,
             title="ABC Posterior - Top 0.01%",
             save_path="../../figures/from_260528/ppc/observations/",
-            xlim=(1, 8),
+            xlim=(1, 4),
             ylim=(0.2, 1.0),
             cmap='viridis_r'  # Purple (close) to yellow (far)
         )
@@ -900,7 +900,7 @@ if __name__ == "__main__":
             true_sigma=None,
             title="ABC Posterior - R0=None, sigma=None",
             save_path="../../figures/from_260528/ppc/observations/",
-            R0_range=(1, 8),
+            R0_range=(1, 4),
             sigma_range=(0.2, 1.0),
             bins=50
         )
@@ -915,7 +915,7 @@ if __name__ == "__main__":
             true_sigma=None,
             title="ABC Posterior Evolution - R0=None, sigma=None",
             save_path="../../figures/from_260528/ppc/observations/",
-            R0_range=(1, 8),
+            R0_range=(1, 4),
             sigma_range=(0.2, 1.0),
             bins=30
         )

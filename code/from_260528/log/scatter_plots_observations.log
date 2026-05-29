@@ -1,105 +1,109 @@
 nohup: ignoring input
 Done. Results saved to '../../experimental_data/from_260528/dists_observations_recal.csv'.
 Loading data...
-✓ Loaded 1,995 samples
+✓ Loaded 37,688 samples
 
-Using MANUAL color scale: [0.110115, 0.142201]
+Using MANUAL color scale: [0.085778, 0.122681]
 
-Percentile 10%: 200 samples
-  Threshold: 0.170849
-  Distance range: [0.110115, 0.170839]
-Percentile 5%: 100 samples
-  Threshold: 0.158781
-  Distance range: [0.110115, 0.158729]
-Percentile 4%: 80 samples
-  Threshold: 0.156197
-  Distance range: [0.110115, 0.156154]
-Percentile 3%: 60 samples
-  Threshold: 0.153646
-  Distance range: [0.110115, 0.153005]
-Percentile 2%: 40 samples
-  Threshold: 0.149342
-  Distance range: [0.110115, 0.149067]
-Percentile 1%: 20 samples
-  Threshold: 0.142649
-  Distance range: [0.110115, 0.142201]
+Percentile 10%: 3,769 samples
+  Threshold: 0.150252
+  Distance range: [0.085778, 0.150251]
+Percentile 5%: 1,885 samples
+  Threshold: 0.139654
+  Distance range: [0.085778, 0.139647]
+Percentile 4%: 1,508 samples
+  Threshold: 0.137057
+  Distance range: [0.085778, 0.137055]
+Percentile 3%: 1,131 samples
+  Threshold: 0.133675
+  Distance range: [0.085778, 0.133668]
+Percentile 2%: 754 samples
+  Threshold: 0.129309
+  Distance range: [0.085778, 0.129287]
+Percentile 1%: 377 samples
+  Threshold: 0.122730
+  Distance range: [0.085778, 0.122681]
 scatter_plots_observations.py:575: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
   plt.tight_layout(rect=[0, 0, 0.92, 0.96])
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__Distance_Colored1.png
 Loading data...
-✓ Loaded 1,995 samples
+✓ Loaded 37,688 samples
 
-Using MANUAL color scale: [0.110115, 0.142201]
+Using MANUAL color scale: [0.085778, 0.122681]
 
-Percentile 2%: 40 samples
-  Threshold: 0.149342
-  Distance range: [0.110115, 0.149067]
-Percentile 1%: 20 samples
-  Threshold: 0.142649
-  Distance range: [0.110115, 0.142201]
-Percentile 0.5%: 10 samples
-  Threshold: 0.136036
-  Distance range: [0.110115, 0.135883]
-Percentile 0.1%: 2 samples
-  Threshold: 0.118846
-  Distance range: [0.110115, 0.118012]
-Percentile 0.05%: 1 samples
-  Threshold: 0.117988
-  Distance range: [0.110115, 0.110115]
-Percentile 0.01%: 1 samples
-  Threshold: 0.111690
-  Distance range: [0.110115, 0.110115]
+Percentile 2%: 754 samples
+  Threshold: 0.129309
+  Distance range: [0.085778, 0.129287]
+Percentile 1%: 377 samples
+  Threshold: 0.122730
+  Distance range: [0.085778, 0.122681]
+Percentile 0.5%: 189 samples
+  Threshold: 0.117820
+  Distance range: [0.085778, 0.117818]
+Percentile 0.1%: 38 samples
+  Threshold: 0.108559
+  Distance range: [0.085778, 0.108410]
+Percentile 0.05%: 19 samples
+  Threshold: 0.103698
+  Distance range: [0.085778, 0.103636]
+Percentile 0.01%: 4 samples
+  Threshold: 0.097033
+  Distance range: [0.085778, 0.095701]
 scatter_plots_observations.py:575: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
   plt.tight_layout(rect=[0, 0, 0.92, 0.96])
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__Distance_Colored.png
 Loading data...
-✓ Loaded 1,995 samples
-  Distance range: [0.110115, 0.856033]
+✓ Loaded 37,688 samples
+  Distance range: [0.085778, 0.854776]
 
 Percentile 1%:
-  Threshold: 0.142649
-  Selected: 20 samples (1.00%)
-  Distance range of selected: [0.110115, 0.142201]
+  Threshold: 0.122730
+  Selected: 377 samples (1.00%)
+  Distance range of selected: [0.085778, 0.122681]
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__Top_1%_p1.png
 Loading data...
-✓ Loaded 1,995 samples
-  Distance range: [0.110115, 0.856033]
+✓ Loaded 37,688 samples
+  Distance range: [0.085778, 0.854776]
 
 Percentile 0.1%:
-  Threshold: 0.118846
-  Selected: 2 samples (0.10%)
-  Distance range of selected: [0.110115, 0.118012]
+  Threshold: 0.108559
+  Selected: 38 samples (0.10%)
+  Distance range of selected: [0.085778, 0.108410]
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__Top_0.1%_p0.1.png
 Loading data...
-✓ Loaded 1,995 samples
-  Distance range: [0.110115, 0.856033]
+✓ Loaded 37,688 samples
+  Distance range: [0.085778, 0.854776]
 
 Percentile 0.05%:
-  Threshold: 0.117988
-  Selected: 1 samples (0.05%)
-  Distance range of selected: [0.110115, 0.110115]
+  Threshold: 0.103698
+  Selected: 19 samples (0.05%)
+  Distance range of selected: [0.085778, 0.103636]
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__Top_0.05%_p0.05.png
 Loading data...
-✓ Loaded 1,995 samples
-  Distance range: [0.110115, 0.856033]
+✓ Loaded 37,688 samples
+  Distance range: [0.085778, 0.854776]
 
 Percentile 0.01%:
-  Threshold: 0.111690
-  Selected: 1 samples (0.05%)
-  Distance range of selected: [0.110115, 0.110115]
+  Threshold: 0.097033
+  Selected: 4 samples (0.01%)
+  Distance range of selected: [0.085778, 0.095701]
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__Top_0.01%_p0.01.png
-Percentile 0.01%: 1 samples selected
-Traceback (most recent call last):
-  File "scatter_plots_observations.py", line 894, in <module>
-    plot_histograms_with_kde(
-  File "scatter_plots_observations.py", line 80, in plot_histograms_with_kde
-    kde_R0 = stats.gaussian_kde(selected_R0)
-  File "/home/ubuntu/anaconda3/envs/strepa_env/lib/python3.8/site-packages/scipy/stats/_kde.py", line 199, in __init__
-    raise ValueError("`dataset` input should have multiple elements.")
-ValueError: `dataset` input should have multiple elements.
+Percentile 0.01%: 4 samples selected
+✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__R0=None,_sigma=None_kde_p0.01.png
+Loaded 37,688 samples
+Percentile 2%: 754 samples
+Percentile 1%: 377 samples
+Percentile 0.5%: 189 samples
+Percentile 0.1%: 38 samples
+Percentile 0.05%: 19 samples
+Percentile 0.01%: 4 samples
+
+✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior_Evolution__R0=None,_sigma=None_kde_multi.png
+
+✅ All plots generated successfully!

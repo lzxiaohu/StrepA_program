@@ -4,47 +4,47 @@ CALCULATING SUMMARY STATISTICS → CLEAN DATA (NaN REMOVAL)
 ======================================================================
 Input directory: ../../experimental_data/from_260528/simulation_banks
 Input files: 1
-Total samples: 2,000
+Total samples: 37,748
 Output file: ../../experimental_data/from_260528/all_summary_statistics_clean.h5
 Mapping file: ../../experimental_data/from_260528/valid_indices.csv
 Parallel workers: 60
 ======================================================================
 
-Allocating arrays for 2,000 samples...
+Allocating arrays for 37,748 samples...
 
 ======================================================================
 FILE 1/1: simulation_bank_part_0000.h5
 ======================================================================
-Samples in this file: 2,000
-Global index: 0 to 1,999
+Samples in this file: 37,748
+Global index: 0 to 37,747
 Calculating summary statistics with 60 workers...
-  Processing:   0%|                                    | 0/2000 [00:00<?, ?it/s]  Processing:  55%|████████████          | 1099/2000 [00:00<00:00, 10916.20it/s]  Processing: 100%|██████████████████████| 2000/2000 [00:00<00:00, 14310.00it/s]
-Progress: 2,000/2,000 (100.0%)
-Rate: 6651.9 samples/sec
+  Processing:   0%|                                   | 0/37748 [00:00<?, ?it/s]  Processing:   0%|                       | 149/37748 [00:00<00:32, 1139.47it/s]  Processing:   2%|▌                      | 855/37748 [00:00<00:09, 4034.04it/s]  Processing:   4%|▊                     | 1360/37748 [00:00<00:08, 4362.17it/s]  Processing:   5%|█                     | 1812/37748 [00:00<00:08, 4347.45it/s]  Processing:   6%|█▎                    | 2272/37748 [00:00<00:08, 4423.60it/s]  Processing:   7%|█▌                    | 2721/37748 [00:00<00:08, 4199.60it/s]  Processing:   8%|█▊                    | 3147/37748 [00:00<00:08, 4157.65it/s]  Processing:  10%|██▏                   | 3771/37748 [00:00<00:07, 4784.55it/s]  Processing:  11%|██▍                   | 4256/37748 [00:00<00:07, 4560.86it/s]  Processing:  13%|██▊                   | 4751/37748 [00:01<00:07, 4663.87it/s]  Processing:  14%|███                   | 5222/37748 [00:01<00:07, 4436.01it/s]  Processing:  16%|███▍                  | 5852/37748 [00:01<00:06, 4947.90it/s]  Processing:  17%|███▋                  | 6354/37748 [00:01<00:06, 4785.32it/s]  Processing:  18%|████                  | 6915/37748 [00:01<00:06, 5019.09it/s]  Processing:  20%|████▎                 | 7423/37748 [00:01<00:06, 5032.74it/s]  Processing:  21%|████▌                 | 7930/37748 [00:01<00:06, 4688.94it/s]  Processing:  22%|████▉                 | 8406/37748 [00:01<00:06, 4356.97it/s]  Processing:  24%|█████▏                | 8905/37748 [00:01<00:06, 4445.19it/s]  Processing:  25%|█████▍                | 9379/37748 [00:02<00:06, 4475.03it/s]  Processing:  27%|█████▋               | 10187/37748 [00:02<00:05, 5470.10it/s]  Processing:  28%|█████▉               | 10744/37748 [00:02<00:05, 5370.22it/s]  Processing:  30%|██████▎              | 11289/37748 [00:02<00:05, 5176.57it/s]  Processing:  31%|██████▌              | 11813/37748 [00:02<00:05, 5127.64it/s]  Processing:  33%|██████▊              | 12330/37748 [00:02<00:05, 5052.65it/s]  Processing:  34%|███████▏             | 12838/37748 [00:02<00:04, 5035.39it/s]  Processing:  35%|███████▍             | 13380/37748 [00:02<00:04, 5100.64it/s]  Processing:  37%|███████▋             | 13892/37748 [00:02<00:04, 5068.42it/s]  Processing:  38%|████████             | 14400/37748 [00:03<00:04, 5018.61it/s]  Processing:  39%|████████▎            | 14903/37748 [00:03<00:04, 4867.14it/s]  Processing:  41%|████████▌            | 15403/37748 [00:03<00:04, 4857.40it/s]  Processing:  42%|████████▊            | 15890/37748 [00:03<00:04, 4845.68it/s]  Processing:  44%|█████████▎           | 16659/37748 [00:03<00:03, 5531.13it/s]  Processing:  46%|█████████▋           | 17381/37748 [00:03<00:03, 6012.81it/s]  Processing:  48%|██████████           | 18086/37748 [00:03<00:03, 6098.51it/s]  Processing:  50%|██████████▍          | 18761/37748 [00:03<00:03, 6236.39it/s]  Processing:  51%|██████████▊          | 19385/37748 [00:03<00:03, 5881.30it/s]  Processing:  53%|███████████          | 19977/37748 [00:04<00:03, 5550.29it/s]  Processing:  56%|███████████▋         | 21042/37748 [00:04<00:02, 6925.41it/s]  Processing:  58%|████████████         | 21750/37748 [00:04<00:02, 5405.75it/s]  Processing:  60%|████████████▋        | 22737/37748 [00:04<00:02, 6453.26it/s]  Processing:  62%|█████████████        | 23522/37748 [00:04<00:02, 6795.56it/s]  Processing:  64%|█████████████▍       | 24256/37748 [00:04<00:02, 6402.37it/s]  Processing:  66%|█████████████▊       | 24937/37748 [00:04<00:02, 5901.14it/s]  Processing:  68%|██████████████▏      | 25560/37748 [00:04<00:02, 5542.83it/s]  Processing:  69%|██████████████▌      | 26140/37748 [00:05<00:02, 5572.57it/s]  Processing:  71%|██████████████▉      | 26793/37748 [00:05<00:01, 5793.04it/s]  Processing:  73%|███████████████▎     | 27413/37748 [00:05<00:01, 5881.27it/s]  Processing:  74%|███████████████▌     | 28013/37748 [00:05<00:01, 5777.55it/s]  Processing:  76%|███████████████▉     | 28599/37748 [00:05<00:01, 5579.99it/s]  Processing:  77%|████████████████▏    | 29163/37748 [00:05<00:01, 4495.56it/s]  Processing:  79%|████████████████▌    | 29721/37748 [00:05<00:01, 4603.92it/s]  Processing:  81%|████████████████▉    | 30517/37748 [00:05<00:01, 5441.62it/s]  Processing:  83%|█████████████████▎   | 31231/37748 [00:05<00:01, 5884.66it/s]  Processing:  84%|█████████████████▋   | 31850/37748 [00:06<00:01, 5434.23it/s]  Processing:  86%|██████████████████   | 32453/37748 [00:06<00:00, 5561.33it/s]  Processing:  88%|██████████████████▍  | 33202/37748 [00:06<00:00, 5950.25it/s]  Processing:  90%|██████████████████▊  | 33813/37748 [00:06<00:00, 5599.92it/s]  Processing:  91%|███████████████████▏ | 34387/37748 [00:06<00:00, 5214.13it/s]  Processing:  93%|███████████████████▌ | 35152/37748 [00:06<00:00, 5709.04it/s]  Processing:  95%|███████████████████▉ | 35736/37748 [00:06<00:00, 5505.50it/s]  Processing:  98%|████████████████████▌| 36966/37748 [00:06<00:00, 7311.63it/s]  Processing: 100%|████████████████████▉| 37724/37748 [00:07<00:00, 6532.33it/s]  Processing: 100%|█████████████████████| 37748/37748 [00:07<00:00, 5365.11it/s]
+Progress: 37,748/37,748 (100.0%)
+Rate: 4756.4 samples/sec
 ETA: 0.0 minutes
 
 ======================================================================
 CHECKING FOR NaN VALUES...
 ======================================================================
-Original samples: 2,000
-Rows with NaN:    5 (0.250%)
-Valid rows:       1,995 (99.750%)
+Original samples: 37,748
+Rows with NaN:    60 (0.159%)
+Valid rows:       37,688 (99.841%)
 
-⚠️  Removing 5 rows with NaN values...
-   Keeping 1,995 clean samples
+⚠️  Removing 60 rows with NaN values...
+   Keeping 37,688 clean samples
 
 📋 Creating index mapping:
    valid_indices[0] = 0 (1st clean sample → original sample 0)
    valid_indices[1] = 1 (2nd clean sample → original sample 1)
    ...
-   valid_indices[1994] = 1999 (last clean sample → original sample 1999)
+   valid_indices[37687] = 37747 (last clean sample → original sample 37747)
 
 ======================================================================
 SAVING INDEX MAPPING...
 ======================================================================
 ✓ Saved mapping to: ../../experimental_data/from_260528/valid_indices.csv
   Format: valid_indices[clean_idx] = original_idx
-  Length: 1,995 rows
+  Length: 37,688 rows
 
 ======================================================================
 SAVING CLEAN DATA TO HDF5...
@@ -53,12 +53,12 @@ SAVING CLEAN DATA TO HDF5...
 ======================================================================
 ✅ SUMMARY STATISTICS COMPLETE (CLEAN DATA)!
 ======================================================================
-Original samples:  2,000
-Removed (NaN):     5 (0.250%)
-Final samples:     1,995
-Total time:        0.0 minutes (0.00 hours)
-Average rate:      6254.9 samples/sec
-Output HDF5:       ../../experimental_data/from_260528/all_summary_statistics_clean.h5 (0.06 MB)
+Original samples:  37,748
+Removed (NaN):     60 (0.159%)
+Final samples:     37,688
+Total time:        0.1 minutes (0.00 hours)
+Average rate:      4684.9 samples/sec
+Output HDF5:       ../../experimental_data/from_260528/all_summary_statistics_clean.h5 (0.81 MB)
 Mapping CSV:       ../../experimental_data/from_260528/valid_indices.csv
 ======================================================================
 
