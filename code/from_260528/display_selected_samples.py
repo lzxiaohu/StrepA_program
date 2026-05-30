@@ -1416,7 +1416,7 @@ if __name__ == "__main__":
         file_sigma='../../experimental_data/from_260528/sigma.csv',
         simulation_banks_dir='../../experimental_data/from_260528/simulation_banks',
         valid_indices_file='../../experimental_data/from_260528/valid_indices.csv',  # ← Add this!
-        percentile=0.1,
+        percentile=0.01,
         n_display=20,
         save_path='../../experimental_data/from_260528/ppc/observations/'
     )
@@ -1429,11 +1429,11 @@ if __name__ == "__main__":
     # my_original_ids = [125598, 479398, 114151,  80488, 302743, 
     #                  95475, 162977, 360642, 396091, 60632]
 
-    my_clean_ids = [8634, 29954,    # Row 1
-                4490, 15932,   # Row 2
-                28100, 25780,   # Row 3
-                1517, 20080,    # Row 4
-                20080, 17551]    # Row 5
+    my_clean_ids = [141852, 174474,    # Row 1
+                483894, 445382,   # Row 2
+                131323, 409188,   # Row 3
+                305865, 311047,    # Row 4
+                214436, 346723]    # Row 5
 
 
     plot_samples_5x2(

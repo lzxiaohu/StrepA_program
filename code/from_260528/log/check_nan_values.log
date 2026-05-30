@@ -3,7 +3,7 @@ nohup: ignoring input
 CHECKING NaN VALUES IN SUMMARY STATISTICS
 ======================================================================
 
-Total samples: 37,688
+Total samples: 499,240
 
 NaN Analysis per column:
 ----------------------------------------------------------------------
@@ -11,22 +11,22 @@ NaN Analysis per column:
 avg_prev_obs:
   ✓ No NaN values
   Range: [0.0435, 113.7826]
-  Mean:  40.1310
+  Mean:  40.6248
 
 var_prev_obs:
   ✓ No NaN values
   Range: [0.2085, 57.6633]
-  Mean:  22.2606
+  Mean:  22.4865
 
 avg_npmi_obs:
   ✓ No NaN values
-  Range: [-0.6284, 0.0834]
-  Mean:  -0.3410
+  Range: [-0.6524, 0.1139]
+  Mean:  -0.3409
 
 div_all_isolates_obs:
   ✓ No NaN values
-  Range: [0.0000, 26.2737]
-  Mean:  9.1360
+  Range: [0.0000, 28.4558]
+  Mean:  9.2217
 
 ======================================================================
 RECOMMENDATION:
