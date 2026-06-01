@@ -766,7 +766,7 @@ if __name__ == "__main__":
     # 1. Calculate distances with Euclidean metric
     result = analyze_distances(
         filepath="../../experimental_data/from_260528/summary_stats_normalized.csv",
-        standard_point=(0.0837156, 0.11931128, 0.07453014, 0.64427342),  # Fixed: added commas
+        standard_point=(0.0837156, 0.11923833, 0.07680562, 0.50925926),  # Fixed: added commas 
         weights=(0.9, 0.9, 0.1, 0.1),  # Fixed: added commas
         metric="euclidean",
         p=3,
@@ -799,7 +799,7 @@ if __name__ == "__main__":
         xlim=(1, 4),
         ylim=(0.2, 1.0),
         cmap='viridis_r', 
-        vmin=0.085778, 
+        vmin=0.065778, 
         vmax=0.122681
     )
     
@@ -830,7 +830,7 @@ if __name__ == "__main__":
         xlim=(1, 4),
         ylim=(0.2, 1.0),
         cmap='viridis_r', 
-        vmin=0.085778, 
+        vmin=0.065778, 
         vmax=0.122681
     )
 

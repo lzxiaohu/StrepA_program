@@ -1,108 +1,108 @@
 nohup: ignoring input
 Done. Results saved to '../../experimental_data/from_260528/dists_observations_recal.csv'.
 Loading data...
-✓ Loaded 499,240 samples
+✓ Loaded 998,493 samples
 
-Using MANUAL color scale: [0.085778, 0.122681]
+Using MANUAL color scale: [0.065778, 0.122681]
 
-Percentile 10%: 49,924 samples
-  Threshold: 0.141180
-  Distance range: [0.074090, 0.141180]
-Percentile 5%: 24,962 samples
-  Threshold: 0.130972
-  Distance range: [0.074090, 0.130971]
-Percentile 4%: 19,970 samples
-  Threshold: 0.128249
-  Distance range: [0.074090, 0.128249]
-Percentile 3%: 14,978 samples
-  Threshold: 0.125047
-  Distance range: [0.074090, 0.125047]
-Percentile 2%: 9,985 samples
-  Threshold: 0.120855
-  Distance range: [0.074090, 0.120855]
-Percentile 1%: 4,993 samples
-  Threshold: 0.114843
-  Distance range: [0.074090, 0.114841]
+Percentile 10%: 99,850 samples
+  Threshold: 0.125472
+  Distance range: [0.059164, 0.125472]
+Percentile 5%: 49,925 samples
+  Threshold: 0.115086
+  Distance range: [0.059164, 0.115086]
+Percentile 4%: 39,940 samples
+  Threshold: 0.112382
+  Distance range: [0.059164, 0.112382]
+Percentile 3%: 29,955 samples
+  Threshold: 0.109216
+  Distance range: [0.059164, 0.109215]
+Percentile 2%: 19,970 samples
+  Threshold: 0.105118
+  Distance range: [0.059164, 0.105118]
+Percentile 1%: 9,985 samples
+  Threshold: 0.099173
+  Distance range: [0.059164, 0.099172]
 scatter_plots_observations.py:575: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
   plt.tight_layout(rect=[0, 0, 0.92, 0.96])
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__Distance_Colored1.png
 Loading data...
-✓ Loaded 499,240 samples
+✓ Loaded 998,493 samples
 
-Using MANUAL color scale: [0.085778, 0.122681]
+Using MANUAL color scale: [0.065778, 0.122681]
 
-Percentile 2%: 9,985 samples
-  Threshold: 0.120855
-  Distance range: [0.074090, 0.120855]
-Percentile 1%: 4,993 samples
-  Threshold: 0.114843
-  Distance range: [0.074090, 0.114841]
-Percentile 0.5%: 2,497 samples
-  Threshold: 0.109706
-  Distance range: [0.074090, 0.109705]
-Percentile 0.1%: 500 samples
-  Threshold: 0.099806
-  Distance range: [0.074090, 0.099806]
-Percentile 0.05%: 250 samples
-  Threshold: 0.095836
-  Distance range: [0.074090, 0.095819]
-Percentile 0.01%: 50 samples
-  Threshold: 0.087715
-  Distance range: [0.074090, 0.087612]
+Percentile 2%: 19,970 samples
+  Threshold: 0.105118
+  Distance range: [0.059164, 0.105118]
+Percentile 1%: 9,985 samples
+  Threshold: 0.099173
+  Distance range: [0.059164, 0.099172]
+Percentile 0.5%: 4,993 samples
+  Threshold: 0.094189
+  Distance range: [0.059164, 0.094188]
+Percentile 0.1%: 999 samples
+  Threshold: 0.084877
+  Distance range: [0.059164, 0.084877]
+Percentile 0.05%: 500 samples
+  Threshold: 0.081495
+  Distance range: [0.059164, 0.081494]
+Percentile 0.01%: 100 samples
+  Threshold: 0.074208
+  Distance range: [0.059164, 0.074191]
 scatter_plots_observations.py:575: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
   plt.tight_layout(rect=[0, 0, 0.92, 0.96])
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__Distance_Colored.png
 Loading data...
-✓ Loaded 499,240 samples
-  Distance range: [0.074090, 0.853635]
+✓ Loaded 998,493 samples
+  Distance range: [0.059164, 0.858003]
 
 Percentile 1%:
-  Threshold: 0.114843
-  Selected: 4,993 samples (1.00%)
-  Distance range of selected: [0.074090, 0.114841]
+  Threshold: 0.099173
+  Selected: 9,985 samples (1.00%)
+  Distance range of selected: [0.059164, 0.099172]
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__Top_1%_p1.png
 Loading data...
-✓ Loaded 499,240 samples
-  Distance range: [0.074090, 0.853635]
+✓ Loaded 998,493 samples
+  Distance range: [0.059164, 0.858003]
 
 Percentile 0.1%:
-  Threshold: 0.099806
-  Selected: 500 samples (0.10%)
-  Distance range of selected: [0.074090, 0.099806]
+  Threshold: 0.084877
+  Selected: 999 samples (0.10%)
+  Distance range of selected: [0.059164, 0.084877]
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__Top_0.1%_p0.1.png
 Loading data...
-✓ Loaded 499,240 samples
-  Distance range: [0.074090, 0.853635]
+✓ Loaded 998,493 samples
+  Distance range: [0.059164, 0.858003]
 
 Percentile 0.05%:
-  Threshold: 0.095836
-  Selected: 250 samples (0.05%)
-  Distance range of selected: [0.074090, 0.095819]
+  Threshold: 0.081495
+  Selected: 500 samples (0.05%)
+  Distance range of selected: [0.059164, 0.081494]
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__Top_0.05%_p0.05.png
 Loading data...
-✓ Loaded 499,240 samples
-  Distance range: [0.074090, 0.853635]
+✓ Loaded 998,493 samples
+  Distance range: [0.059164, 0.858003]
 
 Percentile 0.01%:
-  Threshold: 0.087715
-  Selected: 50 samples (0.01%)
-  Distance range of selected: [0.074090, 0.087612]
+  Threshold: 0.074208
+  Selected: 100 samples (0.01%)
+  Distance range of selected: [0.059164, 0.074191]
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__Top_0.01%_p0.01.png
-Percentile 0.01%: 50 samples selected
+Percentile 0.01%: 100 samples selected
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior__R0=None,_sigma=None_kde_p0.01.png
-Loaded 499,240 samples
-Percentile 2%: 9,985 samples
-Percentile 1%: 4,993 samples
-Percentile 0.5%: 2,497 samples
-Percentile 0.1%: 500 samples
-Percentile 0.05%: 250 samples
-Percentile 0.01%: 50 samples
+Loaded 998,493 samples
+Percentile 2%: 19,970 samples
+Percentile 1%: 9,985 samples
+Percentile 0.5%: 4,993 samples
+Percentile 0.1%: 999 samples
+Percentile 0.05%: 500 samples
+Percentile 0.01%: 100 samples
 
 ✓ Saved to: ../../figures/from_260528/ppc/observations/ABC_Posterior_Evolution__R0=None,_sigma=None_kde_multi.png
 

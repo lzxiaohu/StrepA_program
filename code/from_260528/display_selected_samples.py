@@ -90,8 +90,8 @@ def display_selected_samples(
     print(f"TOP {min(n_display, n_selected)} CLOSEST SAMPLES:")
     print(f"{'='*70}")
     if has_mapping:
-        print("clean_id    = index in R0.csv/sigma.csv/distances (499,665 samples)")
-        print("original_id = index in simulation_bank_*.h5 files (500,000 samples)\n")
+        print("clean_id    = index in R0.csv/sigma.csv/distances")
+        print("original_id = index in simulation_bank_*.h5 files\n")
     print(summary_df.head(n_display).to_string(index=False))
     
     # Statistics
@@ -1429,11 +1429,11 @@ if __name__ == "__main__":
     # my_original_ids = [125598, 479398, 114151,  80488, 302743, 
     #                  95475, 162977, 360642, 396091, 60632]
 
-    my_clean_ids = [141852, 174474,    # Row 1
-                483894, 445382,   # Row 2
-                131323, 409188,   # Row 3
-                305865, 311047,    # Row 4
-                214436, 346723]    # Row 5
+    my_clean_ids = [840439, 483894,    # Row 1
+                939353, 174474,   # Row 2
+                881184, 305865,   # Row 3
+                141852, 214436,    # Row 4
+                445382, 642109]    # Row 5
 
 
     plot_samples_5x2(
