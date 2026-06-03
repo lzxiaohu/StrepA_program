@@ -95,7 +95,7 @@ Percentile 0.01%:
 
 ✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R03p0/ABC_Posterior__Top_0.01%_p0.01.png
 Percentile 1%: 9,985 samples selected
-✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R03p0/ABC_Posterior__R0=1.1,_sigma=0.8_kde_p1.png
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R03p0/ABC_Posterior__R0=3.0,_sigma=0.8_kde_p1.png
 Loaded 998,493 samples
 Percentile 2%: 19,970 samples
 Percentile 1%: 9,985 samples
@@ -104,6 +104,6 @@ Percentile 0.1%: 999 samples
 Percentile 0.05%: 500 samples
 Percentile 0.01%: 100 samples
 
-✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R03p0/ABC_Posterior_Evolution__R0=1.1,_sigma=0.8_kde_multi.png
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R03p0/ABC_Posterior_Evolution__R0=3.0,_sigma=0.8_kde_multi.png
 
 ✅ All plots generated successfully!
