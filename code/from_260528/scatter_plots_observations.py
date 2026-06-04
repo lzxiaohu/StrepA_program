@@ -77,7 +77,7 @@ def plot_histograms_with_kde(
              color='skyblue', edgecolor='black', linewidth=0.5, label='Histogram')
     
     # KDE
-    kde_R0 = stats.gaussian_kde(selected_R0)
+    kde_R0 = stats.gaussian_kde(selected_R0, bw_method='silverman')
     x_R0 = np.linspace(R0_range[0], R0_range[1], 500)
     kde_vals_R0 = kde_R0(x_R0)
     ax1.plot(x_R0, kde_vals_R0, 'b-', linewidth=2.5, label='KDE')
@@ -124,7 +124,7 @@ def plot_histograms_with_kde(
              color='lightcoral', edgecolor='black', linewidth=0.5, label='Histogram')
     
     # KDE
-    kde_sigma = stats.gaussian_kde(selected_sigma)
+    kde_sigma = stats.gaussian_kde(selected_sigma, bw_method='silverman')
     x_sigma = np.linspace(sigma_range[0], sigma_range[1], 500)
     kde_vals_sigma = kde_sigma(x_sigma)
     ax2.plot(x_sigma, kde_vals_sigma, 'r-', linewidth=2.5, label='KDE')
@@ -235,7 +235,7 @@ def plot_histograms_multiple_percentiles(
         
         # KDE
         if len(selected_R0) > 1:
-            kde_R0 = stats.gaussian_kde(selected_R0)
+            kde_R0 = stats.gaussian_kde(selected_R0, bw_method='silverman')
             x_R0 = np.linspace(R0_range[0], R0_range[1], 300)
             kde_vals_R0 = kde_R0(x_R0)
             ax_R0.plot(x_R0, kde_vals_R0, 'b-', linewidth=2)
@@ -275,7 +275,7 @@ def plot_histograms_multiple_percentiles(
         
         # KDE
         if len(selected_sigma) > 1:
-            kde_sigma = stats.gaussian_kde(selected_sigma)
+            kde_sigma = stats.gaussian_kde(selected_sigma, bw_method='silverman')
             x_sigma = np.linspace(sigma_range[0], sigma_range[1], 300)
             kde_vals_sigma = kde_sigma(x_sigma)
             ax_sigma.plot(x_sigma, kde_vals_sigma, 'r-', linewidth=2)
