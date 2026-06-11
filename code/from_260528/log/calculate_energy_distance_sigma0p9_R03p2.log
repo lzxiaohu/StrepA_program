@@ -1,0 +1,133 @@
+nohup: ignoring input
+
+======================================================================
+PERCENTILE: 1.0%
+======================================================================
+======================================================================
+CALCULATING ENERGY DISTANCE: POSTERIOR vs PRIOR
+======================================================================
+Total samples (prior): 998,493
+Posterior (1.0%): 9,985 samples
+  R0:    mean=3.209, std=0.473
+  sigma: mean=0.878, std=0.074
+
+Prior: 998,493 samples
+  R0:    mean=2.502, std=0.865
+  sigma: mean=0.600, std=0.231
+
+Posterior subsampled: 9,985 → 1000
+Prior subsampled: 998,493 → 1000
+Posterior shape: (1000, 2)
+Prior shape:     (1000, 2)
+
+Calculating energy distance...
+
+======================================================================
+ENERGY DISTANCE RESULT
+======================================================================
+Energy distance (posterior vs prior): 0.513887
+
+Interpretation:
+  Large value → posterior very different from prior
+               → ABC learned a lot from the observation
+  Small value → posterior similar to prior
+               → ABC learned little from the observation
+
+✅ Energy distance: 0.513887
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 1.0%: 9,985 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.6382, sigma=0.9116
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_1percentile.png
+✅ Peak: R0=3.6382, sigma=0.9116
+
+======================================================================
+PERCENTILE: 0.1%
+======================================================================
+======================================================================
+CALCULATING ENERGY DISTANCE: POSTERIOR vs PRIOR
+======================================================================
+Total samples (prior): 998,493
+Posterior (0.1%): 999 samples
+  R0:    mean=3.233, std=0.461
+  sigma: mean=0.870, std=0.064
+
+Prior: 998,493 samples
+  R0:    mean=2.502, std=0.865
+  sigma: mean=0.600, std=0.231
+
+Posterior using ALL 999 samples (< 1000)
+Prior subsampled: 998,493 → 1000
+Posterior shape: (999, 2)
+Prior shape:     (1000, 2)
+
+Calculating energy distance...
+
+======================================================================
+ENERGY DISTANCE RESULT
+======================================================================
+Energy distance (posterior vs prior): 0.583237
+
+Interpretation:
+  Large value → posterior very different from prior
+               → ABC learned a lot from the observation
+  Small value → posterior similar to prior
+               → ABC learned little from the observation
+
+✅ Energy distance: 0.583237
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.1%: 999 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5779, sigma=0.8874
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p1percentile.png
+✅ Peak: R0=3.5779, sigma=0.8874
+
+======================================================================
+PERCENTILE: 0.01%
+======================================================================
+======================================================================
+CALCULATING ENERGY DISTANCE: POSTERIOR vs PRIOR
+======================================================================
+Total samples (prior): 998,493
+Posterior (0.01%): 100 samples
+  R0:    mean=3.228, std=0.448
+  sigma: mean=0.859, std=0.054
+
+Prior: 998,493 samples
+  R0:    mean=2.502, std=0.865
+  sigma: mean=0.600, std=0.231
+
+Posterior using ALL 100 samples (< 1000)
+Prior subsampled: 998,493 → 1000
+Posterior shape: (100, 2)
+Prior shape:     (1000, 2)
+
+Calculating energy distance...
+
+======================================================================
+ENERGY DISTANCE RESULT
+======================================================================
+Energy distance (posterior vs prior): 0.576553
+
+Interpretation:
+  Large value → posterior very different from prior
+               → ABC learned a lot from the observation
+  Small value → posterior similar to prior
+               → ABC learned little from the observation
+
+✅ Energy distance: 0.576553
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.01%: 100 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5327, sigma=0.8754
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p01percentile.png
+✅ Peak: R0=3.5327, sigma=0.8754
