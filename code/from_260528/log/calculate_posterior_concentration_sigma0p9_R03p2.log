@@ -1,0 +1,244 @@
+nohup: ignoring input
+
+======================================================================
+PERCENTILE: 1.0%
+======================================================================
+======================================================================
+CALCULATING DIST STD: POSTERIOR CONCENTRATION
+======================================================================
+Total samples: 998,493
+Posterior (1.0%): 9,985 samples
+  R0:    mean=3.209, std=0.473
+  sigma: mean=0.878, std=0.074
+Posterior shape: (9985, 2)
+
+Calculating posterior concentration...
+
+======================================================================
+posterior concentration RESULT
+======================================================================
+Distance std (posterior concentration): 0.555209
+
+Interpretation:
+  Small value → posterior tightly concentrated
+               → ABC learned a lot from the observation
+  Large value → posterior spread out
+               → ABC learned little from the observation
+
+✅ posterior concentration: 0.555209
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 1.0%: 9,985 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.6382, sigma=0.9116
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_1percentile_silverman.png
+✅ Peak: R0=3.6382, sigma=0.9116
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 1.0%: 9,985 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.6382, sigma=0.9116
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_1percentile_scott.png
+✅ Peak: R0=3.6382, sigma=0.9116
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 1.0%: 9,985 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.4874, sigma=0.9035
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_1percentile_0.5.png
+✅ Peak: R0=3.4874, sigma=0.9035
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 1.0%: 9,985 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.6382, sigma=0.9116
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_1percentile_0.3.png
+✅ Peak: R0=3.6382, sigma=0.9116
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 1.0%: 9,985 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.6231, sigma=0.9075
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_1percentile_0.2.png
+✅ Peak: R0=3.6231, sigma=0.9075
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 1.0%: 9,985 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5779, sigma=0.8995
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_1percentile_0.1.png
+✅ Peak: R0=3.5779, sigma=0.8995
+
+======================================================================
+PERCENTILE: 0.1%
+======================================================================
+======================================================================
+CALCULATING DIST STD: POSTERIOR CONCENTRATION
+======================================================================
+Total samples: 998,493
+Posterior (0.1%): 999 samples
+  R0:    mean=3.233, std=0.461
+  sigma: mean=0.870, std=0.064
+Posterior shape: (999, 2)
+
+Calculating posterior concentration...
+
+======================================================================
+posterior concentration RESULT
+======================================================================
+Distance std (posterior concentration): 0.535325
+
+Interpretation:
+  Small value → posterior tightly concentrated
+               → ABC learned a lot from the observation
+  Large value → posterior spread out
+               → ABC learned little from the observation
+
+✅ posterior concentration: 0.535325
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.1%: 999 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5779, sigma=0.8874
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p1percentile_silverman.png
+✅ Peak: R0=3.5779, sigma=0.8874
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.1%: 999 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5779, sigma=0.8874
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p1percentile_scott.png
+✅ Peak: R0=3.5779, sigma=0.8874
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.1%: 999 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.4573, sigma=0.8834
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p1percentile_0.5.png
+✅ Peak: R0=3.4573, sigma=0.8834
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.1%: 999 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5779, sigma=0.8874
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p1percentile_0.3.png
+✅ Peak: R0=3.5779, sigma=0.8874
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.1%: 999 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.6985, sigma=0.8915
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p1percentile_0.2.png
+✅ Peak: R0=3.6985, sigma=0.8915
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.1%: 999 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5477, sigma=0.8995
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p1percentile_0.1.png
+✅ Peak: R0=3.5477, sigma=0.8995
+
+======================================================================
+PERCENTILE: 0.01%
+======================================================================
+======================================================================
+CALCULATING DIST STD: POSTERIOR CONCENTRATION
+======================================================================
+Total samples: 998,493
+Posterior (0.01%): 100 samples
+  R0:    mean=3.228, std=0.448
+  sigma: mean=0.859, std=0.054
+Posterior shape: (100, 2)
+
+Calculating posterior concentration...
+
+======================================================================
+posterior concentration RESULT
+======================================================================
+Distance std (posterior concentration): 0.522035
+
+Interpretation:
+  Small value → posterior tightly concentrated
+               → ABC learned a lot from the observation
+  Large value → posterior spread out
+               → ABC learned little from the observation
+
+✅ posterior concentration: 0.522035
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.01%: 100 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5327, sigma=0.8754
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p01percentile_silverman.png
+✅ Peak: R0=3.5327, sigma=0.8754
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.01%: 100 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5327, sigma=0.8754
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p01percentile_scott.png
+✅ Peak: R0=3.5327, sigma=0.8754
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.01%: 100 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5176, sigma=0.8754
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p01percentile_0.5.png
+✅ Peak: R0=3.5176, sigma=0.8754
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.01%: 100 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5779, sigma=0.8754
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p01percentile_0.3.png
+✅ Peak: R0=3.5779, sigma=0.8754
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.01%: 100 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5930, sigma=0.8754
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p01percentile_0.2.png
+✅ Peak: R0=3.5930, sigma=0.8754
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.01%: 100 samples
+True values: R0=3.2, sigma=0.9
+Peak: R0=3.5628, sigma=0.8754
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R03p2/posterior_scatter_contour_0p01percentile_0.1.png
+✅ Peak: R0=3.5628, sigma=0.8754
