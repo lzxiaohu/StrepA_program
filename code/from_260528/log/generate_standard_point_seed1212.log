@@ -1,0 +1,120 @@
+nohup: ignoring input
+Shape: (42, 23)
+======================================================================
+GENERATING STANDARD POINTS
+======================================================================
+These summary stats from the actual observations.
+  Standard point (raw): [ 9.56521739  7.06351758 -0.59527674 18.33333333]
+
+Generating standard point for R0=1.1, sigma=0.8
+  Standard point (raw): [ 0.82608696  1.15412989 -0.22271678  1.62857143]
+  Reproducible: True ✓
+
+Generating standard point for R0=1.3, sigma=0.8
+  Standard point (raw): [ 2.39130435  2.84028056 -0.17938729  2.19674556]
+  Reproducible: True ✓
+
+Generating standard point for R0=1.5, sigma=0.8
+  Standard point (raw): [ 5.13043478  3.37510064 -0.33181236  3.83713174]
+  Reproducible: True ✓
+
+Generating standard point for R0=1.8, sigma=0.8
+  Standard point (raw): [ 5.52173913  4.98971274 -0.18088405  2.60025999]
+  Reproducible: True ✓
+
+Generating standard point for R0=2.0, sigma=0.8
+  Standard point (raw): [15.95652174 10.23131672 -0.37953795  6.68867643]
+  Reproducible: True ✓
+
+Generating standard point for R0=2.3, sigma=0.8
+  Standard point (raw): [11.17391304 11.50751602 -0.43327778  5.7270195 ]
+  Reproducible: True ✓
+
+Generating standard point for R0=2.5, sigma=0.8
+  Standard point (raw): [25.43478261 19.7664226  -0.38929713  6.78557242]
+  Reproducible: True ✓
+
+Generating standard point for R0=3.0, sigma=0.8
+  Standard point (raw): [15.7826087  11.83199254 -0.31889087  4.88861607]
+  Reproducible: True ✓
+
+Generating standard point for R0=3.2, sigma=0.8
+  Standard point (raw): [22.34782609 19.90342295 -0.32891719  5.16922172]
+  Reproducible: True ✓
+
+Generating standard point for R0=1.1, sigma=0.9
+  Standard point (raw): [ 1.17391304  1.52709391 -0.2615268   2.19375   ]
+  Reproducible: True ✓
+
+Generating standard point for R0=1.3, sigma=0.9
+  Standard point (raw): [ 0.86956522  1.21746188 -0.18266051  1.75925926]
+  Reproducible: True ✓
+
+Generating standard point for R0=1.5, sigma=0.9
+  Standard point (raw): [ 2.69565217  2.53044701 -0.1384745   2.08489526]
+  Reproducible: True ✓
+
+Generating standard point for R0=1.8, sigma=0.9
+  Standard point (raw): [14.56521739  8.03303456 -0.47814309  8.73049313]
+  Reproducible: True ✓
+
+Generating standard point for R0=2.0, sigma=0.9
+  Standard point (raw): [ 9.2173913   9.62929489 -0.32629903  4.88553954]
+  Reproducible: True ✓
+
+Generating standard point for R0=2.3, sigma=0.9
+  Standard point (raw): [16.56521739  9.78786859 -0.52674535  8.34563062]
+  Reproducible: True ✓
+
+Generating standard point for R0=2.5, sigma=0.9
+  Standard point (raw): [13.26086957 12.5343796  -0.33421071  4.52557595]
+  Reproducible: True ✓
+
+Generating standard point for R0=3.0, sigma=0.9
+  Standard point (raw): [27.30434783 24.77982094 -0.43216388  8.20769584]
+  Reproducible: True ✓
+
+Generating standard point for R0=3.2, sigma=0.9
+  Standard point (raw): [29.13043478 24.95505842 -0.52481654  9.64267275]
+  Reproducible: True ✓
+
+======================================================================
+ALL STANDARD POINTS
+======================================================================
+ R0  sigma  avg_prev_obs  var_prev_obs  avg_npmi_obs  div_all_isolates_obs
+0.0    0.0      9.565217      7.063518     -0.595277             18.333333
+1.1    0.8      0.826087      1.154130     -0.222717              1.628571
+1.3    0.8      2.391304      2.840281     -0.179387              2.196746
+1.5    0.8      5.130435      3.375101     -0.331812              3.837132
+1.8    0.8      5.521739      4.989713     -0.180884              2.600260
+2.0    0.8     15.956522     10.231317     -0.379538              6.688676
+2.3    0.8     11.173913     11.507516     -0.433278              5.727019
+2.5    0.8     25.434783     19.766423     -0.389297              6.785572
+3.0    0.8     15.782609     11.831993     -0.318891              4.888616
+3.2    0.8     22.347826     19.903423     -0.328917              5.169222
+1.1    0.9      1.173913      1.527094     -0.261527              2.193750
+1.3    0.9      0.869565      1.217462     -0.182661              1.759259
+1.5    0.9      2.695652      2.530447     -0.138475              2.084895
+1.8    0.9     14.565217      8.033035     -0.478143              8.730493
+2.0    0.9      9.217391      9.629295     -0.326299              4.885540
+2.3    0.9     16.565217      9.787869     -0.526745              8.345631
+2.5    0.9     13.260870     12.534380     -0.334211              4.525576
+3.0    0.9     27.304348     24.779821     -0.432164              8.207696
+3.2    0.9     29.130435     24.955058     -0.524817              9.642673
+
+✓ Saved to: ../../experimental_data/from_260528/standard_points_seed1212.csv
+
+======================================================================
+EXAMPLE: R0=2.5, sigma=0.8
+======================================================================
+Standard point (raw values):
+  avg_prev_obs:         25.43478261
+  var_prev_obs:         19.76642260
+  avg_npmi_obs:         -0.38929713
+  div_all_isolates_obs: 6.78557242
+
+As tuple for copy-paste:
+standard_point = (25.43478261, 19.76642260, -0.38929713, 6.78557242)
+
+⏱️  Elapsed: 276.57 seconds
+======================================================================
