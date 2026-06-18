@@ -1,0 +1,109 @@
+nohup: ignoring input
+Done. Results saved to '../../experimental_data/from_260528/dists_sigma0p8_R01p8_seed1314_recal.csv'.
+Loading data...
+✓ Loaded 998,493 samples
+
+Using MANUAL color scale: [0.000850, 0.015000]
+
+Percentile 10%: 99,850 samples
+  Threshold: 0.051213
+  Distance range: [0.001809, 0.051213]
+Percentile 5%: 49,925 samples
+  Threshold: 0.035536
+  Distance range: [0.001809, 0.035536]
+Percentile 4%: 39,940 samples
+  Threshold: 0.032254
+  Distance range: [0.001809, 0.032254]
+Percentile 3%: 29,955 samples
+  Threshold: 0.028627
+  Distance range: [0.001809, 0.028627]
+Percentile 2%: 19,970 samples
+  Threshold: 0.024338
+  Distance range: [0.001809, 0.024337]
+Percentile 1%: 9,985 samples
+  Threshold: 0.019210
+  Distance range: [0.001809, 0.019210]
+scatter_plots_for_sigma0p8_R01p8_seed1314.py:576: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout(rect=[0, 0, 0.92, 0.96])
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R01p8_seed1314/ABC_Posterior__Distance_Colored1.png
+Loading data...
+✓ Loaded 998,493 samples
+
+Using MANUAL color scale: [0.000850, 0.015000]
+
+Percentile 2%: 19,970 samples
+  Threshold: 0.024338
+  Distance range: [0.001809, 0.024337]
+Percentile 1%: 9,985 samples
+  Threshold: 0.019210
+  Distance range: [0.001809, 0.019210]
+Percentile 0.5%: 4,993 samples
+  Threshold: 0.015649
+  Distance range: [0.001809, 0.015648]
+Percentile 0.1%: 999 samples
+  Threshold: 0.009974
+  Distance range: [0.001809, 0.009973]
+Percentile 0.05%: 500 samples
+  Threshold: 0.008277
+  Distance range: [0.001809, 0.008276]
+Percentile 0.01%: 100 samples
+  Threshold: 0.005383
+  Distance range: [0.001809, 0.005372]
+scatter_plots_for_sigma0p8_R01p8_seed1314.py:576: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout(rect=[0, 0, 0.92, 0.96])
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R01p8_seed1314/ABC_Posterior__Distance_Colored.png
+Loading data...
+✓ Loaded 998,493 samples
+  Distance range: [0.001809, 0.793178]
+
+Percentile 1%:
+  Threshold: 0.019210
+  Selected: 9,985 samples (1.00%)
+  Distance range of selected: [0.001809, 0.019210]
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R01p8_seed1314/ABC_Posterior__Top_1%_p1.png
+Loading data...
+✓ Loaded 998,493 samples
+  Distance range: [0.001809, 0.793178]
+
+Percentile 0.1%:
+  Threshold: 0.009974
+  Selected: 999 samples (0.10%)
+  Distance range of selected: [0.001809, 0.009973]
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R01p8_seed1314/ABC_Posterior__Top_0.1%_p0.1.png
+Loading data...
+✓ Loaded 998,493 samples
+  Distance range: [0.001809, 0.793178]
+
+Percentile 0.05%:
+  Threshold: 0.008277
+  Selected: 500 samples (0.05%)
+  Distance range of selected: [0.001809, 0.008276]
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R01p8_seed1314/ABC_Posterior__Top_0.05%_p0.05.png
+Loading data...
+✓ Loaded 998,493 samples
+  Distance range: [0.001809, 0.793178]
+
+Percentile 0.01%:
+  Threshold: 0.005383
+  Selected: 100 samples (0.01%)
+  Distance range of selected: [0.001809, 0.005372]
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R01p8_seed1314/ABC_Posterior__Top_0.01%_p0.01.png
+Percentile 1%: 9,985 samples selected
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R01p8_seed1314/ABC_Posterior__R0=1.8,_sigma=0.8_kde_p1.png
+Loaded 998,493 samples
+Percentile 2%: 19,970 samples
+Percentile 1%: 9,985 samples
+Percentile 0.5%: 4,993 samples
+Percentile 0.1%: 999 samples
+Percentile 0.05%: 500 samples
+Percentile 0.01%: 100 samples
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p8/R01p8_seed1314/ABC_Posterior_Evolution__R0=1.8,_sigma=0.8_kde_multi.png
+
+✅ All plots generated successfully!
