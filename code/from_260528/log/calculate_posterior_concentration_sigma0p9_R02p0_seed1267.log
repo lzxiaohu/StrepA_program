@@ -212,3 +212,33 @@ PLOTTING SCATTER + CONTOUR
 Percentile 0.01%: 100 samples
 True values: R0=2.0, sigma=0.9
 Peak: R0=1.7085, sigma=0.8352
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R02p0_seed1267/posterior_scatter_contour_0p01percentile_0.5.png
+✅ Peak: R0=1.7085, sigma=0.8352
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.01%: 100 samples
+True values: R0=2.0, sigma=0.9
+Peak: R0=1.6633, sigma=0.8151
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R02p0_seed1267/posterior_scatter_contour_0p01percentile_0.3.png
+✅ Peak: R0=1.6633, sigma=0.8151
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.01%: 100 samples
+True values: R0=2.0, sigma=0.9
+Peak: R0=1.6633, sigma=0.8231
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R02p0_seed1267/posterior_scatter_contour_0p01percentile_0.2.png
+✅ Peak: R0=1.6633, sigma=0.8231
+======================================================================
+PLOTTING SCATTER + CONTOUR
+======================================================================
+Percentile 0.01%: 100 samples
+True values: R0=2.0, sigma=0.9
+Peak: R0=1.6633, sigma=0.8231
+
+✓ Saved to: ../../figures/from_260528/ppc/sigma0p9/R02p0_seed1267/posterior_scatter_contour_0p01percentile_0.1.png
+✅ Peak: R0=1.6633, sigma=0.8231
