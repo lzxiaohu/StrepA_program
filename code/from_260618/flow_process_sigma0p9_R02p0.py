@@ -14,7 +14,7 @@ from numpy.random import default_rng
 import h5py
 from tqdm import tqdm
 from itertools import product
-
+import csv
 
 import functions_list_260528 as functions_list
 import summary_stats_elms_260528 as ss
@@ -67,7 +67,8 @@ def summary_stats(series_2d):
 
 def load_and_prepare_data(
         summary_stats_file='../../experimental_data/from_260618/all_summary_statistics_clean.h5',
-        output_dir='../../experimental_data/from_260618'
+        output_dir='../../experimental_data/from_260618',
+        tag=''   # e.g. '_sigma0p9_R01p6'
 ):
     """Load, normalize, and save summary statistics (both raw and normalized CSV)."""
 
@@ -75,7 +76,6 @@ def load_and_prepare_data(
     print("LOADING AND PREPARING DATA")
     print("=" * 70)
 
-    # Load
     print(f"\nLoading from: {summary_stats_file}")
     with h5py.File(summary_stats_file, 'r') as f:
         summary_stats = f['summary_stats'][:]
@@ -86,17 +86,14 @@ def load_and_prepare_data(
     n_samples = len(R0)
     print(f"✓ Loaded {n_samples:,} samples")
 
-    # Normalize
     col_min = summary_stats.min(axis=0)
     col_max = summary_stats.max(axis=0)
     summary_stats_norm = (summary_stats - col_min) / (col_max - col_min)
 
-    # Save
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 
-    # HDF5
-    norm_file = output_path / 'summary_stats_normalized.h5'
+    norm_file = output_path / f'summary_stats_normalized{tag}.h5'
     with h5py.File(norm_file, 'w') as f:
         f.create_dataset('summary_stats_normalized', data=summary_stats_norm, compression='gzip')
         f.create_dataset('summary_stats_raw', data=summary_stats, compression='gzip')
@@ -107,20 +104,19 @@ def load_and_prepare_data(
         f.attrs['columns'] = columns
         f.attrs['n_samples'] = n_samples
 
-    # CSV - BOTH raw and normalized
-    csv_raw = output_path / 'summary_stats.csv'
-    csv_norm = output_path / 'summary_stats_normalized.csv'
-    
+    csv_raw = output_path / f'summary_stats{tag}.csv'
+    csv_norm = output_path / f'summary_stats_normalized{tag}.csv'
+
     pd.DataFrame(summary_stats).to_csv(csv_raw, index=False, header=False)
     pd.DataFrame(summary_stats_norm).to_csv(csv_norm, index=False, header=False)
-    pd.DataFrame(R0).to_csv(output_path / 'R0.csv', index=False, header=False)
-    pd.DataFrame(sigma).to_csv(output_path / 'sigma.csv', index=False, header=False)
+    pd.DataFrame(R0).to_csv(output_path / f'R0{tag}.csv', index=False, header=False)
+    pd.DataFrame(sigma).to_csv(output_path / f'sigma{tag}.csv', index=False, header=False)
 
     print(f"\n✓ Saved:")
     print(f"  - {norm_file}")
     print(f"  - {csv_raw} (raw)")
     print(f"  - {csv_norm} (normalized)")
-    print(f"  - R0.csv, sigma.csv")
+    print(f"  - R0{tag}.csv, sigma{tag}.csv")
 
     return {
         'summary_stats': summary_stats,
@@ -753,11 +749,11 @@ if __name__ == "__main__":
     true_R0 = 2.0
     true_sigma = 0.9
 
-    # seed_number = [1591, 266, 9117, 9749, 9900, 
-    #                 3992, 1338, 6070, 2489, 4915, 
-    #                 2222, 9734, 8660, 6342, 3746, 
-    #                 1018, 9765, 9474, 5175, 7357]
-    seed_number = [1212, 1234, 1267, 1314, 1690]
+    seed_number = [1591, 266, 9117, 9749, 9900, 
+                    3992, 1338, 6070, 2489, 4915, 
+                    2222, 9734, 8660, 6342, 3746, 
+                    1018, 9765, 9474, 5175, 7357]
+    # seed_number = [1212, 1234, 1267, 1314, 1690]
 
     peak_R0s = []
     peak_sigmas = []
@@ -789,9 +785,13 @@ if __name__ == "__main__":
     else:
         raise ValueError('Invalid core params num')
 
+    tag = '_sigma0p9_R02p0'
 
-
-    
+    data = load_and_prepare_data(
+            summary_stats_file='../../experimental_data/from_260618/all_summary_statistics_clean.h5',
+            output_dir='../../experimental_data/from_260618',
+            tag=tag
+        )
 
 
     for seed_sn in seed_number: 
@@ -812,10 +812,7 @@ if __name__ == "__main__":
         is_reproducible = np.allclose(Tdry, Tdry_check)
         print(f"  Reproducible: {is_reproducible} ✓" if is_reproducible else f"  Reproducible: {is_reproducible} ✗")
 
-        data = load_and_prepare_data(
-            summary_stats_file='../../experimental_data/from_260618/all_summary_statistics_clean.h5',
-            output_dir='../../experimental_data/from_260618'
-        )
+        
 
         # Set your observed data (standard point)
         standard_point = s_obs
@@ -845,11 +842,11 @@ if __name__ == "__main__":
         )
 
         # Step 6: Save results
-        output_file = f'../../experimental_data/from_260618/optimal_weights_results_sigma0p9_R02p0_{seed_sn}.csv'
+        output_file = f'../../experimental_data/from_260618/optimal_weights_results_sigma0p9_R02p0_seed{seed_sn}.csv'
         results_df.to_csv(output_file, index=False)
         print(f"\n✓ Saved full results to: {output_file}")
 
-        weights = results_df.iloc[0][['wA', 'wB', 'wC', 'wD']].values
+        weights = results_df.iloc[0][['w1', 'w2', 'w3', 'w4']].values
 
         # Calculate distances with Euclidean metric
         result = analyze_distances(
@@ -858,12 +855,11 @@ if __name__ == "__main__":
             weights=weights,  # Fixed: added commas
             metric="euclidean",
             p=3,
-            output_path="../../experimental_data/from_260618/dists_sigma0p9_R02p0_recal.csv"
+            output_path=f"../../experimental_data/from_260618/dists_sigma0p9_R02p0_seed{seed_sn}_recal.csv"
         )
 
 
         for percentile, filename in [
-            (0.1,  'posterior_scatter_contour_0p1percentile'),
             (0.01, 'posterior_scatter_contour_0p01percentile'),
         ]:
             print(f"\n{'='*70}")
@@ -909,7 +905,7 @@ if __name__ == "__main__":
                     save_filename='peak_values_plot.png')
 
 save_results_to_csv(true_R0, true_sigma, peak_R0s, peak_sigmas,
-                         save_path='../../experimental_data/from_260618/', save_filename='results.csv')
+                         save_path='../../experimental_data/from_260618/', save_filename='peak_estimates_sigma0p9_R02p0.csv')
 
 end = time.perf_counter()
 print(f"\n⏱️  Elapsed: {end - start:.2f} seconds")
