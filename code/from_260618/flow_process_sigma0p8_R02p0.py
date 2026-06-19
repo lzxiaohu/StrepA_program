@@ -67,7 +67,8 @@ def summary_stats(series_2d):
 
 def load_and_prepare_data(
         summary_stats_file='../../experimental_data/from_260618/all_summary_statistics_clean.h5',
-        output_dir='../../experimental_data/from_260618'
+        output_dir='../../experimental_data/from_260618',
+        tag=''   # e.g. '_sigma0p9_R01p6'
 ):
     """Load, normalize, and save summary statistics (both raw and normalized CSV)."""
 
@@ -75,7 +76,6 @@ def load_and_prepare_data(
     print("LOADING AND PREPARING DATA")
     print("=" * 70)
 
-    # Load
     print(f"\nLoading from: {summary_stats_file}")
     with h5py.File(summary_stats_file, 'r') as f:
         summary_stats = f['summary_stats'][:]
@@ -86,17 +86,14 @@ def load_and_prepare_data(
     n_samples = len(R0)
     print(f"✓ Loaded {n_samples:,} samples")
 
-    # Normalize
     col_min = summary_stats.min(axis=0)
     col_max = summary_stats.max(axis=0)
     summary_stats_norm = (summary_stats - col_min) / (col_max - col_min)
 
-    # Save
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 
-    # HDF5
-    norm_file = output_path / 'summary_stats_normalized.h5'
+    norm_file = output_path / f'summary_stats_normalized{tag}.h5'
     with h5py.File(norm_file, 'w') as f:
         f.create_dataset('summary_stats_normalized', data=summary_stats_norm, compression='gzip')
         f.create_dataset('summary_stats_raw', data=summary_stats, compression='gzip')
@@ -107,20 +104,19 @@ def load_and_prepare_data(
         f.attrs['columns'] = columns
         f.attrs['n_samples'] = n_samples
 
-    # CSV - BOTH raw and normalized
-    csv_raw = output_path / 'summary_stats.csv'
-    csv_norm = output_path / 'summary_stats_normalized.csv'
-    
+    csv_raw = output_path / f'summary_stats{tag}.csv'
+    csv_norm = output_path / f'summary_stats_normalized{tag}.csv'
+
     pd.DataFrame(summary_stats).to_csv(csv_raw, index=False, header=False)
     pd.DataFrame(summary_stats_norm).to_csv(csv_norm, index=False, header=False)
-    pd.DataFrame(R0).to_csv(output_path / 'R0.csv', index=False, header=False)
-    pd.DataFrame(sigma).to_csv(output_path / 'sigma.csv', index=False, header=False)
+    pd.DataFrame(R0).to_csv(output_path / f'R0{tag}.csv', index=False, header=False)
+    pd.DataFrame(sigma).to_csv(output_path / f'sigma{tag}.csv', index=False, header=False)
 
     print(f"\n✓ Saved:")
     print(f"  - {norm_file}")
     print(f"  - {csv_raw} (raw)")
     print(f"  - {csv_norm} (normalized)")
-    print(f"  - R0.csv, sigma.csv")
+    print(f"  - R0{tag}.csv, sigma{tag}.csv")
 
     return {
         'summary_stats': summary_stats,
@@ -598,10 +594,12 @@ def plot_posetrior_concentration(
     plt.tight_layout()
     
     # Save
-    Path(save_path).mkdir(parents=True, exist_ok=True)
-    save_file = f"{save_path}{save_filename}"
-    plt.savefig(save_file, dpi=300, bbox_inches='tight')
-    print(f"\n✓ Saved to: {save_file}")
+    if save_path:
+
+        Path(save_path).mkdir(parents=True, exist_ok=True)
+        save_file = f"{save_path}{save_filename}"
+        plt.savefig(save_file, dpi=300, bbox_inches='tight')
+        print(f"\n✓ Saved to: {save_file}")
     plt.close()
     
     return peak_R0, peak_sigma
@@ -789,13 +787,13 @@ if __name__ == "__main__":
     else:
         raise ValueError('Invalid core params num')
 
+    tag = '_sigma0p8_R02p0'
+
     data = load_and_prepare_data(
             summary_stats_file='../../experimental_data/from_260618/all_summary_statistics_clean.h5',
-            output_dir='../../experimental_data/from_260618'
+            output_dir='../../experimental_data/from_260618',
+            tag=tag
         )
-
-    
-
 
     for seed_sn in seed_number: 
 
@@ -892,7 +890,7 @@ if __name__ == "__main__":
                     ylim=(0.2, 1.0),
                     bw_method=bw,
                     title="ABC Posterior",
-                    save_path=f'{save_path}_seed{seed_sn}/',
+                    save_path=None,
                     save_filename=f'{filename}_{bw}.png'
                 )
                 print(f"✅ Peak: R0={peak_R0:.4f}, sigma={peak_sigma:.4f}")
@@ -905,7 +903,7 @@ if __name__ == "__main__":
                     ylim=(0.2, 1.0),
                     title="True value vs Peak value", 
                     save_path=f'{save_path}/', 
-                    save_filename='peak_values_plot.png')
+                    save_filename='peak_values_plot_sigma0p8_R02p0.png')
 
 save_results_to_csv(true_R0, true_sigma, peak_R0s, peak_sigmas,
                          save_path='../../experimental_data/from_260618/', save_filename='peak_estimates_sigma0p8_R02p0.csv')
